@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>使用ownCloud搭建你的个人云服务(ubuntu 14.04 ) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用ownCloud搭建你的个人云服务(ubuntu 14.04 ) ownCloud是什么 ownCloud是一个自由且开源的个人云存储解决方案(类似百度网盘或者Dropbox)，包括两个部分：服务器和客户端。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用ownCloud搭建你的个人云服务(ubuntu 14.04 )">
+<meta property="og:url" content="http://yoursite.com/2018/11/24/%E4%BD%BF%E7%94%A8ownCloud%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BA%91%E6%9C%8D%E5%8A%A1(ubuntu%2014.04%20)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="使用ownCloud搭建你的个人云服务(ubuntu 14.04 ) ownCloud是什么 ownCloud是一个自由且开源的个人云存储解决方案(类似百度网盘或者Dropbox)，包括两个部分：服务器和客户端。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-11-24T01:18:43.550Z">
+<meta property="article:modified_time" content="2018-12-03T06:27:40.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-使用ownCloud搭建你的个人云服务(ubuntu 14.04 )" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/24/%E4%BD%BF%E7%94%A8ownCloud%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BA%91%E6%9C%8D%E5%8A%A1(ubuntu%2014.04%20)/" class="article-date">
+  <time datetime="2018-11-24T01:18:43.550Z" itemprop="datePublished">2018-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用ownCloud搭建你的个人云服务(ubuntu 14.04 )
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用ownCloud搭建你的个人云服务(ubuntu 14.04 )</p>
+<p><strong>ownCloud是什么</strong></p>
+<p>ownCloud是一个自由且开源的个人云存储解决方案(类似百度网盘或者Dropbox)，包括两个部分：服务器和客户端。</p>
+<a id="more"></a>
+
+<p>ownCloud在客户端可通过网页界面，或者安装专用的客户端软件来使用。网页界面当然就是任何能打开网页的平台都支持，而客户端软件也支持相当多平台，Windows、Linux、iOS、Android皆有。<br>除了云存储之外，ownCloud也可用于同步行事历、电子邮件联系人、网页浏览器的书签；此外还有多人在线文件同步协作的功能。 </p>
+<p><strong>云服务器比较</strong></p>
+<p>在安装owncloud之前，也适用了seafile，总体来说seafile功能和细节上还有所欠缺。不过seafile和owncloud最大的不同在于：<br>owncloud的数据文件直接存放在服务器的磁盘上，目录结构也与网页(客户端)看到的结构相同。这样即便有一天owncloud挂了，或者停止开发了，导出数据也是很方便的，甚至直接删掉owncloud即可。<br>seafile的数据文件在服务器上存储时进行了切片和整合(默认是否加密不清楚)，这样确保了数据安全性，即便拥有服务器root账户也无法查看文件内容，不过seafile的管理员可以修改其他用户密码，所以这个加密功能貌似还有有问题。此外，如果seafile挂掉或者停止更新，数据导出就变的几乎不可能了。<br>下面说下怎么在ubuntu上搭建ownCloud服务器（测试版本：14.04）</p>
+<p><strong>安装（通过apt-get）</strong></p>
+<p>不同的linux版本可以前往查看： </p>
+<p><a href="http://software.opensuse.org/download.html?project=isv:ownCloud:community&amp;package=owncloud" target="_blank" rel="noopener">http://software.opensuse.org/download.html?project=isv:ownCloud:community&amp;package=owncloud</a><br>对于 xUbuntu 14.04，请运行以下命令： </p>
+<blockquote>
+<p>sudo sh -c “echo ‘deb <a href="http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_14.04/" target="_blank" rel="noopener">http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_14.04/</a> /‘ &gt;&gt; /etc/apt/sources.list.d/owncloud.list” </p>
+</blockquote>
+<blockquote>
+<p>sudo apt-get update </p>
+</blockquote>
+<blockquote>
+<p>sudo apt-get install owncloud </p>
+</blockquote>
+<p>您可以把软件源金钥添加到 apt。记住该金钥的拥有者将能够分发您的系统将会信任的更新、软件包和软件源 (更多信息)。要添加该金钥，请运行： </p>
+<blockquote>
+<p>wget <a href="http://download.opensuse.org/repositories/isv:ownCloud:community/xUbuntu_14.04/Release.key" target="_blank" rel="noopener">http://download.opensuse.org/repositories/isv:ownCloud:community/xUbuntu_14.04/Release.key</a> </p>
+</blockquote>
+<blockquote>
+<p>sudo apt-key add - &lt; Release.key </p>
+</blockquote>
+<p>安装时间可能会有点长，因为软件包需要从download.opensuse.org下载，国内网络访问速度不是很快。可以自己连vpn下载安装包。<br>安装过程中，mysql会要求你输入root密码，输入并确认即可。</p>
+<p>执行完毕，如果没有错误的话就安装完成了，可以通过 http://域名或ip/owncloud 访问，将看到初始化配置界面。根据提示设置即可，注意，设置数据存储位置时，需要确保www-data用户具有写入该位置的权限（具体看配置）。</p>
+<p><strong>注意，修改配置后要重启apache让配置生效</strong></p>
+<blockquote>
+<p> sudo /etc/init.d/apache2 restart</p>
+</blockquote>
+<p><strong>设置数据文件位置之前，要修改路径位置的访问权限</strong></p>
+<blockquote>
+<p>sudo chown www-data:www-data &lt;路径&gt;  </p>
+</blockquote>
+<p><strong>修改默认编码</strong></p>
+<p>编辑文件： /etc/php5/apache2/php.ini<br>去掉以下行前#让配置生效：</p>
+<blockquote>
+<p>default_charset = “UTF-8” </p>
+</blockquote>
+<p><strong>上传大小限制(设置成10G)</strong></p>
+<p>编辑文件：/var/www/html/owncloud/.htaccess<br>    php_value upload_max_filesize 10240M<br>    php_value post_max_size 10240M<br>    php_value memory_limit 2048M</p>
+<p><strong>修改成默认页面（访问url不用/owncloud了）</strong></p>
+<p>编辑文件： /etc/apache2/sites-enabled/000-default.conf<br>修改行：<br>    DocumentRoot /var/www/http<br>改为：<br>    DocumentRoot /var/www/owncloud</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/24/%E4%BD%BF%E7%94%A8ownCloud%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BA%91%E6%9C%8D%E5%8A%A1(ubuntu%2014.04%20)/" data-id="ckd0dv3qf000g2ry59f5qbqy6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/24/%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90%E5%88%A9%E5%99%A8%EF%BC%88%E4%B8%8D%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          搜索资源利器（不断更新）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/24/%E5%8D%81%E6%AD%A5%E6%B5%81%E7%A8%8B%E2%80%94%E2%80%94%E5%BE%AE%E8%BD%AFlive%E3%80%81msn%E7%AD%89%E5%90%8E%E7%BC%80%E9%82%AE%E7%AE%B1%E6%B3%A8%E5%86%8C%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">十步流程——微软live、msn等后缀邮箱注册方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/24/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/11/%E6%9C%80%E6%96%B0SS-SSR%20&%20%E5%AE%89%E8%A3%85%E8%B4%A6%E6%88%B7/">最新SS-SSR &amp; 安装账户</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/05/MY%20%E6%94%B6%E5%90%AC%E5%88%97%E8%A1%A8/">MY 收听列表</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/24/VPS%E6%90%AD%E5%BB%BAAria2+AriaNG+Rclone%E6%8C%82%E8%BD%BDGB%E5%AE%9E%E7%8E%B0%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%88%B0%E7%BD%91%E7%9B%98/">VPS搭建Aria2+AriaNG+Rclone挂载GB实现离线下载到网盘</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/24/ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%BC%A0%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">ubuntu下搭建ftp服务器实现上传于下载功能</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
