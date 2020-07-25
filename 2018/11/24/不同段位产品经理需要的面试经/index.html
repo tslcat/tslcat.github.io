@@ -1,54 +1,17 @@
-extends base
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>不同段位产品经理需要的面试经 | Hexo</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">不同段位产品经理需要的面试经</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">不同段位产品经理需要的面试经</h1><div class="post-meta">2018-11-24</div><div class="post-content"><p>不同段位产品经理需要的面试经</p>
+<p>PM面试需要即刻展示公司所需的技能及关联技能、人机交互基础知识以及管理等知识，同时通过沟通，他们的性格、态度以及是否具有强大的内部驱动力都是需要被考察的。那么对于不同等级的产品经理需要考核的装备有哪些呢？</p>
+<a id="more"></a>
 
-block title
-  title= page.title + ' | ' + config.title
-
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable
-      a.disqus-comment-count( href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      div(class='clear')
-        div(id='toc' class='toc-article')
-          div(class='toc-title')= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
-
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
-
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
-
-    include _partial/tag.pug
-    include _partial/post_nav.pug
-
-    if page.comments
-      include _partial/comments.pug
+<ul>
+<li>初级产品经理/助理：</li>
+</ul>
+<p>经验： 零经验0到1年不等<br>人群：刚刚毕业的小白，或者从业一年左右。<br>成长发展：成长速度慢，要求胜任执行和优化的工作。一般没有带独立产品的能力。可以从做单个模块，优化数据的工作中培训。<br>面试考核关键：<br>执行力——初级产品经理最重要的就是执行力。<br>大部分的情况下，产品的大方向不由初级产品经理控制，只负责局部的数据。用户需求是重点，但对于需求的把握能力要求不高，可以深度做好用户调研和反馈，快速的迭代并提升数据。执行力就是初级产品经理有力的推动项目内成员达成目标的保障。<br>综合能力——逻辑能力、沟通表达能力为主。逻辑能力是初级PM安家立命之本。能不能理清楚功能模块和整个产品的关系，功能的设计和迭代的节奏，都会考验产品经理的逻辑能力。<br>一个页面会遇到几种使用场景？不同场景之间的关系是什么？如何让一个页面同时满足多种入口和多种需求？<br>交互设计：初级产品经理可以把单个模块的交互做完整，输出整洁、清晰的产品需求交付物就算合格了。</p>
+<ul>
+<li>历练经验的产品经理：</li>
+</ul>
+<p>经验：2年-5年<br>人群：完整参与过一个产品的生命周期的PM。<br>成长发展：独立的带产品，管理小的产品团队。负责单独的产品，制定产品中短期的打法并给出具体的实施方案，可以协调各方资源达成目标。<br>面试考核的关键：<br>这个阶段的产品经理最重要的是：需求把控能力。一般被offer的是负责公司新产品的。那么对于需求的把控能力就很严格。要控制，好的产品的有节奏的，特别是安排好多个部门的资源和排期。<br>以往的产品经历很重要，面试官通常会重点推敲几个核心逻辑来考察。例如：用户的核心场景是怎样的？做起来之后，对业务线有什么价值？等等。要求面试者很清晰的回答这些问题，并且同时应对插入的疑问。<br>资源协调、项目推动能力、与前后端的对接，各种语言的通讯等细节都决定了排期和节奏，这些对于一个产品经理的资源协调能力要求很高。</p>
+<ul>
+<li>高级产品经理或总监</li>
+</ul>
+<p>经验：4-10年<br>人群：因为随着机遇和个人能力的区别，工作3-5年之后就会产生一个明显的分水岭。实力和运气也是是职业发展的重要辅助。<br>面试的关键：<br>业务能力——通常是一揽子相关需求的打包业务。比如一个直播项目，分为Web、PC Client、App。一个总监或者高级产品经理，背的一般都是整个业务的KPI，下面一堆产品经理。更多的时候需要解决的已经不是单个产品的细节问题了，而是如何让业务满足公司的战略发展方向，在方向的基础上制定多线打法和策略，努力满足业务线的既定目标。<br>比如，假如你要打掉斗鱼直播，招聘一个高级产品经理或者总监就不是简简单单的问他产品怎么做了，要问的应该是一年的业务线规划。<br>管理能力：相当重要，如果业务能力是高级产品经理或者总监指出方向的核心，那么管理能力就是确保执行的核心，可惜，管理能力很大程度看天赋和经验。<br>既往成绩：结果很重要，嘴皮子吹一地，如果最后没有拿得出手的成绩，那要成为高级别的产品经理就有点难度了。<br>最后，面试是切勿过分迷信一线互联网公司的评级，基本上水分和PM这个岗位本身一样大，只要是人评的，就会有误差。</p>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2018/11/24/%E6%9F%A5%E7%9C%8Bvps%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">查看vps配置命令大全</a><a class="next" href="/2018/11/24/%E5%A3%81%E7%BA%B8%E5%92%8C%E5%A4%B4%E5%83%8F%E6%94%B6%E8%97%8F/">壁纸和头像收藏</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://blog.8001008.xyz"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/11/%E6%9C%80%E6%96%B0SS-SSR%20&%20%E5%AE%89%E8%A3%85%E8%B4%A6%E6%88%B7/">最新SS-SSR & 安装账户</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/MY%20%E6%94%B6%E5%90%AC%E5%88%97%E8%A1%A8/">MY 收听列表</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/VPS%E6%90%AD%E5%BB%BAAria2+AriaNG+Rclone%E6%8C%82%E8%BD%BDGB%E5%AE%9E%E7%8E%B0%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%88%B0%E7%BD%91%E7%9B%98/">VPS搭建Aria2+AriaNG+Rclone挂载GB实现离线下载到网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%BC%A0%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">ubuntu下搭建ftp服务器实现上传于下载功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/Telegram%E7%A4%BE%E7%BE%A4-%E9%A2%91%E9%81%93-%E6%9C%BA%E5%99%A8%E4%BA%BA/">Telegram社群-频道-机器人</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/CentOS-Debian-Ubuntu%20ShadowsocksR%20%E5%8D%95-%E5%A4%9A%E7%AB%AF%E5%8F%A3%20%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC/">CentOS-Debian-Ubuntu ShadowsocksR 单-多端口 一键管理脚本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/Resilio%20Sync%20License%20%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/">Resilio Sync License 授权文件下载</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/GoPro%E7%BC%A9%E6%97%B6%E6%91%84%E5%BD%B1%E6%8A%80%E5%B7%A7/">GoPro缩时摄影技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/%E5%9C%A8%E7%BA%BF%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86/">在线经典游戏合集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E8%8C%83%E6%96%87%E5%92%8C%E7%BB%83%E4%B9%A0/">用户使用场景范文和练习</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

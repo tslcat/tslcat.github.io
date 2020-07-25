@@ -1,54 +1,7 @@
-extends base
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>用户使用场景范文和练习 | Hexo</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">用户使用场景范文和练习</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">用户使用场景范文和练习</h1><div class="post-meta">2018-11-24</div><div class="post-content"><p>用户使用场景范文和练习</p>
+<p>打车app使用场景<br>公司职员王先生晚上6：00下班，需要打车回家。王先生在5：50时，打开“快的打车”APP可以看到公司附近有很多出租车，王先生输入出发地和目的地确认打车。30秒后出租车司机李师傅接单，王先生可以在手机上清晰的看到李师傅的车辆位置，10分钟后王先生成功上车。到达目的地后，王先生用手机在线支付了打车费，开心的回到家陪女儿吃晚饭。<br>————————————————————————————————————————————————————————————————————————————————————————</p>
+<a id="more"></a>
+<p>分类溯源系统场景描述<br>    一天李先生在小区遛弯儿，看见有人在宣传居民垃圾分类。于是李先生就下载了一个APP注册后，领取了一卷垃圾分类袋。回家后开始按照APP的指导实施垃圾分类。一天后李先生提着满满的几袋已经分配好的垃圾袋来到楼下，按照分类投入到早已摆放好的分类垃圾箱中，少时APP提示有积分到账，于是李先生用拿到的积分兑换了几件心意的商品。</p>
+<pre><code>早晨一辆环卫车开进小区停到分类垃圾桶旁边，王师傅跳下车，掏出手机打开APP，扫描分类垃圾桶的二维码后打开分类垃圾桶并将桶里的垃圾袋一件件拿出称重扫描后放入环卫车中。于此同时在几千公里外的服务器机房正在处理着王师傅扫描称重的数据。在王师傅的公司里小赵正在大屏幕中注视着这些数据，并根据这些数据给王师傅做这一天的工作考核。
 
-block title
-  title= page.title + ' | ' + config.title
-
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable
-      a.disqus-comment-count( href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      div(class='clear')
-        div(id='toc' class='toc-article')
-          div(class='toc-title')= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
-
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
-
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
-
-    include _partial/tag.pug
-    include _partial/post_nav.pug
-
-    if page.comments
-      include _partial/comments.pug
+1个多小时后王师傅把车开出了这个小区，按照APP导引下的导航进入下一个小区继续工作。直到中午环卫车已经装满，王师傅按照APP中选择的最佳路线，开到了新建的一家分拣中心的库房中。早在王师傅开始赶往这家分拣中心前，分拣中心的工作人员已经通过APP得知了王师傅满载这50吨的垃圾，将在一小时后到达库房的信息，王师傅的环卫车辆一到分拣中心的工作人员就马上帮助王师傅卸车。因为分拣中心的工作人员知道再过30分钟另一个环卫车辆即将到来。卸车完成后王师傅开着空车回到了公司停车场冲洗消毒车辆。这时APP弹出了提示“祝贺！王师傅的一天工作已经完成”王师傅点开APP后，APP显示出王师傅这一上午的工作轨迹并注释出每个关键节点车辆的油耗和状态信息，王师傅饶有兴趣的看了起来。</code></pre></div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2018/11/24/%E5%9C%A8%E7%BA%BF%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86/">在线经典游戏合集</a><a class="next" href="/2018/11/24/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E6%9C%8910%E5%B9%B4%E7%BB%8F%E9%AA%8C%EF%BC%8C%E4%BD%86%E6%88%90%E4%B8%8D%E4%BA%86%E4%B8%93%E5%AE%B6/">为什么你有10年经验，但成不了专家</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://blog.8001008.xyz"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/11/%E6%9C%80%E6%96%B0SS-SSR%20&%20%E5%AE%89%E8%A3%85%E8%B4%A6%E6%88%B7/">最新SS-SSR & 安装账户</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/MY%20%E6%94%B6%E5%90%AC%E5%88%97%E8%A1%A8/">MY 收听列表</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/VPS%E6%90%AD%E5%BB%BAAria2+AriaNG+Rclone%E6%8C%82%E8%BD%BDGB%E5%AE%9E%E7%8E%B0%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%88%B0%E7%BD%91%E7%9B%98/">VPS搭建Aria2+AriaNG+Rclone挂载GB实现离线下载到网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%BC%A0%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">ubuntu下搭建ftp服务器实现上传于下载功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/Telegram%E7%A4%BE%E7%BE%A4-%E9%A2%91%E9%81%93-%E6%9C%BA%E5%99%A8%E4%BA%BA/">Telegram社群-频道-机器人</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/CentOS-Debian-Ubuntu%20ShadowsocksR%20%E5%8D%95-%E5%A4%9A%E7%AB%AF%E5%8F%A3%20%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC/">CentOS-Debian-Ubuntu ShadowsocksR 单-多端口 一键管理脚本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/Resilio%20Sync%20License%20%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/">Resilio Sync License 授权文件下载</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/GoPro%E7%BC%A9%E6%97%B6%E6%91%84%E5%BD%B1%E6%8A%80%E5%B7%A7/">GoPro缩时摄影技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/%E5%9C%A8%E7%BA%BF%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86/">在线经典游戏合集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E8%8C%83%E6%96%87%E5%92%8C%E7%BB%83%E4%B9%A0/">用户使用场景范文和练习</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
