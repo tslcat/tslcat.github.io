@@ -1,0 +1,500 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>shadowsocks超详细科普教程 | 潜空间</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">shadowsocks超详细科普教程</h1><a id="logo" href="/.">潜空间</a><p class="description">Stay Hungry. Stay Foolish</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">shadowsocks超详细科普教程</h1><div class="post-meta">2017-07-27<span> | </span><span class="category"><a href="/categories/VPS/">VPS</a></span></div><div class="post-content"><p>没有可用的shadowsocks节点线路，shadowsocks在你手里也是浮云</p>
+<p>这个作为重点先说一下</p>
+<hr>
+<p>附录，在文本最后</p>
+<p>附1: shadowsocks如何实现类VPN代理</p>
+<p>附2：shadowsocks如何代理本地游戏客户端或其他软件客户端</p>
+<p>附3: chrome浏览器SwitchyOmega扩展如何添加shadowsocks的代理设置</p>
+<p>附4：全球付Globalcash虚拟信用卡和paypal申请教程</p>
+<p>附5：什么是cn2?</p>
+<p>=============================================================</p>
+<p><strong>[section label=”course”]Shadowsocks的小白使用教程</strong></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://51______ruyo______net/p/412______html&z" target="_blank" rel="noopener">http://51.ruyo.net/p/412.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://t______cn/Ry42Kbx&z" target="_blank" rel="noopener">http://t.cn/Ry42Kbx</a></p>
+<p>chrome浏览器配合代理扩展的设置，下拉记事本滑块到底，看附3</p>
+<p>首先明确一点，不管 Shadowsocks 有几种版本，都分为服务端和客户端，</p>
+<p>服务端是部署在服务器（VPS）上的，客户端是在你的电脑上使用的。</p>
+<p>简单说一下windows系统，你有shadowsocks节点的情况下，Shadowsocks客户端的设置代理使用教程</p>
+<p>Repeat 10 times for this, DO NOT ASK void questions!一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行网或群共享下载Windows系统的Shadowsocks客户端软件为绿色免安装，下载 解压到任意目录，如：D:/Program Files/shadowsocksshadowsocks的账号(本地客户端配置参数)一般包括这么几个部分4-1 ：服务器 IP （一般为域名或数字ip）4-2： Port ：服务器端口 （不同的账号的端口也都是不同的）4-3 ：Password：你的密码4-4 ：加密模式：鼠标点击下拉小三角选取</p>
+<p>依次手动输入以下3项</p>
+<p>shadowsocks 服务器域名或IP服务器端口密码并选择ss服务商提供的节点对应的加密方式</p>
+<p>点击“确定”</p>
+<p>右下角的 代理端口 指的是本地监听端口，一般保持默认1080就可以，不用你填。</p>
+<p>现在的ss站都提供二维码形式的ss节点配置参数文件</p>
+<p>对于二维码形式的ss节点配置文件，也可以用客户端自带的二维码扫描功能快速添加</p>
+<p>右键&gt;任务栏&gt;ss客户端图标&gt;服务器&gt;扫描屏幕二维码</p>
+<p>客户端支持添加多线路节点，方便你切换，选择相对你网络环境质量较好，速度快的节点。</p>
+<p>shadowsocks节点速度快慢，影响shadowsocks节点速度的因素：</p>
+<p>你的机房（地理位置，影响节点路由），运营商（网络封锁程度、丢包率、延迟），</p>
+<p>时间段（高峰期），运营商QoS限速，你的本地物理宽带等等。</p>
+<p>总结起来就是一句话：无法预测。</p>
+<p>一般免费或付费shadowsocks站都会提供多个不同vps的节点供你选择切换。</p>
+<ol start="5">
+<li>桌面右下角 任务栏 右键ss图标 选择 启用系统代理。</li>
+</ol>
+<p>系统代理模式 根据自己需要选择pac或全局代理 ，一般建议pac</p>
+<ol start="6">
+<li>打开IE浏览器，访问<a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______youtube______com/&z" target="_blank" rel="noopener">https://www.youtube.com/</a></li>
+</ol>
+<p>其他浏览器的shadowsocks代理设置参考上面的教程链接或下面的说明</p>
+<p>网上找了几个客户端的使用教程 供参考</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______awolau______com/shadowsocks/shadowsocks-win7-xp______html&z" target="_blank" rel="noopener">http://www.awolau.com/shadowsocks/shadowsocks-win7-xp.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/useage-muti-plat-shadowsocks/&z" target="_blank" rel="noopener">http://cnwall.tk/useage-muti-plat-shadowsocks/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://cnlic______com/?paged=2&z" target="_blank" rel="noopener">https://cnlic.com/?paged=2</a></p>
+<p>如果使用Shadowsocks，请清除或还原以前修改过的hosts文件，</p>
+<p>也请务必关闭其他占用1080等端口的代理、翻墙软件</p>
+<p>=============================================================</p>
+<p><strong>[section label=”exchange”]付费的shadowsocks节点</strong></p>
+<p>提供商鱼龙混杂，没个统一的流量和收费标准</p>
+<p>确需购买，建议多比较几家的节点和流量</p>
+<p>能提供试用当然最好，有月付，季付尽量不要选择年付。</p>
+<p>现在基本所有的shadowsocks站都提供收费服务</p>
+<p>以下链接是一部分提供收费服务的shadowsocks商家</p>
+<p>非广告，非推广，来源网络，仅供参考</p>
+<p>shadowsocks各种版本及教程:<a href="http://www.viidii.info/?http://www______lyzlk______cn/thread-32695-1-1______html&z" target="_blank" rel="noopener">www.wegotofqss.info</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______wegotofqss______info/&z" target="_blank" rel="noopener">www.wegotofqss.info</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/112527110814073296465/posts&z" target="_blank" rel="noopener">https://plus.google.com/u/0/112527110814073296465/posts</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/+%E5%96%B5%E5%B8%95%E6%96%AF/posts&z" target="_blank" rel="noopener">https://plus.google.com/u/0/+%E5%96%B5%E5%B8%95%E6%96%AF/posts</a></p>
+<p>目前7元/月，不限流量和接入设备数量</p>
+<p>所有节点均支持shadowsocks/IKEv2 VPN/Anyconnect VPN/IPSec Xauth VPN/DNS接入</p>
+<p>联系方式– hangouts（环聊）或gmail</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______fyzhuji______com/shadow______html&z" target="_blank" rel="noopener">https://www.fyzhuji.com/shadow.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______start-ss______biz/&z" target="_blank" rel="noopener">https://www.start-ss.biz/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______deepss______org/index______php&z" target="_blank" rel="noopener">https://www.deepss.org/index.php</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://my______ssjsq______net/&z" target="_blank" rel="noopener">http://my.ssjsq.net/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://playss______co/&z" target="_blank" rel="noopener">http://playss.co/</a></p>
+<p><a href="http://www.viidii.info/?http://www______qiushiss______com/cart______php&z" target="_blank" rel="noopener">http://www.qiushiss.com/cart.php</a></p>
+<p><a href="http://www.viidii.info/?https://www______bluecloud______pw/&z" target="_blank" rel="noopener">https://www.bluecloud.pw/</a></p>
+<p><a href="http://www.viidii.info/?http://www______hishadowsocks______com/&z" target="_blank" rel="noopener">http://www.hishadowsocks.com/</a></p>
+<p><a href="http://www.viidii.info/?https://my______ssh91______net/&z" target="_blank" rel="noopener">https://my.ssh91.net/</a></p>
+<p><a href="http://www.viidii.info/?http://www______pgfastss______org/order______php&z" target="_blank" rel="noopener">http://www.pgfastss.org/order.php</a></p>
+<p><a href="http://www.viidii.info/?http://my______ssh91______net/cart______php&z" target="_blank" rel="noopener">http://my.ssh91.net/cart.php</a></p>
+<p><a href="http://www.viidii.info/?http://www______pgfastss______com/index______php&z" target="_blank" rel="noopener">http://www.pgfastss.com/index.php</a></p>
+<p><a href="http://www.viidii.info/?http://blog______onlybird______com/&z" target="_blank" rel="noopener">http://blog.onlybird.com/</a>收费ssh代理</p>
+<p><a href="http://www.viidii.info/?http://itti______xyz/&z" target="_blank" rel="noopener">http://itti.xyz/</a></p>
+<p><a href="http://www.viidii.info/?https://www______ezlink______hk/order&z" target="_blank" rel="noopener">https://www.ezlink.hk/order</a></p>
+<p><a href="http://www.viidii.info/?https://vnet______link/&z" target="_blank" rel="noopener">https://vnet.link/</a> 微林（中转）</p>
+<hr>
+<p><em>注意</em>：Shadowsocks.com不是shadowsocks官网，就是一个纯提供商业服务的网站，所售服务和其他shadowsocks商业站一样。</p>
+<p>=============================================================</p>
+<p>公开的shadowsocks线路极易遭到恶意流量消耗和DDoS攻击或恶意破解ssh</p>
+<p>现在明码公开的免费线路，网上论坛和v2ex 还有G+ twitter几乎已经没有了，</p>
+<p>你可以试着自己搜一下 <a href="http://www.viidii.info/?http://t______cn/RLTGXfn&z" target="_blank" rel="noopener">http://t.cn/RLTGXfn</a>或<a href="http://www.viidii.info/?http://t______cn/RLTGoxm&z" target="_blank" rel="noopener">http://t.cn/RLTGoxm</a></p>
+<p><strong>[section label=”free”]获取shadowsocks节点的几种方式</strong></p>
+<p>1.抢码获取免费流量</p>
+<p>免费或免费+收费的shadowsocks站，现在注册码都由站长或管理员严格控制发放了。肉少狼多，现在抢码有难度</p>
+<p>2.自己买vps搭建。</p>
+<p>安全，流量独享。缺点;节点单一，速度如何没保证，靠人品值。</p>
+<p>3.买现成的ss服务商提供的服务</p>
+<p>缺点：一般都有流量限制。</p>
+<p>没有有效节点，想免费体验一把的只能自己想其他办法了。</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______hishadowsocks______com/&z" target="_blank" rel="noopener">http://www.hishadowsocks.com/</a> 4小时更新一次密码</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______ishadowsocks______com/&z" target="_blank" rel="noopener">http://www.ishadowsocks.com/</a> 6小时更新一次密码</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______surperoneblog______com/shadowsocks______php&z" target="_blank" rel="noopener">http://www.surperoneblog.com/shadowsocks.php</a> 6小时更新一次密码</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://sscat______cc/free/&z" target="_blank" rel="noopener">http://sscat.cc/free/</a> 3小时更新一次密码</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://kf0______cc/&z" target="_blank" rel="noopener">http://kf0.cc/</a> 4小时更新一次密码</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______ezlink______hk/free______php&z" target="_blank" rel="noopener">https://www.ezlink.hk/free.php</a> 密码每天0点更新</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://freehide______co______uk/free-shadowsocks/&z" target="_blank" rel="noopener">http://freehide.co.uk/free-shadowsocks/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://namaho______com&z" target="_blank" rel="noopener">https://namaho.com</a> 半个月更换一次密码 不限速不限量不收费不负责</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______htovpn______net/?View=FreeSS&z" target="_blank" rel="noopener">http://www.htovpn.net/?View=FreeSS</a> 3小时更新一次密码 需要注册</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://sskuai______pw/&z" target="_blank" rel="noopener">http://sskuai.pw/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/communities/104092405342699579599&z" target="_blank" rel="noopener">https://plus.google.com/communities/104092405342699579599</a> shadowsocks免费帐号</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/communities/109962494203239446911&z" target="_blank" rel="noopener">https://plus.google.com/communities/109962494203239446911</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/+GhostAssassin/posts/NrDZWoXVjSD&z" target="_blank" rel="noopener">https://plus.google.com/+GhostAssassin/posts/NrDZWoXVjSD</a> 免费shadowsocks大集合</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______fyhqy______com/356/&z" target="_blank" rel="noopener">http://www.fyhqy.com/356/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://yyf______sg/code&z" target="_blank" rel="noopener">http://yyf.sg/code</a> 免费shadowsocks邀请码集合站</p>
+<p>QQ搜群 shadowsocks 有的shadowsocks qq群有免费ss线路或内部放邀请码</p>
+<p>以上链接或链接中的免费shadowsocks随时可能失效，这个就没啥好解释的了。</p>
+<p>有问题，自己随时google解决。</p>
+<p><strong>[section label=”google-plus”]1个shadowsocks讨论圈</strong></p>
+<p><a href="http://www.viidii.info/?https://plus______google______com/s/shadowsocks&z" target="_blank" rel="noopener">https://plus.google.com/s/shadowsocks</a></p>
+<p>=============================================================</p>
+<p>提醒一下</p>
+<p>如非确实必要，尽量不要用shadowsocks全局</p>
+<p>可以通过软件自带pac或浏览器安装代理管理扩展，实现智能分流</p>
+<p>如何修改shadowsocks pac文件</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______awolau______com/shadowsocks/start-pac______html&z" target="_blank" rel="noopener">http://www.awolau.com/shadowsocks/start-pac.html</a></p>
+<p>实现科学上网时，启用系统代理后，Shadowsocks客户端会自动配置一个IE代理，使用本地127.0.0.1:1080，默认会选择PAC模式。关于PAC，大家可以参考维基百科。</p>
+<p>选择PAC模式后，系统会根据PAC配置文件pac.txt(与Shadowsocks.exe同级目录)，</p>
+<p>当你的浏览器访问这个配置文件里面配置的URL时，会使用代理，否则则不会使用代理。</p>
+<p>这样既节省ss流量，也会提高国内网站的访问速度，这个很不错。</p>
+<p>最后，如果大家发现有什么网站被Qiang了，可以在pac.txt这个文件里面添加这个网站URL，即可通过ss的代理来访问了。同时，最好也定期从GFWList更新PAC。</p>
+<p>=============================================================</p>
+<p><strong>[section label=”easy”]如何制作便携版shadowsocks</strong></p>
+<p>下载2.5.6版（clowwindy）shadowsocks（只有高于这版的才支持制作便携版）</p>
+<p>在 shadowsocks.exe 所在目录创建一个 shadowsocks_portable_mode.txt 文件</p>
+<p>退出程序，重启程序</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-windows/releases&z" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-windows/releases</a></p>
+<p>源码下架，可以自行寻找</p>
+<p>注：SSR版貌似不支持此项功能</p>
+<p>=============================================================</p>
+<p><strong>[section label=”inf”]shadowsocks俗称 纸飞机</strong></p>
+<p>ShadowSocks是Clowwindy开发的，一个轻量级的几乎跨平台的开源翻墙应用。</p>
+<p>Shadowsocks 是一个安全的socks5代理，由于服务端与终端都简便易用，</p>
+<p>目前配合VPS主机后十分稳定，已慢慢取代GAE等成为主流代理工具。</p>
+<p><strong>[section label=”style”]Shadowsocks功能特性：</strong></p>
+<ol>
+<li><p>高性能：基于异步 I/O，事件驱动的程序实现；专为大并发、大流量的应用场景优化；无需保持连接状态，适用于移动设备及无线网络。</p>
+</li>
+<li><p>低资源占用：完全以原生代码实现，后台服务内存占用不超过10MB。</p>
+</li>
+<li><p>跨平台：可以在PC、MAC、智能手机（iPhone与Android）、甚至路由器（OpenWRT）中运行。</p>
+</li>
+<li><p>安全：支持多种加密方案及多种加密强度，提供系统级别的网络数据加密。</p>
+</li>
+<li><p>开源：由社区维护的开源项目，包括GPL及MIT两种协议的多种实现。</p>
+</li>
+</ol>
+<p>有必要先说明一下，用shadowsocks科学上网不是”免费”的。</p>
+<p>shadowsocks软件是免费的,但必须要有架设好的服务器线路才能实现无障碍的“科学上网”。</p>
+<p>架设shadowsocks需要自己购买vps，在服务器端搭建，或买别人搭建好出售流量的线路。</p>
+<p>网上有免费分享的shadowsocks线路，这种是可以免费使用的。</p>
+<p>=============================================================</p>
+<p><strong>[section label=”web”]shadowsocks官方信息</strong></p>
+<p><a href="http://shadowsocks.org/en/download/clients.html" target="_blank" rel="noopener">http://shadowsocks.org/en/download/clients.html</a></p>
+<p>shadowsocks官网</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______org/en/index______html&z" target="_blank" rel="noopener">http://shadowsocks.org/en/index.html</a></p>
+<p>shadowsocks作者</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______v2ex______com/member/clowwindy&z" target="_blank" rel="noopener">https://www.v2ex.com/member/clowwindy</a></p>
+<p>shadowsocks官方 pac</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/clowwindy/gfwlist2pac&z" target="_blank" rel="noopener">https://github.com/clowwindy/gfwlist2pac</a></p>
+<p>shadowsocks官方的2种pac模式（无法更新了）</p>
+<p>fast mode pac</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/clowwindy/gfwlist2pac/master/test/proxy______pac&z" target="_blank" rel="noopener">https://raw.githubusercontent.com/clowwindy/gfwlist2pac/master/test/proxy.pac</a></p>
+<p>precise mode pac</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/clowwindy/gfwlist2pac/master/test/proxy_abp______pac&z" target="_blank" rel="noopener">https://raw.githubusercontent.com/clowwindy/gfwlist2pac/master/test/proxy_abp.pac</a></p>
+<p>一个shadowsocks可用的可更新的pac</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/KyonLi/ss-pac/master/ss______pac&z" target="_blank" rel="noopener">https://raw.githubusercontent.com/KyonLi/ss-pac/master/ss.pac</a></p>
+<p>=============================================================</p>
+<p>shadowsocks客户端官网下载页面</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______org/en/download/clients______html&z" target="_blank" rel="noopener">http://shadowsocks.org/en/download/clients.html</a></p>
+<p>Windows系统shadowsocks旧版及MAC电脑客户端shadowsocks官方下载页面</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://sourceforge______net/projects/shadowsocksgui/files/dist/&z" target="_blank" rel="noopener">http://sourceforge.net/projects/shadowsocksgui/files/dist/</a></p>
+<p>github的下载链接(最新版)</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-windows/releases&z" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-windows/releases</a></p>
+<p>低于2.5.2的旧版Shadowsocks-win-x.x.x.zip和Shadowsocks-win-dotnet4.0-x.x.x.zip的区别</p>
+<p>For &gt;= Windows 8 or with .Net 4.0, download Shadowsocks-win-dotnet4.0-x.x.x.zip.</p>
+<p>For &lt;= Windows 7 or with .Net 2.0, download Shadowsocks-win-x.x.x.zip.</p>
+<p><strong>[section label=”notice”]注意：</strong></p>
+<p>NET 2.0不能在Windows10良好运行，</p>
+<p>从2.5.2这个版本开始，我们不再支持.NET 2.0。最低要求 .Net 4.0</p>
+<p>现在Shadowsocks-win-2.5.2.zip和Shadowsocks-win-dotnet4.0-2.5.2.zip是完全相同的文件。</p>
+<p>如果您使用的是Windows XP或7，请安装.NET 4.0或更高版本。</p>
+<p>负载均衡：就是多个连接分摊到各个服务器 随机选择服务器</p>
+<p>高可用：按最低延迟+最稳定的标准（丢包率）自动选择一个服务器进行连接</p>
+<p>累计丢包率：通过定时 ping 来测速和选择。如果要使用本功能，请打开菜单里的统计可用性</p>
+<p>shadowsocks作者关于windows2.0客户端功能性的说明</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______chinagfw______org/2014/11/shadowsocks-for-windows-20______html&z" target="_blank" rel="noopener">http://www.chinagfw.org/2014/11/shadowsocks-for-windows-20.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://vc2tea______com/whats-shadowsocks/&z" target="_blank" rel="noopener">http://vc2tea.com/whats-shadowsocks/</a> 写给非专业人士看的 Shadowsocks 简介</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://blog______linuxeye______com/423______html&z" target="_blank" rel="noopener">https://blog.linuxeye.com/423.html</a> Shadowsocks原理</p>
+<hr>
+<p>安卓客户端-影梭的官网下载页面</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://play______google______com/store/apps/details?id=com______github______shadowsocks&z" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.github.shadowsocks</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-android/releases&z" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-android/releases</a></p>
+<p>安卓未root，也可以使用shadowsocks</p>
+<p>安卓版教程 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://51______ruyo______net/p/412______html&z" target="_blank" rel="noopener">http://51.ruyo.net/p/412.html</a></p>
+<p>设置要点：路由-绕过局域网及中国大陆地址，全局代理-勾选“设置系统代理”。</p>
+<p>设置完成后，点击右上角的开关，即可开启Shadowsocks代理</p>
+<p>有特殊原因还在坚守fqrouter2的，可以添加自己的shadowsocks线路，添加后fqrouter可满血复活</p>
+<p>=============================================================</p>
+<p><strong>[section label=”shadowsocksR”]shadowsockR</strong></p>
+<p>shadowsocks-rss版下载链接</p>
+<p>shadowsockR就是第三方shadowsocks编译版（群共享的神奇海螺版shadowsocks-SSR）</p>
+<p>shadowsockR官方链接：<a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/breakwa11/shadowsocks-rss&z" target="_blank" rel="noopener">https://github.com/breakwa11/shadowsocks-rss</a></p>
+<p>ShadowsocksR 服务端安装教程</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/breakwa11/shadowsocks-rss/wiki/Server-Setup&z" target="_blank" rel="noopener">https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/+MikotoMisakamm&z" target="_blank" rel="noopener">https://plus.google.com/u/0/+MikotoMisakamm</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/118234153777431449917/posts&z" target="_blank" rel="noopener">https://plus.google.com/u/0/118234153777431449917/posts</a></p>
+<p>使用第三方shadowsocks编译版前，请务必仔细阅读shadowsockR主页的参数解释和说明</p>
+<hr>
+<p><strong>[section label=”route”]路由器端shadowsocks教程</strong></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://cokebar______info/&z" target="_blank" rel="noopener">https://cokebar.info/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://php-rmcr7______rhcloud______com/openwrt-fq/&z" target="_blank" rel="noopener">https://php-rmcr7.rhcloud.com/openwrt-fq/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://hong______im/2014/03/16/configure-an-openwrt-based-router-to-use-shadowsocks-and-redirect-foreign-traffic/&z" target="_blank" rel="noopener">http://hong.im/2014/03/16/configure-an-openwrt-based-router-to-use-shadowsocks-and-redirect-foreign-traffic/</a></p>
+<p>具体哪些型号的路由器支持shadowsocks?</p>
+<p>想自己动手的，淘宝搜 openWRT,QQ搜 群openWRT</p>
+<p>=============================================================</p>
+<p><strong>[section label=”ios”]iOS端 shadowsocks客户端教程</strong></p>
+<p>iOS使用shadowsocks的前提条件是必须越狱！越狱！越狱！</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______pgssh______com/ios-shadowsocks______html&z" target="_blank" rel="noopener">http://www.pgssh.com/ios-shadowsocks.html</a></p>
+<p>未越狱的话，ss客户端仅相当于一个内置浏览器，无法代理其他应用。</p>
+<p>直接在appstore搜索 Shadowsocks，下载地址：</p>
+<p><a href="https://itunes.apple.com/us/app/shadowsocks/id665729974?ls=1&amp;mt=8" target="_blank" rel="noopener">https://itunes.apple.com/us/app/shadowsocks/id665729974?ls=1&amp;mt=8</a></p>
+<p>iOS 越狱了的话，可以代理其他应用端。越狱的直接在 Cydia 里搜索 Shadowsocks ，然后安装。</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jas0n______me/2014/11/12/up_14_11_12/&z" target="_blank" rel="noopener">http://jas0n.me/2014/11/12/up_14_11_12/</a></p>
+<p>未越狱的iOS端建议使用anyconnectvpn或最近的神器Surge</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cellsystech______com/docs/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF%E5%8F%8A%E5%8D%8F%E8%AE%AE/&z" target="_blank" rel="noopener">http://www.cellsystech.com/docs/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF%E5%8F%8A%E5%8D%8F%E8%AE%AE/</a></p>
+<p><strong>[section label=”surge”]关于Surge</strong></p>
+<p>已经提交apple,在AppStore上架</p>
+<p><a href="http://www.viidii.info/?https://t______co/TF1WvOgq1c&z" target="_blank" rel="noopener">https://t.co/TF1WvOgq1c</a> Surge AppStore 购买前说明。</p>
+<p>购买直达链接： <a href="https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637?ls=1&amp;mt=8" target="_blank" rel="noopener">https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637?ls=1&amp;mt=8</a></p>
+<p>Surge 新手使用指南</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://medium______com/@scomper/surge-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-a1533c10e80b&z" target="_blank" rel="noopener">https://medium.com/@scomper/surge-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-a1533c10e80b</a></p>
+<p>如何配置surge在ios中使用shadowsocks科学上网</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://ideafoc______us/2015/10/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEsurge%E5%9C%A8ios%E4%B8%AD%E4%BD%BF%E7%94%A8shadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/&z" target="_blank" rel="noopener">http://ideafoc.us/2015/10/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEsurge%E5%9C%A8ios%E4%B8%AD%E4%BD%BF%E7%94%A8shadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://surge______run/&z" target="_blank" rel="noopener">http://surge.run/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://gist______github______com/soffchen/05bc0f017a10486eb646&z" target="_blank" rel="noopener">https://gist.github.com/soffchen/05bc0f017a10486eb646</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://twitter______com/Blankwonder&z" target="_blank" rel="noopener">https://twitter.com/Blankwonder</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/+LeoLiu/posts/GPvHQ7uj2iv&z" target="_blank" rel="noopener">https://plus.google.com/+LeoLiu/posts/GPvHQ7uj2iv</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______pgyer______com/b7c37752060a55ceeae89159d6cedd52&z" target="_blank" rel="noopener">http://www.pgyer.com/b7c37752060a55ceeae89159d6cedd52</a></p>
+<p>Surge可以去twitter上找作者要测试版</p>
+<p>需要 OS X 10.10 / iOS 9.0 以上版本</p>
+<p>=============================================================</p>
+<p><strong>[section label=”parameter”]shadowsocks客户端参数简单说明：</strong></p>
+<p>“server”， 服务器名称 一般填写域名或ip</p>
+<p>“server_port”， 服务端监听端口 填写ss提供者给你的服务器端口</p>
+<p>“local_address”， 本地中转地址 通常为 127.0.0.1</p>
+<p>“password”， 接入服务端密码</p>
+<p>“method”， 加密方式 通常为 aes-256-cfb或rc4-md5</p>
+<p>“local_port”， 本地监听端口， 默认为 1080 ，本地端口一般保持默认即可</p>
+<p>“timeout”， 以秒为单位的连接超时时长</p>
+<p>说明:ss://开头的地址是base64加密方式提供的shadowsocks线路，</p>
+<p>解密方法：</p>
+<p>复制ss:// 后面的字符串，解密后，就可以得到格式为method:password@IP:Port的服务器地址。</p>
+<p>一个base64解密网站</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://tool______chinaz______com/Tools/Base64______aspx?jdfwkey=cvvmy&z" target="_blank" rel="noopener">http://tool.chinaz.com/Tools/Base64.aspx?jdfwkey=cvvmy</a></p>
+<p>注意：</p>
+<p>切记遵守vps所在国法律，勿做违法或法律禁止事宜。</p>
+<p>千万不要挂shadowsocks使用p2p BT下载。</p>
+<p>因为美国的vps需要遵从美国的DMCA版权法律，如果该vps被用于bt下载，</p>
+<p>使用的vps的ip就会被记录下来。VPS商家就会封号，vps就会被停止服务。</p>
+<p>如果不想失去这个翻墙手段，最好不要翻墙的时候用p2p。</p>
+<p>=============================================================</p>
+<p><strong>[section label=”build-course”]自己部署shadowsocks服务器端的教程</strong></p>
+<p>以下为vps端自己部署shadowsocks服务器端的教程，不是自己部署的就略过</p>
+<p>大流量或重度用户建议自己搭建或购买适合自己流量,价位的shadowsocks服务</p>
+<p>对个人隐私和安全性比较重视的，就自己部署shadowsocks服务器端吧</p>
+<p>网上搭建和优化教程很多，自己动手搜一下。以下几个链接供参考</p>
+<p>官网教程</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks/wiki&z" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks/wiki</a></p>
+<p>网上搜集的一部分教程 打不开的链接挂代理访问</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://vbird______dic______ksu______edu______tw/&z" target="_blank" rel="noopener">http://vbird.dic.ksu.edu.tw/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______blogspot______com/2015/01/shadowsocks______html&z" target="_blank" rel="noopener">http://shadowsocks.blogspot.com/2015/01/shadowsocks.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______dothinking______cn/ruan-jian-jing-pin-wu/shadowsocks-vps______html&z" target="_blank" rel="noopener">http://www.dothinking.cn/ruan-jian-jing-pin-wu/shadowsocks-vps.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/103234343779069345365/posts/Xce4EJpLGhX&z" target="_blank" rel="noopener">https://plus.google.com/103234343779069345365/posts/Xce4EJpLGhX</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______blogspot______com/2015/01/shadowsocks______html&z" target="_blank" rel="noopener">http://shadowsocks.blogspot.com/2015/01/shadowsocks.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://ju______outofmemory______cn/entry/114637&z" target="_blank" rel="noopener">http://ju.outofmemory.cn/entry/114637</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______abclite______org/602&z" target="_blank" rel="noopener">http://www.abclite.org/602</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://teddysun______com/399______html&z" target="_blank" rel="noopener">http://teddysun.com/399.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://php-rmcr7______rhcloud______com/shadowsocks-server/&z" target="_blank" rel="noopener">https://php-rmcr7.rhcloud.com/shadowsocks-server/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______fanyue______info/2015/02/shadowsocks______html&z" target="_blank" rel="noopener">http://www.fanyue.info/2015/02/shadowsocks.html</a> 搬瓦工一键shadowsocks教程</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jannerchang______tumblr______com/post/114392917710/4-23&z" target="_blank" rel="noopener">http://jannerchang.tumblr.com/post/114392917710/4-23</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/shadowsocks-manyuser-udp/&z" target="_blank" rel="noopener">http://www.cmsky.com/shadowsocks-manyuser-udp/</a> Shadowsocks-Manyuser开启UDP支持</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/serverspeeder-install/&z" target="_blank" rel="noopener">http://www.cmsky.com/serverspeeder-install/</a> 安装锐速为网络加速</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://blog______linuxeye______com/423______html&z" target="_blank" rel="noopener">https://blog.linuxeye.com/423.html</a> Shadowsocks一键安装脚本</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://blog______linuxeye______com/426______html&z" target="_blank" rel="noopener">https://blog.linuxeye.com/426.html</a> ShadowSocks多用户管理系统搭建（moeSS+manyuser）</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/bandwagonhost-one-key-install-shadowsocks/&z" target="_blank" rel="noopener">http://cnwall.tk/bandwagonhost-one-key-install-shadowsocks/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/3334______html&z" target="_blank" rel="noopener">http://www.tennfy.com/3334.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/2022______html&z" target="_blank" rel="noopener">http://www.tennfy.com/2022.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://capbone______com/shadowsocks/&z" target="_blank" rel="noopener">http://capbone.com/shadowsocks/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/2843______html&z" target="_blank" rel="noopener">http://www.tennfy.com/2843.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/2148______html&z" target="_blank" rel="noopener">http://www.tennfy.com/2148.html</a></p>
+<p>iOS端搭建anyconnect教程</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/+McGhostGao/posts/Z4gJrZsiRyp&z" target="_blank" rel="noopener">https://plus.google.com/+McGhostGao/posts/Z4gJrZsiRyp</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://lifehacker______io/post/108708838206/cisco-anyconnect-shadowsocks&z" target="_blank" rel="noopener">http://lifehacker.io/post/108708838206/cisco-anyconnect-shadowsocks</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://ifreedomlife______com/2015/04/20/Setup-Cisco-AnyConnect-VPN-on-CentOS7/&z" target="_blank" rel="noopener">http://ifreedomlife.com/2015/04/20/Setup-Cisco-AnyConnect-VPN-on-CentOS7/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jannerchang______tumblr______com/post/108814743720/centos7-strongswan-ios-vpn&z" target="_blank" rel="noopener">http://jannerchang.tumblr.com/post/108814743720/centos7-strongswan-ios-vpn</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://goo______gl/WRW8ns&z" target="_blank" rel="noopener">http://goo.gl/WRW8ns</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/anyconnect/&z" target="_blank" rel="noopener">http://www.cmsky.com/anyconnect/</a></p>
+<p>=============================================================</p>
+<p><strong>[section label=”vps”]关于VPS（虚拟专用服务器）的基础知识</strong></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/about-vps/&z" target="_blank" rel="noopener">http://cnwall.tk/about-vps/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______v2ex______com/go/vps&z" target="_blank" rel="noopener">https://www.v2ex.com/go/vps</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/about-vps-ssh-client/&z" target="_blank" rel="noopener">http://cnwall.tk/about-vps-ssh-client/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______vpser______net/vps-howto&z" target="_blank" rel="noopener">http://www.vpser.net/vps-howto</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://since1989______org/digitalocean/vps-vpn-shadowsocks______html&z" target="_blank" rel="noopener">http://since1989.org/digitalocean/vps-vpn-shadowsocks.html</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______appfordev______com/68______html&z" target="_blank" rel="noopener">https://www.appfordev.com/68.html</a></p>
+<p>几个vps测评网站（排名不分先后）：</p>
+<p>1.LEB: <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://lowendbox______com/&z" target="_blank" rel="noopener">http://lowendbox.com/</a></p>
+<p>2.老左博客： <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______laozuo______org/vps&z" target="_blank" rel="noopener">http://www.laozuo.org/vps</a></p>
+<p>3.主机测评： <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______zhujiceping______com/&z" target="_blank" rel="noopener">http://www.zhujiceping.com/</a></p>
+<p>4.freehao123: <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______freehao123______com/category/vps-zhuji/&z" target="_blank" rel="noopener">http://www.freehao123.com/category/vps-zhuji/</a></p>
+<p>5.年付vps： <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______yrvps______com/&z" target="_blank" rel="noopener">http://www.yrvps.com/</a></p>
+<p>6.赵荣部落： <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______zrblog______net/?&z" target="_blank" rel="noopener">http://www.zrblog.net/?</a></p>
+<p>7.VPS推荐网 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://vpsadd______com/&z" target="_blank" rel="noopener">http://vpsadd.com/</a></p>
+<p>8.主机博士 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______drpsafe______com/&z" target="_blank" rel="noopener">http://www.drpsafe.com/</a></p>
+<p>9.小夜博客 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______vpsmm______com/&z" target="_blank" rel="noopener">http://www.vpsmm.com/</a></p>
+<p>10.v2ex <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______v2ex______com/go/vps&z" target="_blank" rel="noopener">https://www.v2ex.com/go/vps</a></p>
+<p>想了解更多，自己google或baidu</p>
+<p>=============================================================</p>
+<p><strong>[section label=”think”]以后翻墙的方向，重点就是去中心化</strong></p>
+<p>fqrouter2作者:</p>
+<p>为何有fqrouter？</p>
+<p>因为当年GFW还是一个入侵检测系统，不是一个防火墙。</p>
+<p>这就意味着可以利用很多入侵检测系统的漏洞来做无代理的翻墙，这是很有意思的事情。</p>
+<p>为何关闭fqrouter？</p>
+<p>因为今年GFW已经正式升级为一道防火墙了，google的成千上万个ip被封。</p>
+<p>这种行为相当于把部分国际互联网进行了物理层面的拔网线。</p>
+<p>今后的翻墙只有资源的比拼了，对于这种索然无味的事情我就不在这个上面浪费生命了。</p>
+<p>那我怎么翻墙？（文字作者）</p>
+<p>找渠道买shadowsocks帐号。这种零散的基于交易的行为是去中心化的，长期的，有生命力的。</p>
+<hr>
+<p>shadowsocks 作者clowwindy：</p>
+<p>从实际情况上来看，Shadowsocks 没有办法离开去中心化的服务器。要么自己花钱买 VPS，</p>
+<p>要么用有人分享的账号，要么用有人提供的付费服务，他们各有所长，适合不同的人。</p>
+<p>=============================================================</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______solidot______org/story?sid=45231&z" target="_blank" rel="noopener">http://www.solidot.org/story?sid=45231</a></p>
+<p>ShadowsocksBackup</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/Long-live-shadowsocks&z" target="_blank" rel="noopener">https://github.com/Long-live-shadowsocks</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/ShadowsocksBackup&z" target="_blank" rel="noopener">https://github.com/ShadowsocksBackup</a></p>
+<p>=============================================================</p>
+<p><strong>[section label=”web-explain”]Shadowsocks Windows 官方使用说明</strong></p>
+<p>功能</p>
+<p>系统代理设置</p>
+<p>PAC 模式和全局模式</p>
+<p>GFWList 和用户规则</p>
+<p>支持 HTTP 代理</p>
+<p>支持多服务器切换</p>
+<p>支持 UDP 代理</p>
+<p>下载</p>
+<p>下载 最新版 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-windows/releases&z" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-windows/releases</a>。</p>
+<p>基本使用</p>
+<p>在任务栏找到 Shadowsocks 图标</p>
+<p>在 服务器 菜单添加多个服务器</p>
+<p>选择 启用系统代理 来启用系统代理。请禁用浏览器里的代理插件，或把它们设置为使用系统代理。</p>
+<p>除了设为系统代理，你也可以直接自己配置浏览器代理。在 SwitchyOmega 中把代理设置为 SOCKS5 或 HTTP 的 127.0.0.1:1080。这个 1080 端口可以在服务器设置中设置。</p>
+<p>PAC</p>
+<p>可以编辑 PAC 文件来修改 PAC 设置。Shadowsocks 会监听文件变化，修改后会自动生效。</p>
+<p>你也可以从 GFWList （由第三方维护）更新 PAC 文件。</p>
+<p>你也可以使用在线 PAC URL</p>
+<p>服务器自动切换</p>
+<p>负载均衡：随机选择服务器</p>
+<p>高可用：根据延迟和丢包率自动选择服务器</p>
+<p>累计丢包率：通过定时 ping 来测速和选择。如果要使用本功能，请打开菜单里的统计可用性。</p>
+<p>也可以实现 IStrategy 接口来自定义切换规则，然后给我们发一个 pull request。</p>
+<p>UDP</p>
+<p>对于 UDP，请使用 SocksCap 或 ProxyCap 强制你想使用的程序走代理。</p>
+<p>多实例</p>
+<p>如果想使用其它工具如 SwitchyOmega 管理多个服务器，可以启动多个 Shadowsocks。 为了避免配置产生冲突，把 Shadowsocks 复制到一个新目录里，并给它设置一个新的本地端口。</p>
+<p>另外在 SwitchyOmega 中需要使用 SOCKS5 代理，因为 HTTP 代理还是只会启动一个。</p>
+<p>服务器配置</p>
+<p>请访问 服务器</p>
+<p><a href="https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#linux--server-side" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#linux--server-side</a> 获取更多信息。</p>
+<p>绿色模式</p>
+<p>如果你想把所有临时文件放在 shadowsocks/temp 目录而不是系统的 temp 目录， 可以在shadowsocks 所在目录创建一个 shadowsocks_portable_mode.txt 文件。</p>
+<p>开发</p>
+<p>Visual Studio 2015 is required.</p>
+<p>授权</p>
+<p>GPLv3</p>
+<p>=============================================================</p>
+<p><strong>[section label=”add-1”]附1:</strong></p>
+<p>Shadowsocks（Sock5代理）的PAC模式与全局模式与VPN的区别</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://t______cn/Ry4wJ6x&z" target="_blank" rel="noopener">http://t.cn/Ry4wJ6x</a></p>
+<p>使用Proxifier把shadowsocks代理转为全局代理(类VPN)</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://t______cn/Ry42ih9&z" target="_blank" rel="noopener">http://t.cn/Ry42ih9</a></p>
+<p>Proxifier下载</p>
+<p>Proxifier 3.28 吕达嵘汉化注册版（安装即为注册版）</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______hanzify______org/software/13717______html&z" target="_blank" rel="noopener">http://www.hanzify.org/software/13717.html</a></p>
+<p>Proxifier v3.28 破解版</p>
+<p>Initex.Software.Proxifier.v3.28.Standard.Edition.Incl.Keymaker-ZWT</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www89______zippyshare______com/v/5iEwpCKM/file______html&z" target="_blank" rel="noopener">http://www89.zippyshare.com/v/5iEwpCKM/file.html</a></p>
+<p>Initex.Software.Proxifier.v3.28.Portable.Edition.Incl.Keymaker-ZWT</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www12______zippyshare______com/v/BqNsbIiu/file______html&z" target="_blank" rel="noopener">http://www12.zippyshare.com/v/BqNsbIiu/file.html</a></p>
+<p>本站系列教程：<a href="http://www.viidii.info/?https://gochrome______info/tag/proxifier-series/&z" target="_blank" rel="noopener">https://gochrome.info/tag/proxifier-series/</a></p>
+<p>=============================================================</p>
+<p><strong>[section label=”add-2”]附2：</strong></p>
+<p>shadowsocks如何代理本地游戏客户端或其他软件客户端</p>
+<p>关于代理UDP（以TCP转发或UDP转发均可）</p>
+<p>官方shadowsocks和第三方客户端shadowsocksR最新版，都支持配合使用SocksCap64/SocksCap/ProxyCap等工具，把需要TCP和UDP代理的程序通过本版本程序转发。即不需要折腾OpenWrt或路由器即可在PC上获得UDP转发的能力，是游戏玩家的福音</p>
+<p>如果你是个人用户，可自行更新服务端或向你的ss站长提议更新后端。</p>
+<p>如果你是站长，可从<a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/breakwa11/shadowsocks/tree/manyuser&z" target="_blank" rel="noopener">https://github.com/breakwa11/shadowsocks/tree/manyuser</a></p>
+<p>获取最新的多用户分支代码，与原版本兼容。</p>
+<p>1.需要第三方软件SocksCap64/SocksCap/ProxyCap</p>
+<p>2.需要有支持udp转发的shadowsocks节点</p>
+<p>SocksCap64教程（SocksCap/ProxyCap使用方法大同小异）</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/sockscap64-shadowsocks/&z" target="_blank" rel="noopener">http://www.cmsky.com/sockscap64-shadowsocks/</a></p>
+<p>SocksCap64免费</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______sockscap64______com/&z" target="_blank" rel="noopener">http://www.sockscap64.com/</a></p>
+<p>Sockscap 免费</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______socksproxychecker______com/sockscap______html&z" target="_blank" rel="noopener">http://www.socksproxychecker.com/sockscap.html</a></p>
+<p>Sockscap汉化版</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______hanzify______org/software/8898______html&z" target="_blank" rel="noopener">http://www.hanzify.org/software/8898.html</a></p>
+<p>Proxycap</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______proxycap______com/download______html&z" target="_blank" rel="noopener">http://www.proxycap.com/download.html</a></p>
+<p>破解</p>
+<p>x86 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www43______zippyshare______com/v/39892822/file______html&z" target="_blank" rel="noopener">http://www43.zippyshare.com/v/39892822/file.html</a></p>
+<p>x64 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www74______zippyshare______com/v/12710611/file______html&z" target="_blank" rel="noopener">http://www74.zippyshare.com/v/12710611/file.html</a></p>
+<p>注意：Proxifier 不支持处理 UDP 流量，Proxifier是靠实现类vpn方式实现第三方应用代理</p>
+<p>=============================================================</p>
+<p><strong>[section label=”add-3”]附3:</strong></p>
+<p>chrome浏览器SwitchyOmega扩展如何添加shadowsocks的代理设置？</p>
+<p>1.添加shadowsocks的浏览器全局模式</p>
+<p>右键SwitchyOmega扩展图标</p>
+<p>选项&gt;&gt;</p>
+<p>新建情景模式&gt;&gt;</p>
+<p>名称：shadowsocks 全局(名称随便填)&gt;&gt;</p>
+<p>类型：选择：代理服务器&gt;&gt;</p>
+<p>点击：创建&gt;&gt;</p>
+<p>代理协议：一定选择SOCKS5 ，代理服务器 填写127.0.0.1 ，代理端口填写 1080</p>
+<p>2.添加shadowsocks的浏览器pac模式</p>
+<p>新建情景模式&gt;&gt;</p>
+<p>名称：shadowsocks pac(名称随便填)&gt;&gt;</p>
+<p>类型：选择：pac情景模式&gt;&gt;</p>
+<p>点击：创建&gt;&gt;</p>
+<p>pac网址&gt;&gt;复制下面这个链接到pac网址一栏</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/KyonLi/ss-pac/master/ss______pac&z" target="_blank" rel="noopener">https://raw.githubusercontent.com/KyonLi/ss-pac/master/ss.pac</a></p>
+<p>点击：立即更新情景模式</p>
+<p>shadowsocks官方有2种pac模式，用哪个或都添加这个随你便</p>
+<p>fast mode pac（快速）和precise mode pac（精确）</p>
+<p>3.添加shadowsocks的”自动切换”代理模式，</p>
+<p>有个步骤用纯文字表诉的话，略微有点困难，这里掠过。</p>
+<p>需要的自己导入OmegaOptions.bak</p>
+<p>群共享和网盘的OmegaOptions.bak (文件大小243KB那个)</p>
+<p>包括shadowsocks”自动切换” “shadowsockspac”和”shadowsocks全局” 3种情景模式，导入即可</p>
+<p>SwitchyOmega 商店下载链接</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://chrome______google______com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif&z" target="_blank" rel="noopener">https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif</a></p>
+<p>SwitchyOmega官方备用下载地址</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/FelisCatus/SwitchyOmega/releases&z" target="_blank" rel="noopener">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
+<p>附：原gfwlist项目迁移到 <a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/gfwlist/gfwlist&z" target="_blank" rel="noopener">https://github.com/gfwlist/gfwlist</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/gfwlist/gfwlist/master/gfwlist______txt&z" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></p>
+<p>本站原创switchyomega配置文件</p>
+<p>switchyomega自动切换版：<a href="http://www.viidii.info/?https://gochrome______info/switchyomega-config/&z" target="_blank" rel="noopener">https://gochrome.info/switchyomega-config/</a></p>
+<p>switchyomega虚拟情景版：<a href="http://www.viidii.info/?https://gochrome______info/switchyomega-virtual/&z" target="_blank" rel="noopener">https://gochrome.info/switchyomega-virtual/</a></p>
+<p>站长推荐使用虚拟情景模式（共内置了8套模式）</p>
+<p>火狐浏览器添加规则和chrome大同小异</p>
+<p>Google 即将关闭 Google Code，原gfwlist项目主页</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://code______google______com/p/autoproxy-gfwlist/&z" target="_blank" rel="noopener">https://code.google.com/p/autoproxy-gfwlist/</a></p>
+<p>=============================================================</p>
+<p><strong>[section label=”add-4”]附4：</strong></p>
+<p>全球付Globalcash虚拟信用卡和paypal注册申请教程</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/globalcash/&z" target="_blank" rel="noopener">http://www.cmsky.com/globalcash/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jingyan______baidu______com/article/e73e26c0e3913b24adb6a7a4______html&z" target="_blank" rel="noopener">http://jingyan.baidu.com/article/e73e26c0e3913b24adb6a7a4.html</a></p>
+<p>=============================================================</p>
+<p><strong>[section label=”add-5”]附5：</strong></p>
+<p>什么是cn2?</p>
+<p>中国电信下一代承载网络（国际流量走的cn2线路）</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______chinatelecom______com______cn/gjywpd/gj-qqwl/&z" target="_blank" rel="noopener">http://www.chinatelecom.com.cn/gjywpd/gj-qqwl/</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______netroby______com/view______php?id=3459&z" target="_blank" rel="noopener">https://www.netroby.com/view.php?id=3459</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://baike______baidu______com/subview/2193652/2193652______htm&z" target="_blank" rel="noopener">http://baike.baidu.com/subview/2193652/2193652.htm</a></p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cablemap______info/&z" target="_blank" rel="noopener">http://cablemap.info/</a> Greg’s Cable Map</p>
+<p>CN2网络延迟和丢包监控:</p>
+<p><a href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://183______91______49______53/public/sla/slaPerformanceNew______html&z" target="_blank" rel="noopener">http://183.91.49.53/public/sla/slaPerformanceNew.html</a></p>
+<p>=============================================================</p>
+<p>如果你连不上服务器，请首先检查SS客户端配置是否正确：</p>
+<p>服务器域名或ip ，服务器端口 ，密码 ，加密方式，检查上面四项，确认没有填错。</p>
+<p>如果均正常，依然连不上的话，请尝试Ping下 服务器域名或ip,看是否通；</p>
+<p>如果不通，一般是你的线路问题（电信、联通、地域、时间等相关，有可能是暂时性问题）。</p>
+<p>但注意在少数情况下，不管你是否能Ping通，都跟是否能连上ss服务器无关。</p>
+<p>最后说下，一般都不会是服务器的问题，也就是说最大的可能性是：1.客户端参数配置，2.浏览器代理设置。</p>
+<p>=============================================================</p>
+<p>Shadowsocks 为什么出现 500 Internal Privoxy Error</p>
+<p>可能原因：</p>
+<p>1.客户端的服务器信息错误</p>
+<p>2.服务端未正常启动或线路问题（被墙？）</p>
+<p>3.如果有使用端口转发，有可能是转发线路问题</p>
+<p>通俗点说</p>
+<p>1.客户端配置参数填错，或参数有变化,自己更新不及时</p>
+<ol start="2">
+<li>服务器端挂了，或线路被墙 （可能性很小）</li>
+</ol>
+<p>3.使用端口转发的，联系你的服务商</p>
+<p>=============================================================</p>
+<p>可能有人会有觉得100多人同时在用一个服务器会非常慢，</p>
+<p>但实际上这点用户数对服务器造成的压力并没你想像中的大。</p>
+<p>根据过去的服务器监控数据来看，平时的带宽使用平均在12Mbps左右，</p>
+<p>间中会有去到20Mbps的突发流量，可以说完全没有压力。</p>
+<p>CPU使用率长期在10%以下。内存方面没做太多优化，保持在60%左右。</p>
+<p>或者100人同时在看视频的话，带宽可能就真的有压力，但这种概率几乎不存在，</p>
+<p>而且就算你家有100Mbps的宽带，服务器也有100Mbps的带宽，你也会受中间线路最小带宽路段的限制，想像下木桶短板原理，而且“网络”中还有很多你意想不到的情况和条件存在，所以用（总带宽/使用人数来）算每人得到的带宽这种方法实在不合理。</p>
+<p>=============================================================</p>
+</div><div class="tags"><a href="/tags/%E7%95%AA%E7%BE%BD/"><i class="fa fa-tag"></i>番羽</a></div><div class="post-nav"><a class="pre" href="/2018/11/24/160%E7%A7%8D%E9%B8%9F%E7%B1%BB%E7%9A%84%E5%8F%AB%E5%A3%B0/">160种鸟类的叫声</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://blog.8001008.xyz"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/MY/">MY</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VPS/">VPS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/%E7%95%AA%E7%BE%BD/" style="font-size: 15px;">番羽</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 15px;">资源</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">笔记</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/29/vps%E6%8D%A3%E9%BC%93%E5%B0%8F%E8%AE%B0/">VPS 捣鼓小记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/%E5%85%B6%E4%BB%96%E4%B9%A6%E6%91%98/">其他书摘</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/%E3%80%8A%E5%9C%A8%E8%B7%AF%E4%B8%8A%E3%80%8B%E4%B9%A6%E6%91%98/">《在路上》书摘</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/%E3%80%8A%E8%BE%BE%E6%91%A9%E6%B5%81%E6%B5%AA%E8%80%85%E3%80%8B%E4%B9%A6%E6%91%98/">《达摩流浪者》书摘</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/CentOS-Debian-Ubuntu%20ShadowsocksR%20%E5%8D%95-%E5%A4%9A%E7%AB%AF%E5%8F%A3%20%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC/">CentOS/Debian/Ubuntu ShadowsocksR 单/多端口 一键管理脚本</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%BC%A0%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">ubuntu下搭建ftp服务器实现上传于下载功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/%E3%80%8A%E5%B7%A8%E5%A9%B4%E5%9B%BD%E3%80%8B%E4%B9%A6%E6%91%98/">《巨婴国》书摘</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/%E4%BD%A0%E6%89%8D%E6%98%AF%E4%B8%80%E5%88%87%E7%9A%84%E6%A0%B9%E6%9C%AC/">你才是一切的根本！</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/27/VPS%E6%90%AD%E5%BB%BAAria2+AriaNG+Rclone%E6%8C%82%E8%BD%BDGB%E5%AE%9E%E7%8E%B0%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%88%B0%E7%BD%91%E7%9B%98/">VPS搭建Aria2+AriaNG+Rclone挂载GB实现离线下载到网盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/27/%E8%A7%A3%E8%AF%BB%E3%80%8A%E8%A5%BF%E6%B8%B8%E8%AE%B0%E3%80%8B/">解读《西游记》</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="https://www.fakenamegenerator.com/" title="生成器" target="_blank">生成器</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">潜空间.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
