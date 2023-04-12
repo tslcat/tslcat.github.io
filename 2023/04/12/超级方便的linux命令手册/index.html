@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="潜空间">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>潜空间</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="潜空间">
+    
+    
+      <meta 
+        property="og:url" 
+        content="http://blog.779911.xyz/2023/04/12/%E8%B6%85%E7%BA%A7%E6%96%B9%E4%BE%BF%E7%9A%84linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="https://img.songhn.com/img/Y67gdd.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="&lt;p&gt;超级方便的linux命令手册&lt;/p&gt;
+&lt;p&gt;NO     分类     PS1     命令名     用法及参数     功能注解     对应章节&lt;br&gt;1     文件管理     #     ls     ls -a     列出当前目录下的所有文件，包括以.头的隐含文件&lt;br&gt;     文件管理     #     ls     ls -l或ll     列出当前目录下文件的详细信息&lt;br&gt;     文件管理     #     pwd     pwd     查看当前所在目录的绝对路经&lt;br&gt;     文件管理     #     cd     cd ..     回当前目录的上一级目录&lt;br&gt;     文件管理     #     cd     cd -     回上一次所在的目录&lt;br&gt;     文件管理     #     cd     cd ~ 或 cd     回当前用户的宿主目录&lt;br&gt;     文件管理     #     cd     cd ~用户名     回指定用户的宿主目录    &lt;/p&gt;">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-04-12">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-03-15">
+      <meta 
+        property="og:article:author" 
+        content="潜">
+      
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">潜空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          Home
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          Archive
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          Tags
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          Categories
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          About
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          Friends
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="https://img.songhn.com/img/Y67gdd.png" 
+    class="author-img"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">潜</p>
+<p class="author-description">designed by theme-kaze</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>86</span>
+    <span>Posts</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>7</span>
+    <span>Categories</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>4</span>
+    <span>Tags</span>
+  </a>
+</div>
+
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>TOC
+</div>
+
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>Categories
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/%E6%91%84%E5%BD%B1/">
+        <div class="categories-list-item">
+          摄影
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%AF%BB%E4%B9%A6/">
+        <div class="categories-list-item">
+          读书
+          <span class="categories-list-item-badge">24</span>
+        </div>
+      </a>
+    
+      <a href="/categories/VPS/">
+        <div class="categories-list-item">
+          VPS
+          <span class="categories-list-item-badge">26</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%85%B6%E4%BB%96/">
+        <div class="categories-list-item">
+          其他
+          <span class="categories-list-item-badge">8</span>
+        </div>
+      </a>
+    
+      <a href="/categories/MY/">
+        <div class="categories-list-item">
+          MY
+          <span class="categories-list-item-badge">6</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E4%BA%A7%E5%93%81/">
+        <div class="categories-list-item">
+          产品
+          <span class="categories-list-item-badge">8</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%9A%8F%E6%83%B3/">
+        <div class="categories-list-item">
+          随想
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>hot tags
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/%E7%AC%94%E8%AE%B0/" 
+        title="笔记">
+        <div class="tags-list-item">笔记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%B5%84%E6%BA%90/" 
+        title="资源">
+        <div class="tags-list-item">资源</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%95%AA%E7%BE%BD/" 
+        title="番羽">
+        <div class="tags-list-item">番羽</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%9F%E6%B4%BB/" 
+        title="生活">
+        <div class="tags-list-item">生活</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-04-12T04:41:25.341Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-04-12</span>
+    </time>
+    
+    
+      <span class="dot"></span>
+      <span>2.4k words</span>
+    
+  </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <p>超级方便的linux命令手册</p>
+<p>NO     分类     PS1     命令名     用法及参数     功能注解     对应章节<br>1     文件管理     #     ls     ls -a     列出当前目录下的所有文件，包括以.头的隐含文件<br>     文件管理     #     ls     ls -l或ll     列出当前目录下文件的详细信息<br>     文件管理     #     pwd     pwd     查看当前所在目录的绝对路经<br>     文件管理     #     cd     cd ..     回当前目录的上一级目录<br>     文件管理     #     cd     cd -     回上一次所在的目录<br>     文件管理     #     cd     cd ~ 或 cd     回当前用户的宿主目录<br>     文件管理     #     cd     cd ~用户名     回指定用户的宿主目录    </p>
+<span id="more"></span>
+<p>2     文件管理     #     mkdir     mkdir 目录名     创建一个目录<br>     文件管理     #     mkdir     mkdir –p     递归式去创建一些嵌套目录<br>     文件管理     #     rmdir     Rmdir 空目录名     删除一个空目录<br>3     文件管理     #     rm     rm 文件名 文件名     删除一个文件或多个文件<br>     文件管理     #     rm     rm -rf 非空目录名     递归删除一个非空目录下的一切，不让提式-f<br>4     文件管理     #     cat     cat文件名     一屏查看文件内容<br>5     文件管理     #     more     more文件名     分页查看文件内容<br>6     文件管理     #     less     less 文件名     可控分页查看文件内容<br>7     文件管理     #     grep     grep字符 文件名     根据字符匹配来查看文件部分内容<br>8     文件管理     #     mv     mv 路经&#x2F;文件  &#x2F;经&#x2F;文件     移动相对路经下的文件到绝对路经下<br>     文件管理     #     mv     mv 文件名 新名称     在当前目录下改名<br>9     文件管理     #     cp     cp &#x2F;路经&#x2F;文件  .&#x2F;     移动绝对路经下的文件到当前目录下<br>10     文件管理     #     find     find 路经 -name “字符串”     查找路经所在范围内满足字符串匹配的文件和目录<br>11     文件管理     #     ln     ln 源文件 链接名     创建当前目录源文件的硬链接<br>     ln &#x2F;home&#x2F;test &#x2F;usr&#x2F;test1     在&#x2F;usr下建立&#x2F;home&#x2F;test的硬链接<br>12     文件管理     #     ln     Ln -s a b     创建当前目录下a的符号链接b<br>13     文件管理     #     touch     touch file1 file2     创建两个空文件<br>14     磁盘管理     #     df     df     用于报告文件系统的总容量，使用量，剩余容量。<br>15     磁盘管理     #     du     du -b &#x2F;home     查看目前&#x2F;HOME目录的容量(k)及子目录的容量(k)。<br>16     磁盘管理     #     fdisk     fdisk -l     查看系统分区信息<br>17     磁盘管理     #     fdisk     fdisk &#x2F;dev&#x2F;sdb     为一块新的SCSI硬盘进行分区<br>18     磁盘管理     #     mkfs.ext3     Mkfs.ext3 &#x2F;dev&#x2F;sdb1<br>     为第一块SCSI硬盘的第一主分区格式化成<br>ext3的文件系统<br>               mkfs.ext2     Mkfs.ext2&#x2F;dev&#x2F;sdb2      格式化成ext2文件系统<br>19     磁盘管理     #     mount     mount -t 文件系统类型 设备路经  访问路经<br>     磁盘管理     #          文件系统类型<br>                    Iso9660     光驱文件系统<br>                    vfat     Fat文件系统(windows)<br>     挂载光驱     #     mount –t iso9660 &#x2F;dev&#x2F;cdrom &#x2F;mnt&#x2F;cdrom<br>     挂载FAT     #     mount –t vfat &#x2F;dev&#x2F;hda5 &#x2F;mnt&#x2F;cdrom      挂第一个ide的第五个逻辑分区<br>17     磁盘管理     #     Umount &#x2F;mnt&#x2F;cdrom       卸载&#x2F;mnt&#x2F;cdrom为空<br>18     文件权限     #     chmod     chmod u+s file     为file的属主加上特殊权限<br>                    chmod g+r file     为file的属组加上读权限<br>                    chmod o+w file     为file的其它用户加上写权限<br>                    chmod a-x file     为file的所有用户减去执行权限<br>     chmod 765 file  为file的属主设为完全权限，属组设成读写权，其它用户具有读和执心权限<br>19     文件权限     #     chown     chown root &#x2F;home     把&#x2F;home的属主改成root用户<br>20     文件权限     #     chgrp     chgrp root &#x2F;home     把&#x2F;home的属组改成root组<br>21     打印管理     #     redhat-config-printer-tui     进入安装打印机界面<br>22     打印管理     #     lp     lp –d hptr file     打印file到hptr的打印机上<br>23     打印管理     #     lpq     Lpq –P 打印机名     查看打印机的状态<br>24     打印管理     #     lprm     Lprm –P 打印机名 a     删除打印机内的打印作业<br>25     打印管理     #     disable     Disable –r “changing paper” HPtr      禁用打印机并提示原因<br>26     打印管理     #     enable     Enable HPtr     重新启用被禁用的<br>27     用户管理     #     useradd     Useradd     创建一个新的用户<br>28     用户管理     #     groupadd     Groupadd 组名     创建一个新的组<br>29     用户管理     #     passwd     Passwd 用户名     为用户创建密码<br>30     用户管理     #     Passwd -d     Passwd -d用户名     删除用户密码也能登陆<br>31     用户管理     #     Passwd -l     Passwd -l用户名     锁定账号密码<br>32     用户管理     #     Passwd -u     Passwd -u用户名     解锁账号密码<br>33     用户管理     #     Passwd -S     Passwd -S用户名     查询账号密码<br>34     用户管理     #     Usermod -l     Usermod -l 新用户名 老用户名     为用户改名<br>35     用户管理     #     Usermod -L     Usermod -L 要锁定用户名     锁定用户登陆<br>36     用户管理     #     Usermod -U     Usermod –U解锁用户名     解锁用户登陆<br>37     用户管理     #     Usermod -u     Usermod –u 501用户名     改变用户UID<br>38     用户管理     #     Userdel     Userdel–r 用户名     删除用户一切<br>39     用户管理     #     Groupmod -n     Groupmod –n新用户名 老用户名     为组改名<br>40     用户管理     #     Groupmod -g     Groupmod –g 501 组名     改变组GID<br>41     用户管理     #     groupdel     Groupdel组名    先应删它的用户     删除组<br>42     用户管理     #     gpasswd -a     gpasswd -a 用户名 组名     增加用户到组<br>43     用户管理     #     Id      id   用户名     查用户信息<br>44     软件管理     #     rpm -qa     rpm –qa | less     查询已安装RPM<br>45     软件管理     #          rpm –qa | grep ftp     查询指定RPM<br>46     软件管理     #     rpm -q     rpm -q 已安装的RPM包     查是否安装<br>47     软件管理     #          rpm -q telnet-server     查看telnet服务器包<br>48     软件管理     #     rpm -qi     rpm –qi 软件包名称     查看软件的描述信息<br>49     软件管理     #     rpm -ql     rpm –ql软件包名称     查询软件包的文件列表<br>50     软件管理     #     rpm -qf     rpm –qf软件包名称     查询某个文件所属的软件包<br>51     软件管理     #     rpm -qp     rpm –qp软件包全名     查询未安装的软件包信息<br>52     软件管理     #     rpm -e     rpm –e 软件包名称     删除具体的软件包<br>53     软件管理     #     rpm -U     rpm –Uvh软件包全名     升级软件包并显示过程<br>54     软件管理     #     rpm -ivh     rpm –ivh 软件包全名     安装软件包并显示过程<br>55     软件管理     #     rpm -V     rpm –V软件包名称     验证软件包的大小，类型等<br>56     软件管理     #     tar      -c 创建包 –x 释放包  -v 显示命令过程 –z 代表压缩包<br>57     软件管理     #     tar -cf     tar –cvf benet.tar &#x2F;home&#x2F;benet     把&#x2F;home&#x2F;benet目录打包<br>58     软件管理     #     tar -czf     tar –zcvf benet.tar.gz &#x2F;mnt     把目录打包并压缩<br>59     软件管理     #     tar –tf     tar –tf benet.tar     看非压缩包的文件列表<br>60     软件管理     #     tar –tzf     tar –tf benet.tar.gz     看压缩包的文件列表<br>61     软件管理     #     tar –xf     tar –xf benet.tar     非压缩包的文件恢复<br>62     软件管理     #     tar –zxvf     tar –zxvf benet.tar.gz     压缩包的文件解压恢复<br>63     软件管理     #     tar -jxvf     tar –jxvf benet.tar.bz2<br>64     软件管理     #     diff     diff file1 file2 &gt; 补丁名.patch     为新旧文件生成补丁文件<br>65     软件管理     #     diff     diff file1 file2     比较两个文件的区别<br>66     软件管理     #     Patch      Patch file补丁名.patch     打补丁<br>67     软件管理     #     .&#x2F;configure  –prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;     编译前配置<br>68     软件管理     #     make     编译<br>69     软件管理     #     make install     安装编译好的源码包<br>70     启动管理     #     reboot     Init 6     重启LINUX系统<br>71     启动管理     #     Halt     Init 0     Shutdown –h now     关闭LINUX系统<br>72     启动管理     #     runlevel          显示系统运行级<br>73     启动管理     #     Init [0123456]           改变系统运行级,7种<br>74     启动管理     #     Chkconfig –-list [服务名称]     查看服务的状态<br>75     启动管理     #     Chkconfig –-level &lt;运行级&gt; &lt;服务名&gt; on|off|set      设置服务的启动状态<br>76     启动管理     #     Chkconfig &lt;服务名&gt; on|off|set     设置非独立服务启状态<br>77     进程管理     #     Top动态     Ps-aux静态     进程树pstree     查看系统进程<br>78     进程管理     #     程序名 &amp;     后台运行程序<br>79     进程管理     #     fg     把后台运行的进程调回前台<br>80     进程管理     #     bg     把前台运行进程调到后台<br>81     进程管理     #     renice     Renice +1 180      把180号进程的优先级加1<br>82     进程管理     #     kill     Kill PID      终止某个PID进程<br>83     进程管理     #     at     at 5pm + 3 days<br>&#x2F;bin&#x2F;ls     指定三天后下午5:00执行&#x2F;bin&#x2F;ls<br>84     进程管理     #     crontab     Crontab -e     用VI的形式来编辑自动周期性任务<br>85     进程管理     #     crontab     Crontab -l     查看自动周期性任务<br>86     进程管理     #     crontab     Crontab -r     删除自动周期性任务<br>87     进程管理     #     crond     Service crond &lt;start|stop|restart|status&gt;<br>     马上启动自动周期性服务     Service crond &lt;启动|停止|重启|状态&gt;</p>
+<pre><code> 实现磁盘配额     (注安装LINUX时建立/home分区）
+</code></pre>
+<p>目标：对用户zhao在&#x2F;home目录上实现soft limit为5k,hard limit 为10k的磁盘配额<br>实现步骤：</p>
+<ol>
+<li>修改包含&#x2F;home的行，  #vi &#x2F;etc&#x2F;fstab， 改为：defaults,usrquota。也就是增加usrquota项。然后保存退出。<br>2、卸载&#x2F;home目录                           #umount &#x2F;home</li>
+<li>挂接&#x2F;home目录                           #mount &#x2F;home<br>4、增加用户zhao                            #useradd zhao<br>5、修改密码                                #passwd zhao<br>6、生成关于&#x2F;home目录的quota信息           # quotacheck -cmug &#x2F;home<br>                                #quotacheck -vu &#x2F;home</li>
+</ol>
+<p>7、查看所有用户的信息                       #repquota -au<br>8、设置配额                                 #edquota -u zhao<br>将soft 和hard 分别改为5和10<br>9、保存并退出                               #wq!<br>10、修改时间                                #edquota -t<br>11、                                        #wq!<br>12.开启&#x2F;home上的磁盘配额功能                #quotaon &#x2F;home<br>13.查询配额                                 #quota -u zhao<br>14.验证配额                                 #su - zhao</p>
+
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            潜
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="http://blog.779911.xyz/2023/04/12/%E8%B6%85%E7%BA%A7%E6%96%B9%E4%BE%BF%E7%9A%84linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/">
+            http://blog.779911.xyz/2023/04/12/%E8%B6%85%E7%BA%A7%E6%96%B9%E4%BE%BF%E7%9A%84linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/04/12/%E8%B0%88%E5%88%A4%E6%8A%80%E5%B7%A7/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">Next</div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>TOC
+</div>
+
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>TOC
+</div>
+
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>Recent Posts
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-04-12</div>
+        <a href="/2023/04/12/%E8%B6%85%E7%BA%A7%E6%96%B9%E4%BE%BF%E7%9A%84linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-04-12</div>
+        <a href="/2023/04/12/%E8%B0%88%E5%88%A4%E6%8A%80%E5%B7%A7/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-04-12</div>
+        <a href="/2023/04/12/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E8%8C%83%E6%96%87%E5%92%8C%E7%BB%83%E4%B9%A0/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-04-12</div>
+        <a href="/2023/04/12/%E6%B4%BB%E5%87%BA%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2023
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          潜空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+  </body>
+</html>
