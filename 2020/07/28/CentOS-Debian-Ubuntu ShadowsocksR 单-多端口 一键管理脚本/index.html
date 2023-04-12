@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		CentOS/Debian/Ubuntu ShadowsocksR 单/多端口 一键管理脚本 | 
+	 
+	潜空间
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.com";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">潜空间</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='https://github.com/wujun234/hexo-theme-tree' class="menu-item-link" target="_blank">
+            Tree
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a href='https://github.com/wujun234/uid-generator-spring-boot-starter' class="menu-item-link" target="_blank">
+            UidGenerator
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wujun234' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/12/5%E4%B8%AA%E8%AE%AD%E7%BB%83%E8%A7%82%E5%AF%9F%E5%8A%9B%E7%9A%84%E6%96%B9%E6%B3%95/">
+                     
+										    5个训练观察力的方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2011/07/28/?+%EF%BC%9F=%EF%BC%9F/">
+                     
+										    《？+？=1》摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/07/28/CentOS-Debian-Ubuntu%20ShadowsocksR%20%E5%8D%95-%E5%A4%9A%E7%AB%AF%E5%8F%A3%20%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC/">
+                     
+										    CentOS/Debian/Ubuntu ShadowsocksR 单/多端口 一键管理脚本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/22/Compose%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                     
+										    Compose 常用命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/21/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                     
+										    Docker常用命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/01/Github+hexo%E6%9B%B4%E6%8D%A2%E5%AD%90%E5%9F%9F%E5%90%8D/">
+                     
+										    Github+hexo更换子域名
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/21/Google%20one%20vpn%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+                     
+										    Google one vpn安卓使用教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/14/Linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/">
+                     
+										    Linux命令手册
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/11/11/MAC%E9%83%A8%E7%BD%B2Hexo/">
+                     
+										    MAC部署Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/MY%20%E5%BF%85%E8%A3%85%E8%BD%AF%E4%BB%B6/">
+                     
+										    MY 必装软件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/MY%20%E6%94%B6%E5%90%AC%E5%88%97%E8%A1%A8/">
+                     
+										    MY 收听收看列表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/08/03/MY%20%E6%97%85%E8%A1%8C%E6%B8%85%E5%8D%95/">
+                     
+										    MY 旅行清单
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/MY%20%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/">
+                     
+										    MY 网站收藏
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/16/MY%20%E9%9D%A2%E8%AF%95%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D%E6%A1%86%E6%9E%B6%E5%9B%BE/">
+                     
+										    MY 面试个人介绍框架图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/26/MY%E9%83%8A%E6%B8%B8/">
+                     
+										    MY 郊游
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/Markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/">
+                     
+										    Markdown语法教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/26/NAS%20docker%20%E9%83%A8%E7%BD%B2%20bitwarden/">
+                     
+										    NAS docker 部署 bitwarden
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/17/Nginx%20Proxy%20Manager%20%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%90%AD%E5%BB%BA/">
+                     
+										    Nginx Proxy Manager 反向代理搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/04/Openwrt+Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%A1%AB%E5%9D%91/">
+                     
+										    Openwrt+Frp内网穿透
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/Rclone%E7%9B%B8%E5%85%B3/">
+                     
+										    Rclone相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/Resilio%20Sync%20License%20%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/">
+                     
+										    Resilio Sync License 授权文件下载
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/06/Root%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B%EF%BC%88OVH%EF%BC%89/">
+                     
+										    Root登录教程（OVH）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/Trojan%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%BB%AD%E7%AD%BESSL%E8%AF%81%E4%B9%A6%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E4%BC%AA%E8%A3%85%E7%BD%91%E7%AB%99%EF%BC%8C%E6%94%AF%E6%8C%81centos7-debian9-ubuntu16/">
+                     
+										    Trojan一键安装脚本，自动续签SSL证书，自动配置伪装网站，支持centos7+/debian9+/ubuntu16+
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/11/VPS%E4%BC%A0%E5%AE%B6%E5%AE%9D%E6%94%B6%E9%9B%86/">
+                     
+										    VPS传家宝收集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/14/VPS%E5%91%BD%E4%BB%A4%E8%84%9A%E6%9C%AC%E5%A4%87%E4%BB%BD%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82%EF%BC%89/">
+                     
+										    VPS命令脚本备份（持续更新。。。。。）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/VPS%E6%90%AD%E5%BB%BAAria2+AriaNG+Rclone%E6%8C%82%E8%BD%BDGB%E5%AE%9E%E7%8E%B0%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%88%B0%E7%BD%91%E7%9B%98/">
+                     
+										    VPS搭建Aria2+AriaNG+Rclone挂载GB实现离线下载到网盘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/06/VPS%E6%90%AD%E5%BB%BAGithub+Blog+Hexo/">
+                     
+										    VPS搭建Github+Blog+Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/24/VPS%E7%AB%AF%E5%8F%A3%E5%91%BD%E4%BB%A4/">
+                     
+										    关于VPS端口
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/27/X-UI%E5%92%8C%E5%AE%9D%E5%A1%94%E5%85%B1%E5%AD%98/">
+                     
+										    X-UI和宝塔共存
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/29/axure%208%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                     
+										    axure 8软件的问题解决
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/27/shadowsocks%E8%B6%85%E8%AF%A6%E7%BB%86%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B/">
+                     
+										    shadowsocks超详细科普教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%BC%A0%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">
+                     
+										    ubuntu下搭建ftp服务器实现上传于下载功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/vps%E6%8D%A3%E9%BC%93%E5%B0%8F%E8%AE%B0/">
+                     
+										    VPS 捣鼓小记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/25/%E3%80%8A%E4%BA%8B%E5%AE%9E%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《事实》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/01/11/%E3%80%8A%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    孟德斯鸠：论专制十恶
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/13/%E3%80%8A%E5%8F%A4%E6%9C%AC%E7%AB%B9%E4%B9%A6%E7%BA%AA%E5%B9%B4%E3%80%8B/">
+                     
+										    《古本竹书纪年》全文
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E3%80%8A%E5%9C%A8%E8%B7%AF%E4%B8%8A%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《在路上》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D%E7%9A%84%E4%B8%83%E5%BC%A0%E9%9D%A2%E5%AD%94%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《大明王朝的七张面孔》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/29/%E3%80%8A%E5%A6%82%E4%BD%95%E7%BB%83%E6%88%90%E8%B6%85%E5%BC%BA%E8%AE%B0%E5%BF%86%E6%9C%AF%E3%80%8B%E5%BD%B1%E7%89%87%E7%AC%94%E8%AE%B0/">
+                     
+										    《如何练成超强记忆术》影片笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E3%80%8A%E5%B7%A8%E5%A9%B4%E5%9B%BD%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《巨婴国》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/%E3%80%8A%E6%96%87%E6%98%8E%E3%80%81%E7%8E%B0%E4%BB%A3%E5%8C%96%E3%80%81%E4%BB%B7%E5%80%BC%E6%8A%95%E8%B5%84%E4%B8%8E%E4%B8%AD%E5%9B%BD%E3%80%8B%20%E4%B9%A6%E6%91%98/">
+                     
+										    《文明、现代化、价值投资与中国》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/28/%E3%80%8A%E8%B6%85%E8%B6%8A%E8%87%AA%E5%8D%91%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《超越自卑》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E3%80%8A%E8%BE%BE%E6%91%A9%E6%B5%81%E6%B5%AA%E8%80%85%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《达摩流浪者》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/25/%E3%80%8A%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E6%9C%AF%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《高效能人士的笔记整理术》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E6%9C%8910%E5%B9%B4%E7%BB%8F%E9%AA%8C%EF%BC%8C%E4%BD%86%E6%88%90%E4%B8%8D%E4%BA%86%E4%B8%93%E5%AE%B6/">
+                     
+										    为什么你有10年经验，但成不了专家
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%92%E8%81%94%E7%BD%91%E7%99%BB%E9%99%86%E7%94%A8%E4%BE%8B%E5%9B%BE/">
+                     
+										    互联网登陆用例图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B9%8BOFO%E5%92%8C%E6%91%A9%E6%8B%9C/">
+                     
+										    产品分析之OFO和摩拜
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%B8%80%E5%AE%9A%E8%A6%81%E6%9C%89%E7%90%86%E6%83%B3/">
+                     
+										    产品经理一定要有理想
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+                     
+										    产品经理面试常见问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E4%BA%BA%E7%94%9F%E6%9C%80%E4%B8%8D%E5%80%BC%E5%BE%97%E4%BD%A0%E5%8E%BB%E5%81%9A%E7%9A%8430%E4%BB%B6%E4%BA%8B/">
+                     
+										    人生最不值得你去做的30件事
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E4%BD%A0%E6%89%8D%E6%98%AF%E4%B8%80%E5%88%87%E7%9A%84%E6%A0%B9%E6%9C%AC/">
+                     
+										    你才是一切的根本！
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E5%8F%98%E5%BE%97%E4%B8%8D%E6%B5%AE%E8%BA%81%E7%9A%84/">
+                     
+										    你是如何变得不浮躁的
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E4%BD%BF%E7%94%A8ownCloud%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BA%91%E6%9C%8D%E5%8A%A1(ubuntu%2014.04%20)/">
+                     
+										    使用ownCloud搭建你的个人云服务(ubuntu 14.04 )
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E5%85%B6%E4%BB%96%E4%B9%A6%E6%91%98/">
+                     
+										    其他书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/11/22/%E5%88%86%E7%B1%BB%E6%BA%AF%E6%BA%90%E7%B3%BB%E7%BB%9F%E5%9C%BA%E6%99%AF%E6%8F%8F%E8%BF%B0/">
+                     
+										    分类溯源系统场景描述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/15/%E5%88%A0%E9%99%A4mac%E5%90%AF%E5%8A%A8%E5%8F%B0launchpad%E4%B8%AD%E7%9A%84%E6%97%A0%E6%95%88%E5%9B%BE%E6%A0%87/">
+                     
+										    删除mac启动台launchpad中的无效图标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E5%8D%81%E6%AD%A5%E6%B5%81%E7%A8%8B%E2%80%94%E2%80%94%E5%BE%AE%E8%BD%AFlive%E3%80%81msn%E7%AD%89%E5%90%8E%E7%BC%80%E9%82%AE%E7%AE%B1%E6%B3%A8%E5%86%8C%E6%96%B9%E6%B3%95/">
+                     
+										    十步流程——微软live、msn等后缀邮箱注册方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/05/%E5%8F%8D%E4%BB%A3%E5%AE%9D%E5%A1%94%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88/">
+                     
+										    反代配置修改模版
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/31/%E5%8F%94%E6%9C%AC%E5%8D%8E32%E5%8F%A5/">
+                     
+										    叔本华32句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/27/%E5%9C%9F%E5%8C%BA%E8%AE%A2%E9%98%85Google%20one%E8%AE%B0%E5%BD%95/">
+                     
+										    土区订阅Google one记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/08/25/%E5%A3%81%E7%BA%B8%E5%92%8C%E5%A4%B4%E5%83%8F%E6%94%B6%E8%97%8F/">
+                     
+										    壁纸和头像收藏（一）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/14/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2%E7%94%A8%E4%BB%80%E4%B9%88%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%94%A8WordPress%E7%9A%84%E4%B8%BB%E9%A2%98/">
+                     
+										    如何查看博客用什么搭建及用WordPress的主题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9F/">
+                     
+										    如何进行网站运营数据分析？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/28/%E5%AD%9F%E5%BE%B7%E6%96%AF%E9%B8%A0%EF%BC%9A%E8%AE%BA%E4%B8%93%E5%88%B6%E5%8D%81%E6%81%B6/">
+                     
+										    《产品思维》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/09/%E5%B8%B8%E7%94%A8%E5%B9%B3%E5%8F%B0RSS%E8%AE%A2%E9%98%85%E8%A7%84%E5%88%99/">
+                     
+										    常用平台RSS订阅规则
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/01/%E6%8A%8A%E2%80%9C%E6%88%91%E7%88%B1%E4%BD%A0%E2%80%9D%E6%8D%A2%E6%88%90520%E7%A7%8D%E6%96%B9%E5%BC%8F%E8%AF%B4/">
+                     
+										    把“我爱你”换成520种方式说
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90%E5%88%A9%E5%99%A8%EF%BC%88%E4%B8%8D%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/">
+                     
+										    搜索资源利器（不断更新）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/18/%E6%90%AD%E5%BB%BAmemos%EF%BC%88%E4%BE%BF%E7%AD%BE%EF%BC%89/">
+                     
+										    搭建memos（便签）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/27/%E6%90%AD%E5%BB%BAonenav%E4%B9%A6%E7%AD%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                     
+										    搭建onenav书签管理系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/18/%E6%90%AD%E5%BB%BA%E6%8E%A2%E9%92%88%EF%BC%88ServerStatus%EF%BC%89/">
+                     
+										    搭建探针（ServerStatus）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/16/%E6%96%B0%E5%BC%80%E9%80%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E5%81%9A%E4%BB%80%E4%B9%88/">
+                     
+										    新开通的服务器要做什么(debian/ubuntu)
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E6%9B%BE%E5%9B%BD%E8%97%A9%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95%E8%AF%AD%E5%8F%A5100%E5%8F%A5/">
+                     
+										    曾国藩经典语录语句100句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/14/%E6%9C%89%E5%85%B3%E4%BA%A7%E5%93%81%E2%80%9C%E4%B8%AD%E5%8F%B0%E2%80%9D/">
+                     
+										    有关产品“中台”
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/01/%E6%9D%91%E4%B8%8A%E6%98%A5%E6%A0%91%E6%89%8E%E5%BF%83%E7%9A%8425%E5%8F%A5%E8%AF%9D/">
+                     
+										    村上春树扎心的25句话
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/08/03/%E6%9D%A5%E8%87%AA%E4%B8%93%E4%B8%9A%E6%91%84%E5%BD%B1%E5%B8%88%E7%9A%84100%E6%9D%A1%E6%84%9F%E6%82%9F/">
+                     
+										    来自专业摄影师的100条感悟
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E6%B4%BB%E5%87%BA%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1/">
+                     
+										    活出更好的自己
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E8%8C%83%E6%96%87%E5%92%8C%E7%BB%83%E4%B9%A0/">
+                     
+										    用户使用场景范文和练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/22/%E7%94%B3%E8%AF%B7SSL%E8%AF%81%E4%B9%A6%E6%95%99%E7%A8%8B/">
+                     
+										    申请SSL证书教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E7%A2%8E%E7%89%87%E5%8C%96%E9%98%85%E8%AF%BB%E6%B5%81%E7%A8%8B/">
+                     
+										    碎片化阅读流程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/07/%E8%A7%A3%E5%86%B3%20Mac%20OS%20%E4%B8%8B%E7%BD%97%E6%8A%80%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/">
+                     
+										    解决 Mac OS 下罗技鼠标滚轮失效问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/%E8%A7%A3%E8%AF%BB%E3%80%8A%E8%A5%BF%E6%B8%B8%E8%AE%B0%E3%80%8B/">
+                     
+										    解读《西游记》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E8%AF%97%E6%AD%8C/">
+                     
+										    诗歌
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/20/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%96%B9%E6%B3%95/">
+                     
+										    读书笔记方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E8%B0%88%E5%88%A4%E6%8A%80%E5%B7%A7/">
+                     
+										    谈判技巧
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E8%B6%85%E7%BA%A7%E6%96%B9%E4%BE%BF%E7%9A%84linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/">
+                     
+										    超级方便的linux命令手册
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/15/%E8%BF%87%E5%8E%BB%E4%B8%8E%E7%8E%B0%E5%9C%A8-%E5%91%A8%E8%BE%B9%E5%90%84%E5%9B%BD/">
+                     
+										    过去与现在-周边各国
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	CentOS/Debian/Ubuntu ShadowsocksR 单/多端口 一键管理脚本
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>John Doe</span>
+	<span>2020-07-28 10:21:30</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+          
+              <span>
+                  <i class="fa fa-folder" aria-hidden="true">
+                  <a href="/categories/VPS/">VPS</a>
+                  </i>
+                
+              </span>
+          
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+            
+                <span>
+                    <i class="fa fa-tag" aria-hidden="true">
+                    <a href="/tags/番羽/">番羽</a>
+                    </i>
+                </span>
+            
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p>转帖：<a target="_blank" rel="noopener" href="https://doub.io/ss-jc42/">https://doub.io/ss-jc42/</a></p>
+<p>系统要求<br>CentOS 6+ &#x2F; Debian 6+ &#x2F; Ubuntu 14.04 +</p>
+<p>推荐 Debian 7 x64，这个是我一直使用的系统，我的脚本在这个系统上面出错率最低。并且最容易安装锐速（锐速不支持OpenVZ）</p>
+<p>CentOS根据大家的要求，加入了CentOS 6和7的支持，CentOS 7 自带防火墙问题(firewalld)自行解决，其他版本没有做测试。</p>
+<span id="more"></span>
+
+<p>脚本版本<br>Ver: 2.0.38</p>
+<p>本脚本与另一个SSR脚本 『原创』ShadowsocksR MudbJSON模式多用户一键脚本 支持流量限制等 的区别是什么？</p>
+<p>ssrmu.sh 脚本是单服务器多用户脚本，使用的是 SSR服务端的MudbJSON模式，可以给每个用户(端口)设置不同的加密方式&#x2F;协议&#x2F;混淆&#x2F;限制速度&#x2F;设备数限制&#x2F;可用总流量等功能。即实现单服务器多用户流量管理等功能。</p>
+<p>而 ssr.sh 则是单服务器单用户脚本，使用的是 SSR服务端的单用户配置方式，即使实现了多端口，但是还算不算多用户，不支持每个用户(端口)不同的加密方式&#x2F;协议&#x2F;混淆等，并且无法管理流量使用。</p>
+<p>如何选择这两个脚本？</p>
+<p>根据你的需求选择，比如你仅仅是 一个或两个人使用，并且不需要流量管理功能，那么选择 ssr.sh 好了。而如果很多人使用，并且都需要限制流量来管理，那你适合使用 ssrmu.sh ，所以自己看着选，多试试（两个脚本不能共存）！</p>
+<p>脚本特点：<br>目前网上的各个ShadowsocksR脚本基本都是只有 安装&#x2F;卸载 等基础功能，对于小白来说还是不够简单方便，要修改账号配置还要手动修改文件，所以那些ShadowsocksR脚本只能称得上一键安装脚本。既然没有我满意的ShadowsocksR一键管理脚本，那么我就自己造喽，于是特意学了Shell，然后写出来了这个ShadowsocksR一键管理脚本！</p>
+<p>支持 限制 端口限速<br>支持 限制 端口设备数<br>支持 显示 当前连接IP<br>支持 显示 SS&#x2F;SSR连接+二维码<br>支持 切换管理 单&#x2F;多端口<br>支持 一键安装 BBR<br>支持 一键安装 锐速<br>支持 一键安装 LotServer<br>支持 一键封禁 垃圾邮件(SMAP)&#x2F;BT&#x2F;PT<br>安装步骤<br>简单的来说，如果你什么都不懂，那么你直接一路回车就可以了！</p>
+<p>本脚本需要Linux root账户权限才能正常安装运行，所以如果不是 root账号，请先切换为root，如果是 root账号，那么请跳过！</p>
+<p>sudo su<br>输入上面代码回车后会提示你输入当前用户的密码，输入并回车后，没有报错就继续下面的步骤安装ShadowsocksR。</p>
+<p>v2.0.0 版本以后的脚本，请先卸载旧脚本ShadowsocksR服务端，再重新安装！</p>
+<p><del>wget -N –no-check-certificate <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh">https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh</a> &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</del><br>wget -N –no-check-certificate <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ss-go.sh">https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ss-go.sh</a> &amp;&amp; chmod +x ss-go.sh &amp;&amp; bash ss-go.sh<br>wget -N –no-check-certificate <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh">https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh</a> &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</p>
+<p>下载运行后会提示你输入数字来选择要做什么。</p>
+<p>输入 1 ，就会开始安装ShadowsocksR服务端，并且会提示你输入Shadowsocks的 端口&#x2F;密码&#x2F;加密方式&#x2F; 协议&#x2F;混淆（混淆和协议是通过输入数字选择的） 等参数。</p>
+<p>如果安装过程中报错，请看 常见问题解决方法。</p>
+<p>点击展开 查看更多</p>
+<p>请输入要设置的ShadowsocksR账号 端口<br>(默认: 2333):</p>
+<p>——————————————————————————————<br> 端口 : 2333<br>——————————————————————————————</p>
+<p>请输入要设置的ShadowsocksR账号 密码<br>(默认: doub.io):</p>
+<p>——————————————————————————————<br> 密码 : doub.io<br>——————————————————————————————</p>
+<p>请选择要设置的ShadowsocksR账号 加密方式</p>
+<ol>
+<li><p>none<br> [注意] 如果使用 auth_chain_a 协议，请加密方式选择 none，混淆随意(建议 plain)</p>
+</li>
+<li><p>rc4</p>
+</li>
+<li><p>rc4-md5</p>
+</li>
+<li><p>rc4-md5-6</p>
+</li>
+<li><p>aes-128-ctr</p>
+</li>
+<li><p>aes-192-ctr</p>
+</li>
+<li><p>aes-256-ctr</p>
+</li>
+<li><p>aes-128-cfb</p>
+</li>
+<li><p>aes-192-cfb</p>
+</li>
+<li><p>aes-256-cfb</p>
+</li>
+<li><p>aes-128-cfb8</p>
+</li>
+<li><p>aes-192-cfb8</p>
+</li>
+<li><p>aes-256-cfb8</p>
+</li>
+<li><p>salsa20</p>
+</li>
+<li><p>chacha20</p>
+</li>
+<li><p>chacha20-ietf<br>注意：salsa20&#x2F;chacha20-*系列加密方式，需要额外安装依赖 libsodium ，否则会无法启动ShadowsocksR !</p>
+</li>
+</ol>
+<p>(默认: 5. aes-128-ctr):</p>
+<p>——————————————————————————————<br> 加密 : aes-128-ctr<br>——————————————————————————————</p>
+<p>请选择要设置的ShadowsocksR账号 协议插件</p>
+<ol>
+<li>origin</li>
+<li>auth_sha1_v4</li>
+<li>auth_aes128_md5</li>
+<li>auth_aes128_sha1</li>
+<li>auth_chain_a<br> [注意] 如果使用 auth_chain_a 协议，请加密方式选择 none，混淆随意(建议 plain)</li>
+</ol>
+<p>(默认: 2. auth_sha1_v4):</p>
+<p>——————————————————————————————<br> 协议 : auth_sha1_v4<br>——————————————————————————————</p>
+<p>是否设置 协议插件兼容原版(_compatible)？[Y&#x2F;n]</p>
+<p>请选择要设置的ShadowsocksR账号 混淆插件</p>
+<ol>
+<li>plain</li>
+<li>http_simple</li>
+<li>http_post</li>
+<li>random_head</li>
+<li>tls1.2_ticket_auth<br> [注意] 如果使用 ShadowsocksR 加速游戏，请选择 混淆兼容原版或 plain 混淆，然后客户端选择 plain，否则会增加延迟 !<br>(默认: 5. tls1.2_ticket_auth):</li>
+</ol>
+<p>——————————————————————————————<br> 混淆 : tls1.2_ticket_auth<br>——————————————————————————————</p>
+<p>是否设置 混淆插件兼容原版(<em>compatible)？[Y&#x2F;n]<br>请输入要设置的ShadowsocksR账号 欲限制的设备数 ( auth</em>* 系列协议 不兼容原版才有效 )<br>[注意] 设备数限制：每个端口同一时间能链接的客户端数量(多端口模式，每个端口都是独立计算)，建议最少 2个。<br>(默认: 无限):5<br>——————————————————————————————<br> 链接设备数 : 5<br>——————————————————————————————</p>
+<p>请输入要设置的每个端口 单线程 限速上限(单位：KB&#x2F;S)<br>[注意] 单线程限速：每个端口 单线程的限速上限，多线程即无效。<br>(默认: 无限):666</p>
+<p>——————————————————————————————<br> 单端口单线程 : 666 KB&#x2F;S<br>——————————————————————————————</p>
+<p>请输入要设置的每个端口 总速度 限速上限(单位：KB&#x2F;S)<br>[注意] 端口总限速：每个端口 总速度 限速上限，单个端口整体限速。<br>(默认: 无限):2333</p>
+<p>——————————————————————————————<br> 单端口总限速 : 2333 KB&#x2F;S<br>——————————————————————————————<br>同时最后也会提示是否设置 混淆 兼容原版（也就是使用原版SS也能链接），不懂 直接回车 或 输入 y 。（协议不在兼容原版）</p>
+<p>注意：关于限制设备数数，这个协议必须是非原版并且不兼容原版才有效，也就是必须SSR客户端使用协议的情况下，才有效！<br>不输入一路回车就是 默认参数：</p>
+<p>端口 : 2333<br>密码 : doub.io<br>加密 : aes-128-ctr<br>协议 : auth_sha1_v4_compatible<br>混淆 : tls1.2_ticket_auth_compatible<br>设备数限制: 0(无限)<br>单线程限速: 0 KB&#x2F;S (不限速)<br>端口总限速: 0 KB&#x2F;S (不限速)<br>最后会提示让你确认是否输入正确，如果没问题那就按任意键继续安装，如果输入错误，那么就使用 Ctrl + C 退出脚本。</p>
+<p>——————————————————————————————<br> 请检查Shadowsocks账号配置是否有误 !</p>
+<p> 端口     : 2333<br> 密码     : doub.io<br> 加密     : aes-128-ctr<br> 协议     : auth_sha1_v4_compatible<br> 混淆     : tls1.2_ticket_auth_compatible<br> 设备数限制: 5<br> 单线程限速: 666 KB&#x2F;S<br> 端口总限速: 2333 KB&#x2F;S<br>——————————————————————————————</p>
+<p>请按任意键继续，如有配置错误请使用 Ctrl+C 退出。<br>如果安装过程没有出错，那么最后就会提示：</p>
+<p>############################################################<br> ShadowsocksR账号 配置信息：</p>
+<p> I P     : xxx.xxx.xxx.xxx<br> 端口     : 2333<br> 密码     : doub.io<br> 加密     : aes-128-ctr<br> 协议     : auth_sha1_v4_compatible<br> 混淆     : tls1.2_ticket_auth_compatible<br> 设备数限制: 5<br> 单线程限速: 666 KB&#x2F;S<br> 端口总限速: 2333 KB&#x2F;S </p>
+<p> SS链接: ss:&#x2F;&#x2F;xxxxxxxxxxxxx<br> SS二维码: <a target="_blank" rel="noopener" href="http://pan.baidu.com/share/qrcode?w=300&h=300&url=ss://xxxxxxxxxxxxx">http://pan.baidu.com/share/qrcode?w=300&amp;h=300&amp;url=ss://xxxxxxxxxxxxx</a><br> SSR链接: ssr:&#x2F;&#x2F;xxxxxxxxxxxxx<br> SSR二维码: <a target="_blank" rel="noopener" href="http://pan.baidu.com/share/qrcode?w=300&h=300&url=ssr://xxxxxxxxxxxxx">http://pan.baidu.com/share/qrcode?w=300&amp;h=300&amp;url=ssr://xxxxxxxxxxxxx</a></p>
+<p> 提示:<br> 在浏览器中，打开二维码链接，就可以看到二维码图片。<br> 协议和混淆后面的[ _compatible ]，指的是 兼容原版协议&#x2F;混淆。</p>
+<p>############################################################<br>SS&#x2F;SSR链接（格式： ss:&#x2F;&#x2F;XXXXXXX ，很长），可以从剪辑版导入Shadowsocks客户端，不懂的话看下面二维码。</p>
+<p>SS&#x2F;SSR二维码，复制后面的链接在浏览器打开，就会显示一个二维码的图片，可以用Shadowsocks客户端扫描二维码来添加。<br>使用说明<br>运行脚本，</p>
+<p>bash ssr.sh<br>输入对应的数字来执行相应的命令。</p>
+<p>  请输入一个数字来选择菜单选项</p>
+<ol>
+<li>安装 ShadowsocksR</li>
+<li>更新 ShadowsocksR</li>
+<li>卸载 ShadowsocksR</li>
+<li>安装 libsodium(chacha20)<br>————————————</li>
+<li>查看 账号信息</li>
+<li>显示 连接信息</li>
+<li>设置 用户配置</li>
+<li>手动 修改配置</li>
+<li>切换 端口模式<br>————————————</li>
+<li>启动 ShadowsocksR</li>
+<li>停止 ShadowsocksR</li>
+<li>重启 ShadowsocksR</li>
+<li>查看 ShadowsocksR 日志<br>————————————</li>
+<li>其他功能</li>
+<li>升级脚本</li>
+</ol>
+<p> 当前状态: 已安装 并 已启动<br> 当前模式: 单端口</p>
+<p>请输入数字(1-15)：<br>当你为 单端口模式时，使用 7. 设置 用户配置 是 修改 单端口账号配置。</p>
+<p>当你为 多端口模式时，使用 7. 设置 用户配置 是 添加&#x2F;删除&#x2F;修改 多端口账号配置。</p>
+<p>文件位置<br>安装目录：&#x2F;usr&#x2F;local&#x2F;shadowsocksr</p>
+<p>配置文件：&#x2F;etc&#x2F;shadowsocksr&#x2F;user-config.json</p>
+<p>其他说明<br>ShadowsocksR 安装后，自动设置为 系统服务，所以支持使用服务来启动&#x2F;停止等操作，同时支持开机启动。</p>
+<p>启动 ShadowsocksR：&#x2F;etc&#x2F;init.d&#x2F;ssr start<br>停止 ShadowsocksR：&#x2F;etc&#x2F;init.d&#x2F;ssr stop<br>重启 ShadowsocksR：&#x2F;etc&#x2F;init.d&#x2F;ssr restart<br>查看 ShadowsocksR状态：&#x2F;etc&#x2F;init.d&#x2F;ssr status<br>ShadowsocksR 默认支持UDP转发，服务端无需任何设置。</p>
+<p>本脚本已经集成了 安装&#x2F;卸载 锐速(ServerSpeeder)开心版，但是是否支持请查看 Linux支持内核列表 。（锐速不支持OpenVZ）</p>
+<p>v2.0.0 以前的旧版本下载地址：</p>
+<p>点击展开 查看更多</p>
+<p>ShadowsocksR目前支持的协议和混淆：<br>协议（Protocol）：origin，auth_sha1_v4，auth_aes128_md5，auth_aes128_sha1，auth_chain_a，auth_chain_b</p>
+<p>混淆（Obfs）：plain，http_simple，http_post，random_head，tls1.2_ticket_auth，tls1.2_ticket_fastauth(需06&#x2F;04日以后的服务端版本)</p>
+<p>origin 和 plain 是原版，加粗的是推荐使用的。</p>
+<p>如果你想要使用 tls1.2_ticket_fastauth 混淆插件，那么服务端选择 tls1.2_ticket_auth，客户端选择 tls1.2_ticket_fastauth 即可。</p>
+<p>如果服务端 设置混淆参数为：tls1.2_ticket_auth_compatible (兼容原版)</p>
+<p>那么客户端 可使用的混淆为：plain &#x2F; tls1.2_ticket_auth &#x2F; tls1.2_ticket_fastauth</p>
+<p>tls1.2_ticket_auth 与 tls1.2_ticket_fastauth 的区别为，后者不会等待服务器回应，所以不会增加延迟。适合于，因为混淆插件增加延迟的原因不得不选择原版混淆 plain，但是又因为QOS等因素而处于延迟与干扰&#x2F;限速等之间抉择的时候，可以选择 tls1.2_ticket_fastauth 客户端混淆插件！</p>
+<p>使用阿里云&#x2F;腾讯云等存着安全组或规则组一类外部防火墙的请注意<br>点击展开 查看更多</p>
+<p>因为阿里云&#x2F;腾讯云的服务器还有一个外部的防火墙也就是叫 安全组或规则组。</p>
+<p>一般来说默认是只开放 22(SSH)端口，所以一些人在搭建ShadowsocksR服务端后，会出现无法访问的情况，ShadowsocksR客户端的统计窗口显示超时。</p>
+<p>同时ShadowsocksR服务端开启详细日志模式(其他功能中)后，ShadowsocksR客户端访问ShadowsocksR账号无日志输出。</p>
+<p>ShadowsocksR 端口限速中 单线程限速 和 端口总限速 的区别<br>注意：如果要使用脚本中的这个功能，需要重新下载脚本，并重装安装 2月15日 以后的ShadowsocksR服务端才行。<br>请查看这个文章：ShadowsocksR服务端 限制设备连接数 和 限制端口速度 的方法</p>
+<p>解决 可使用原版协议，但无法使用ShadowsocksR协议 的问题<br>点击展开 查看更多</p>
+<p>如果发现Shadowsocks原版协议&#x2F;混淆可以使用，而ShadowsocksR的协议&#x2F;混淆无法使用，那么多半是 VPS时区问题</p>
+<p>这个命令，我的ShadowsocksR脚本在安装的时候已经执行了，如果你发现没有执行，那你可以手动执行。</p>
+<p>我们可以通过下面这个命令，把VPS的时区调整为北京时区，这样就避免了ShadowsocksR 协议&#x2F;混淆 因为时差太大造成的无法验证。</p>
+<p>cp &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai &#x2F;etc&#x2F;localtime<br>注意，部分VPS会提示你是否覆盖文件，输入 y 然后回车。</p>
+<p>如果你遇到，crontab设定的定时任务不按更换时区后的VPS时间执行，那么请看下面：</p>
+<p>crontab设定的定时任务不按VPS的时间执行，那是因为你更换VPS时区后还需要重启crontab。</p>
+<p>CentOS 系统：</p>
+<p>&#x2F;etc&#x2F;init.d&#x2F;crond restart<br>Debian&#x2F;Ubuntu 系统：</p>
+<p>&#x2F;etc&#x2F;init.d&#x2F;cron restart<br>提示 Media change: please insert the disc labeled‘Debian GNU&#x2F;Linux 7.0.0 Wheezy — Official amd64 CD 等信息是 apt源 的问题，更换 apt源<br>点击展开 查看解决办法</p>
+<p>ShadowsocksR启动失败，日志提示：Exception: libsodium not found 的错误<br>这是你使用了 chacha20 系列加密方式，但是却没有安装 libsodium支持库，导致ShadowsocksR无法启动，运行脚本选择选项 4 安装 libsodium支持库即可，如果安装失败，请选择其他的加密方式，对速度影响不大。</p>
+<p>提示wget: unknown host “raw.githubusercontent.com” 之类的错误<br>这是无法解析我的域名，多半是DNS的问题，请更换DNS为谷歌DNS。<br>点击展开 查看更多</p>
+<p>提示 wget: command not found 的错误<br>这是你的系统精简的太干净了，wget都没有安装，所以需要安装wget。<br>点击展开 查看更多</p>
+<p>升级脚本<br>升级脚本只需要重新下载脚本文件就可以了，会自动覆盖原文件。</p>
+<p>定时重启<br>一些人可能需要定时重启ShadowsocksR服务端来保证稳定性等，所以这里用 crontab 定时。</p>
+<p>点击展开 查看更多</p>
+<p>本脚本只是本人的第一个Shell脚本学习练手作品，在逻辑结构上问题不少，大家遇到什么BUG请积极反馈！</p>
+<p>更新日志<br>2018年07月10日，版本 v2.0.38</p>
+<ol>
+<li>新增 升级脚本时，将一起升级服务脚本（Service）。</li>
+</ol>
+<p>2018年01月02日，版本 v2.0.37</p>
+<ol>
+<li>修复 Debian9 系统下，无法使用 显示连接信息 功能的问题。</li>
+</ol>
+<p>2017年11月12日，版本 v2.0.36</p>
+<ol>
+<li>优化 显示链接信息功能的 显示内容排版(对齐了一下)。</li>
+</ol>
+<p>2017年11月03日，版本 v2.0.35</p>
+<ol>
+<li><p>修改 SSR服务端安装方式为：ZIP压缩包安装（考虑到SSR服务端不更新了，所以为了降低git依赖安装出错率，就改成zip压缩包了）。</p>
+</li>
+<li><p>修改 JQ安装方式为：集成与SSR服务端文件夹内（减少了一个安装JQ的下载步骤，节省时间）。</p>
+</li>
+</ol>
+<p>2017年10月06日，版本 v2.0.34<br>1.恢复 libsodium以前安装方式。</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/07/28/%E3%80%8A%E8%BE%BE%E6%91%A9%E6%B5%81%E6%B5%AA%E8%80%85%E3%80%8B%E4%B9%A6%E6%91%98/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  《达摩流浪者》书摘
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/07/28/ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%BC%A0%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">
+                ubuntu下搭建ftp服务器实现上传于下载功能
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+	<a href="/">John Doe</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

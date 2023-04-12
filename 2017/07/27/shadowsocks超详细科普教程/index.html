@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		shadowsocks超详细科普教程 | 
+	 
+	潜空间
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.com";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">潜空间</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='https://github.com/wujun234/hexo-theme-tree' class="menu-item-link" target="_blank">
+            Tree
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a href='https://github.com/wujun234/uid-generator-spring-boot-starter' class="menu-item-link" target="_blank">
+            UidGenerator
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wujun234' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/12/5%E4%B8%AA%E8%AE%AD%E7%BB%83%E8%A7%82%E5%AF%9F%E5%8A%9B%E7%9A%84%E6%96%B9%E6%B3%95/">
+                     
+										    5个训练观察力的方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2011/07/28/?+%EF%BC%9F=%EF%BC%9F/">
+                     
+										    《？+？=1》摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/CentOS-Debian-Ubuntu%20ShadowsocksR%20%E5%8D%95-%E5%A4%9A%E7%AB%AF%E5%8F%A3%20%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC/">
+                     
+										    CentOS/Debian/Ubuntu ShadowsocksR 单/多端口 一键管理脚本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/22/Compose%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                     
+										    Compose 常用命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/21/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                     
+										    Docker常用命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/01/Github+hexo%E6%9B%B4%E6%8D%A2%E5%AD%90%E5%9F%9F%E5%90%8D/">
+                     
+										    Github+hexo更换子域名
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/21/Google%20one%20vpn%E5%AE%89%E5%8D%93%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+                     
+										    Google one vpn安卓使用教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/14/Linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/">
+                     
+										    Linux命令手册
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/11/11/MAC%E9%83%A8%E7%BD%B2Hexo/">
+                     
+										    MAC部署Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/MY%20%E5%BF%85%E8%A3%85%E8%BD%AF%E4%BB%B6/">
+                     
+										    MY 必装软件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/MY%20%E6%94%B6%E5%90%AC%E5%88%97%E8%A1%A8/">
+                     
+										    MY 收听收看列表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/08/03/MY%20%E6%97%85%E8%A1%8C%E6%B8%85%E5%8D%95/">
+                     
+										    MY 旅行清单
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/MY%20%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/">
+                     
+										    MY 网站收藏
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/16/MY%20%E9%9D%A2%E8%AF%95%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D%E6%A1%86%E6%9E%B6%E5%9B%BE/">
+                     
+										    MY 面试个人介绍框架图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/26/MY%E9%83%8A%E6%B8%B8/">
+                     
+										    MY 郊游
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/Markdown%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B/">
+                     
+										    Markdown语法教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/26/NAS%20docker%20%E9%83%A8%E7%BD%B2%20bitwarden/">
+                     
+										    NAS docker 部署 bitwarden
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/17/Nginx%20Proxy%20Manager%20%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%90%AD%E5%BB%BA/">
+                     
+										    Nginx Proxy Manager 反向代理搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/04/Openwrt+Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%A1%AB%E5%9D%91/">
+                     
+										    Openwrt+Frp内网穿透
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/Rclone%E7%9B%B8%E5%85%B3/">
+                     
+										    Rclone相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/Resilio%20Sync%20License%20%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/">
+                     
+										    Resilio Sync License 授权文件下载
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/06/Root%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B%EF%BC%88OVH%EF%BC%89/">
+                     
+										    Root登录教程（OVH）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/26/Trojan%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%BB%AD%E7%AD%BESSL%E8%AF%81%E4%B9%A6%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E4%BC%AA%E8%A3%85%E7%BD%91%E7%AB%99%EF%BC%8C%E6%94%AF%E6%8C%81centos7-debian9-ubuntu16/">
+                     
+										    Trojan一键安装脚本，自动续签SSL证书，自动配置伪装网站，支持centos7+/debian9+/ubuntu16+
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/11/VPS%E4%BC%A0%E5%AE%B6%E5%AE%9D%E6%94%B6%E9%9B%86/">
+                     
+										    VPS传家宝收集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/14/VPS%E5%91%BD%E4%BB%A4%E8%84%9A%E6%9C%AC%E5%A4%87%E4%BB%BD%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82%EF%BC%89/">
+                     
+										    VPS命令脚本备份（持续更新。。。。。）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/VPS%E6%90%AD%E5%BB%BAAria2+AriaNG+Rclone%E6%8C%82%E8%BD%BDGB%E5%AE%9E%E7%8E%B0%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%88%B0%E7%BD%91%E7%9B%98/">
+                     
+										    VPS搭建Aria2+AriaNG+Rclone挂载GB实现离线下载到网盘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/06/VPS%E6%90%AD%E5%BB%BAGithub+Blog+Hexo/">
+                     
+										    VPS搭建Github+Blog+Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/24/VPS%E7%AB%AF%E5%8F%A3%E5%91%BD%E4%BB%A4/">
+                     
+										    关于VPS端口
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/27/X-UI%E5%92%8C%E5%AE%9D%E5%A1%94%E5%85%B1%E5%AD%98/">
+                     
+										    X-UI和宝塔共存
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/29/axure%208%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                     
+										    axure 8软件的问题解决
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2017/07/27/shadowsocks%E8%B6%85%E8%AF%A6%E7%BB%86%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B/">
+                     
+										    shadowsocks超详细科普教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%BC%A0%E4%BA%8E%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/">
+                     
+										    ubuntu下搭建ftp服务器实现上传于下载功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/vps%E6%8D%A3%E9%BC%93%E5%B0%8F%E8%AE%B0/">
+                     
+										    VPS 捣鼓小记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/25/%E3%80%8A%E4%BA%8B%E5%AE%9E%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《事实》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/01/11/%E3%80%8A%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    孟德斯鸠：论专制十恶
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/13/%E3%80%8A%E5%8F%A4%E6%9C%AC%E7%AB%B9%E4%B9%A6%E7%BA%AA%E5%B9%B4%E3%80%8B/">
+                     
+										    《古本竹书纪年》全文
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E3%80%8A%E5%9C%A8%E8%B7%AF%E4%B8%8A%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《在路上》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D%E7%9A%84%E4%B8%83%E5%BC%A0%E9%9D%A2%E5%AD%94%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《大明王朝的七张面孔》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/29/%E3%80%8A%E5%A6%82%E4%BD%95%E7%BB%83%E6%88%90%E8%B6%85%E5%BC%BA%E8%AE%B0%E5%BF%86%E6%9C%AF%E3%80%8B%E5%BD%B1%E7%89%87%E7%AC%94%E8%AE%B0/">
+                     
+										    《如何练成超强记忆术》影片笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E3%80%8A%E5%B7%A8%E5%A9%B4%E5%9B%BD%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《巨婴国》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/%E3%80%8A%E6%96%87%E6%98%8E%E3%80%81%E7%8E%B0%E4%BB%A3%E5%8C%96%E3%80%81%E4%BB%B7%E5%80%BC%E6%8A%95%E8%B5%84%E4%B8%8E%E4%B8%AD%E5%9B%BD%E3%80%8B%20%E4%B9%A6%E6%91%98/">
+                     
+										    《文明、现代化、价值投资与中国》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/28/%E3%80%8A%E8%B6%85%E8%B6%8A%E8%87%AA%E5%8D%91%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《超越自卑》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E3%80%8A%E8%BE%BE%E6%91%A9%E6%B5%81%E6%B5%AA%E8%80%85%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《达摩流浪者》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/25/%E3%80%8A%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E6%9C%AF%E3%80%8B%E4%B9%A6%E6%91%98/">
+                     
+										    《高效能人士的笔记整理术》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E6%9C%8910%E5%B9%B4%E7%BB%8F%E9%AA%8C%EF%BC%8C%E4%BD%86%E6%88%90%E4%B8%8D%E4%BA%86%E4%B8%93%E5%AE%B6/">
+                     
+										    为什么你有10年经验，但成不了专家
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%92%E8%81%94%E7%BD%91%E7%99%BB%E9%99%86%E7%94%A8%E4%BE%8B%E5%9B%BE/">
+                     
+										    互联网登陆用例图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B9%8BOFO%E5%92%8C%E6%91%A9%E6%8B%9C/">
+                     
+										    产品分析之OFO和摩拜
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%B8%80%E5%AE%9A%E8%A6%81%E6%9C%89%E7%90%86%E6%83%B3/">
+                     
+										    产品经理一定要有理想
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+                     
+										    产品经理面试常见问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E4%BA%BA%E7%94%9F%E6%9C%80%E4%B8%8D%E5%80%BC%E5%BE%97%E4%BD%A0%E5%8E%BB%E5%81%9A%E7%9A%8430%E4%BB%B6%E4%BA%8B/">
+                     
+										    人生最不值得你去做的30件事
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E4%BD%A0%E6%89%8D%E6%98%AF%E4%B8%80%E5%88%87%E7%9A%84%E6%A0%B9%E6%9C%AC/">
+                     
+										    你才是一切的根本！
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E5%8F%98%E5%BE%97%E4%B8%8D%E6%B5%AE%E8%BA%81%E7%9A%84/">
+                     
+										    你是如何变得不浮躁的
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E4%BD%BF%E7%94%A8ownCloud%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BA%91%E6%9C%8D%E5%8A%A1(ubuntu%2014.04%20)/">
+                     
+										    使用ownCloud搭建你的个人云服务(ubuntu 14.04 )
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E5%85%B6%E4%BB%96%E4%B9%A6%E6%91%98/">
+                     
+										    其他书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/11/22/%E5%88%86%E7%B1%BB%E6%BA%AF%E6%BA%90%E7%B3%BB%E7%BB%9F%E5%9C%BA%E6%99%AF%E6%8F%8F%E8%BF%B0/">
+                     
+										    分类溯源系统场景描述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/15/%E5%88%A0%E9%99%A4mac%E5%90%AF%E5%8A%A8%E5%8F%B0launchpad%E4%B8%AD%E7%9A%84%E6%97%A0%E6%95%88%E5%9B%BE%E6%A0%87/">
+                     
+										    删除mac启动台launchpad中的无效图标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E5%8D%81%E6%AD%A5%E6%B5%81%E7%A8%8B%E2%80%94%E2%80%94%E5%BE%AE%E8%BD%AFlive%E3%80%81msn%E7%AD%89%E5%90%8E%E7%BC%80%E9%82%AE%E7%AE%B1%E6%B3%A8%E5%86%8C%E6%96%B9%E6%B3%95/">
+                     
+										    十步流程——微软live、msn等后缀邮箱注册方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/05/%E5%8F%8D%E4%BB%A3%E5%AE%9D%E5%A1%94%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88/">
+                     
+										    反代配置修改模版
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/31/%E5%8F%94%E6%9C%AC%E5%8D%8E32%E5%8F%A5/">
+                     
+										    叔本华32句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/27/%E5%9C%9F%E5%8C%BA%E8%AE%A2%E9%98%85Google%20one%E8%AE%B0%E5%BD%95/">
+                     
+										    土区订阅Google one记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/08/25/%E5%A3%81%E7%BA%B8%E5%92%8C%E5%A4%B4%E5%83%8F%E6%94%B6%E8%97%8F/">
+                     
+										    壁纸和头像收藏（一）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/14/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E5%8D%9A%E5%AE%A2%E7%94%A8%E4%BB%80%E4%B9%88%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%94%A8WordPress%E7%9A%84%E4%B8%BB%E9%A2%98/">
+                     
+										    如何查看博客用什么搭建及用WordPress的主题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9F/">
+                     
+										    如何进行网站运营数据分析？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/28/%E5%AD%9F%E5%BE%B7%E6%96%AF%E9%B8%A0%EF%BC%9A%E8%AE%BA%E4%B8%93%E5%88%B6%E5%8D%81%E6%81%B6/">
+                     
+										    《产品思维》书摘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/09/%E5%B8%B8%E7%94%A8%E5%B9%B3%E5%8F%B0RSS%E8%AE%A2%E9%98%85%E8%A7%84%E5%88%99/">
+                     
+										    常用平台RSS订阅规则
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/01/%E6%8A%8A%E2%80%9C%E6%88%91%E7%88%B1%E4%BD%A0%E2%80%9D%E6%8D%A2%E6%88%90520%E7%A7%8D%E6%96%B9%E5%BC%8F%E8%AF%B4/">
+                     
+										    把“我爱你”换成520种方式说
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E6%90%9C%E7%B4%A2%E8%B5%84%E6%BA%90%E5%88%A9%E5%99%A8%EF%BC%88%E4%B8%8D%E6%96%AD%E6%9B%B4%E6%96%B0%EF%BC%89/">
+                     
+										    搜索资源利器（不断更新）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/18/%E6%90%AD%E5%BB%BAmemos%EF%BC%88%E4%BE%BF%E7%AD%BE%EF%BC%89/">
+                     
+										    搭建memos（便签）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/27/%E6%90%AD%E5%BB%BAonenav%E4%B9%A6%E7%AD%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                     
+										    搭建onenav书签管理系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/18/%E6%90%AD%E5%BB%BA%E6%8E%A2%E9%92%88%EF%BC%88ServerStatus%EF%BC%89/">
+                     
+										    搭建探针（ServerStatus）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/16/%E6%96%B0%E5%BC%80%E9%80%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E5%81%9A%E4%BB%80%E4%B9%88/">
+                     
+										    新开通的服务器要做什么(debian/ubuntu)
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E6%9B%BE%E5%9B%BD%E8%97%A9%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95%E8%AF%AD%E5%8F%A5100%E5%8F%A5/">
+                     
+										    曾国藩经典语录语句100句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/14/%E6%9C%89%E5%85%B3%E4%BA%A7%E5%93%81%E2%80%9C%E4%B8%AD%E5%8F%B0%E2%80%9D/">
+                     
+										    有关产品“中台”
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/01/%E6%9D%91%E4%B8%8A%E6%98%A5%E6%A0%91%E6%89%8E%E5%BF%83%E7%9A%8425%E5%8F%A5%E8%AF%9D/">
+                     
+										    村上春树扎心的25句话
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/08/03/%E6%9D%A5%E8%87%AA%E4%B8%93%E4%B8%9A%E6%91%84%E5%BD%B1%E5%B8%88%E7%9A%84100%E6%9D%A1%E6%84%9F%E6%82%9F/">
+                     
+										    来自专业摄影师的100条感悟
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E6%B4%BB%E5%87%BA%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1/">
+                     
+										    活出更好的自己
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E8%8C%83%E6%96%87%E5%92%8C%E7%BB%83%E4%B9%A0/">
+                     
+										    用户使用场景范文和练习
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/22/%E7%94%B3%E8%AF%B7SSL%E8%AF%81%E4%B9%A6%E6%95%99%E7%A8%8B/">
+                     
+										    申请SSL证书教程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/31/%E7%A2%8E%E7%89%87%E5%8C%96%E9%98%85%E8%AF%BB%E6%B5%81%E7%A8%8B/">
+                     
+										    碎片化阅读流程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/07/%E8%A7%A3%E5%86%B3%20Mac%20OS%20%E4%B8%8B%E7%BD%97%E6%8A%80%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/">
+                     
+										    解决 Mac OS 下罗技鼠标滚轮失效问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/%E8%A7%A3%E8%AF%BB%E3%80%8A%E8%A5%BF%E6%B8%B8%E8%AE%B0%E3%80%8B/">
+                     
+										    解读《西游记》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/%E8%AF%97%E6%AD%8C/">
+                     
+										    诗歌
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/20/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%96%B9%E6%B3%95/">
+                     
+										    读书笔记方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E8%B0%88%E5%88%A4%E6%8A%80%E5%B7%A7/">
+                     
+										    谈判技巧
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/12/%E8%B6%85%E7%BA%A7%E6%96%B9%E4%BE%BF%E7%9A%84linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/">
+                     
+										    超级方便的linux命令手册
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/15/%E8%BF%87%E5%8E%BB%E4%B8%8E%E7%8E%B0%E5%9C%A8-%E5%91%A8%E8%BE%B9%E5%90%84%E5%9B%BD/">
+                     
+										    过去与现在-周边各国
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	shadowsocks超详细科普教程
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>John Doe</span>
+	<span>2017-07-27 10:21:30</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+          
+              <span>
+                  <i class="fa fa-folder" aria-hidden="true">
+                  <a href="/categories/VPS/">VPS</a>
+                  </i>
+                
+              </span>
+          
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+            
+                <span>
+                    <i class="fa fa-tag" aria-hidden="true">
+                    <a href="/tags/番羽/">番羽</a>
+                    </i>
+                </span>
+            
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p>没有可用的shadowsocks节点线路，shadowsocks在你手里也是浮云</p>
+<p>这个作为重点先说一下</p>
+<hr>
+<p>附录，在文本最后</p>
+<p>附1: shadowsocks如何实现类VPN代理</p>
+<p>附2：shadowsocks如何代理本地游戏客户端或其他软件客户端</p>
+<p>附3: chrome浏览器SwitchyOmega扩展如何添加shadowsocks的代理设置</p>
+<p>附4：全球付Globalcash虚拟信用卡和paypal申请教程</p>
+<p>附5：什么是cn2?</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”course”]Shadowsocks的小白使用教程</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://51______ruyo______net/p/412______html&z">http://51.ruyo.net/p/412.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://t______cn/Ry42Kbx&z">http://t.cn/Ry42Kbx</a></p>
+<p>chrome浏览器配合代理扩展的设置，下拉记事本滑块到底，看附3</p>
+<p>首先明确一点，不管 Shadowsocks 有几种版本，都分为服务端和客户端，</p>
+<p>服务端是部署在服务器（VPS）上的，客户端是在你的电脑上使用的。</p>
+<p>简单说一下windows系统，你有shadowsocks节点的情况下，Shadowsocks客户端的设置代理使用教程</p>
+<p>Repeat 10 times for this, DO NOT ASK void questions!一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行一定要有有效SS节点才行 一定要有有效SS节点才行网或群共享下载Windows系统的Shadowsocks客户端软件为绿色免安装，下载 解压到任意目录，如：D:&#x2F;Program Files&#x2F;shadowsocksshadowsocks的账号(本地客户端配置参数)一般包括这么几个部分4-1 ：服务器 IP （一般为域名或数字ip）4-2： Port ：服务器端口 （不同的账号的端口也都是不同的）4-3 ：Password：你的密码4-4 ：加密模式：鼠标点击下拉小三角选取</p>
+<p>依次手动输入以下3项</p>
+<p>shadowsocks 服务器域名或IP服务器端口密码并选择ss服务商提供的节点对应的加密方式</p>
+<p>点击“确定”</p>
+<p>右下角的 代理端口 指的是本地监听端口，一般保持默认1080就可以，不用你填。</p>
+<p>现在的ss站都提供二维码形式的ss节点配置参数文件</p>
+<p>对于二维码形式的ss节点配置文件，也可以用客户端自带的二维码扫描功能快速添加</p>
+<p>右键&gt;任务栏&gt;ss客户端图标&gt;服务器&gt;扫描屏幕二维码</p>
+<p>客户端支持添加多线路节点，方便你切换，选择相对你网络环境质量较好，速度快的节点。</p>
+<p>shadowsocks节点速度快慢，影响shadowsocks节点速度的因素：</p>
+<p>你的机房（地理位置，影响节点路由），运营商（网络封锁程度、丢包率、延迟），</p>
+<p>时间段（高峰期），运营商QoS限速，你的本地物理宽带等等。</p>
+<p>总结起来就是一句话：无法预测。</p>
+<p>一般免费或付费shadowsocks站都会提供多个不同vps的节点供你选择切换。</p>
+<ol start="5">
+<li>桌面右下角 任务栏 右键ss图标 选择 启用系统代理。</li>
+</ol>
+<p>系统代理模式 根据自己需要选择pac或全局代理 ，一般建议pac</p>
+<ol start="6">
+<li>打开IE浏览器，访问<a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______youtube______com/&z">https://www.youtube.com/</a></li>
+</ol>
+<p>其他浏览器的shadowsocks代理设置参考上面的教程链接或下面的说明</p>
+<p>网上找了几个客户端的使用教程 供参考</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______awolau______com/shadowsocks/shadowsocks-win7-xp______html&z">http://www.awolau.com/shadowsocks/shadowsocks-win7-xp.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/useage-muti-plat-shadowsocks/&z">http://cnwall.tk/useage-muti-plat-shadowsocks/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://cnlic______com/?paged=2&z">https://cnlic.com/?paged=2</a></p>
+<p>如果使用Shadowsocks，请清除或还原以前修改过的hosts文件，</p>
+<p>也请务必关闭其他占用1080等端口的代理、翻墙软件</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”exchange”]付费的shadowsocks节点</strong></p>
+<p>提供商鱼龙混杂，没个统一的流量和收费标准</p>
+<p>确需购买，建议多比较几家的节点和流量</p>
+<p>能提供试用当然最好，有月付，季付尽量不要选择年付。</p>
+<p>现在基本所有的shadowsocks站都提供收费服务</p>
+<p>以下链接是一部分提供收费服务的shadowsocks商家</p>
+<p>非广告，非推广，来源网络，仅供参考</p>
+<p>shadowsocks各种版本及教程:<a target="_blank" rel="noopener" href="http://www.viidii.info/?http://www______lyzlk______cn/thread-32695-1-1______html&z">www.wegotofqss.info</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______wegotofqss______info/&z">www.wegotofqss.info</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/112527110814073296465/posts&z">https://plus.google.com/u/0/112527110814073296465/posts</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/+%E5%96%B5%E5%B8%95%E6%96%AF/posts&z">https://plus.google.com/u/0/+%E5%96%B5%E5%B8%95%E6%96%AF/posts</a></p>
+<p>目前7元&#x2F;月，不限流量和接入设备数量</p>
+<p>所有节点均支持shadowsocks&#x2F;IKEv2 VPN&#x2F;Anyconnect VPN&#x2F;IPSec Xauth VPN&#x2F;DNS接入</p>
+<p>联系方式– hangouts（环聊）或gmail</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______fyzhuji______com/shadow______html&z">https://www.fyzhuji.com/shadow.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______start-ss______biz/&z">https://www.start-ss.biz/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______deepss______org/index______php&z">https://www.deepss.org/index.php</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://my______ssjsq______net/&z">http://my.ssjsq.net/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://playss______co/&z">http://playss.co/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?http://www______qiushiss______com/cart______php&z">http://www.qiushiss.com/cart.php</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://www______bluecloud______pw/&z">https://www.bluecloud.pw/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?http://www______hishadowsocks______com/&z">http://www.hishadowsocks.com/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://my______ssh91______net/&z">https://my.ssh91.net/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?http://www______pgfastss______org/order______php&z">http://www.pgfastss.org/order.php</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?http://my______ssh91______net/cart______php&z">http://my.ssh91.net/cart.php</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?http://www______pgfastss______com/index______php&z">http://www.pgfastss.com/index.php</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?http://blog______onlybird______com/&z">http://blog.onlybird.com/</a>收费ssh代理</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?http://itti______xyz/&z">http://itti.xyz/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://www______ezlink______hk/order&z">https://www.ezlink.hk/order</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://vnet______link/&z">https://vnet.link/</a> 微林（中转）</p>
+<hr>
+<p><em>注意</em>：Shadowsocks.com不是shadowsocks官网，就是一个纯提供商业服务的网站，所售服务和其他shadowsocks商业站一样。</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>公开的shadowsocks线路极易遭到恶意流量消耗和DDoS攻击或恶意破解ssh</p>
+<p>现在明码公开的免费线路，网上论坛和v2ex 还有G+ twitter几乎已经没有了，</p>
+<p>你可以试着自己搜一下 <a target="_blank" rel="noopener" href="http://www.viidii.info/?http://t______cn/RLTGXfn&z">http://t.cn/RLTGXfn</a>或<a target="_blank" rel="noopener" href="http://www.viidii.info/?http://t______cn/RLTGoxm&z">http://t.cn/RLTGoxm</a></p>
+<p><strong>[section label&#x3D;”free”]获取shadowsocks节点的几种方式</strong></p>
+<p>1.抢码获取免费流量</p>
+<p>免费或免费+收费的shadowsocks站，现在注册码都由站长或管理员严格控制发放了。肉少狼多，现在抢码有难度</p>
+<p>2.自己买vps搭建。</p>
+<p>安全，流量独享。缺点;节点单一，速度如何没保证，靠人品值。</p>
+<p>3.买现成的ss服务商提供的服务</p>
+<p>缺点：一般都有流量限制。</p>
+<p>没有有效节点，想免费体验一把的只能自己想其他办法了。</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______hishadowsocks______com/&z">http://www.hishadowsocks.com/</a> 4小时更新一次密码</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______ishadowsocks______com/&z">http://www.ishadowsocks.com/</a> 6小时更新一次密码</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______surperoneblog______com/shadowsocks______php&z">http://www.surperoneblog.com/shadowsocks.php</a> 6小时更新一次密码</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://sscat______cc/free/&z">http://sscat.cc/free/</a> 3小时更新一次密码</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://kf0______cc/&z">http://kf0.cc/</a> 4小时更新一次密码</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______ezlink______hk/free______php&z">https://www.ezlink.hk/free.php</a> 密码每天0点更新</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://freehide______co______uk/free-shadowsocks/&z">http://freehide.co.uk/free-shadowsocks/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://namaho______com&z">https://namaho.com</a> 半个月更换一次密码 不限速不限量不收费不负责</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______htovpn______net/?View=FreeSS&z">http://www.htovpn.net/?View=FreeSS</a> 3小时更新一次密码 需要注册</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://sskuai______pw/&z">http://sskuai.pw/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/communities/104092405342699579599&z">https://plus.google.com/communities/104092405342699579599</a> shadowsocks免费帐号</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/communities/109962494203239446911&z">https://plus.google.com/communities/109962494203239446911</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/+GhostAssassin/posts/NrDZWoXVjSD&z">https://plus.google.com/+GhostAssassin/posts/NrDZWoXVjSD</a> 免费shadowsocks大集合</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______fyhqy______com/356/&z">http://www.fyhqy.com/356/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://yyf______sg/code&z">http://yyf.sg/code</a> 免费shadowsocks邀请码集合站</p>
+<p>QQ搜群 shadowsocks 有的shadowsocks qq群有免费ss线路或内部放邀请码</p>
+<p>以上链接或链接中的免费shadowsocks随时可能失效，这个就没啥好解释的了。</p>
+<p>有问题，自己随时google解决。</p>
+<p><strong>[section label&#x3D;”google-plus”]1个shadowsocks讨论圈</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://plus______google______com/s/shadowsocks&z">https://plus.google.com/s/shadowsocks</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>提醒一下</p>
+<p>如非确实必要，尽量不要用shadowsocks全局</p>
+<p>可以通过软件自带pac或浏览器安装代理管理扩展，实现智能分流</p>
+<p>如何修改shadowsocks pac文件</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______awolau______com/shadowsocks/start-pac______html&z">http://www.awolau.com/shadowsocks/start-pac.html</a></p>
+<p>实现科学上网时，启用系统代理后，Shadowsocks客户端会自动配置一个IE代理，使用本地127.0.0.1:1080，默认会选择PAC模式。关于PAC，大家可以参考维基百科。</p>
+<p>选择PAC模式后，系统会根据PAC配置文件pac.txt(与Shadowsocks.exe同级目录)，</p>
+<p>当你的浏览器访问这个配置文件里面配置的URL时，会使用代理，否则则不会使用代理。</p>
+<p>这样既节省ss流量，也会提高国内网站的访问速度，这个很不错。</p>
+<p>最后，如果大家发现有什么网站被Qiang了，可以在pac.txt这个文件里面添加这个网站URL，即可通过ss的代理来访问了。同时，最好也定期从GFWList更新PAC。</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”easy”]如何制作便携版shadowsocks</strong></p>
+<p>下载2.5.6版（clowwindy）shadowsocks（只有高于这版的才支持制作便携版）</p>
+<p>在 shadowsocks.exe 所在目录创建一个 shadowsocks_portable_mode.txt 文件</p>
+<p>退出程序，重启程序</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-windows/releases&z">https://github.com/shadowsocks/shadowsocks-windows/releases</a></p>
+<p>源码下架，可以自行寻找</p>
+<p>注：SSR版貌似不支持此项功能</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”inf”]shadowsocks俗称 纸飞机</strong></p>
+<p>ShadowSocks是Clowwindy开发的，一个轻量级的几乎跨平台的开源翻墙应用。</p>
+<p>Shadowsocks 是一个安全的socks5代理，由于服务端与终端都简便易用，</p>
+<p>目前配合VPS主机后十分稳定，已慢慢取代GAE等成为主流代理工具。</p>
+<p><strong>[section label&#x3D;”style”]Shadowsocks功能特性：</strong></p>
+<ol>
+<li><p>高性能：基于异步 I&#x2F;O，事件驱动的程序实现；专为大并发、大流量的应用场景优化；无需保持连接状态，适用于移动设备及无线网络。</p>
+</li>
+<li><p>低资源占用：完全以原生代码实现，后台服务内存占用不超过10MB。</p>
+</li>
+<li><p>跨平台：可以在PC、MAC、智能手机（iPhone与Android）、甚至路由器（OpenWRT）中运行。</p>
+</li>
+<li><p>安全：支持多种加密方案及多种加密强度，提供系统级别的网络数据加密。</p>
+</li>
+<li><p>开源：由社区维护的开源项目，包括GPL及MIT两种协议的多种实现。</p>
+</li>
+</ol>
+<p>有必要先说明一下，用shadowsocks科学上网不是”免费”的。</p>
+<p>shadowsocks软件是免费的,但必须要有架设好的服务器线路才能实现无障碍的“科学上网”。</p>
+<p>架设shadowsocks需要自己购买vps，在服务器端搭建，或买别人搭建好出售流量的线路。</p>
+<p>网上有免费分享的shadowsocks线路，这种是可以免费使用的。</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”web”]shadowsocks官方信息</strong></p>
+<p><a target="_blank" rel="noopener" href="http://shadowsocks.org/en/download/clients.html">http://shadowsocks.org/en/download/clients.html</a></p>
+<p>shadowsocks官网</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______org/en/index______html&z">http://shadowsocks.org/en/index.html</a></p>
+<p>shadowsocks作者</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______v2ex______com/member/clowwindy&z">https://www.v2ex.com/member/clowwindy</a></p>
+<p>shadowsocks官方 pac</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/clowwindy/gfwlist2pac&z">https://github.com/clowwindy/gfwlist2pac</a></p>
+<p>shadowsocks官方的2种pac模式（无法更新了）</p>
+<p>fast mode pac</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/clowwindy/gfwlist2pac/master/test/proxy______pac&z">https://raw.githubusercontent.com/clowwindy/gfwlist2pac/master/test/proxy.pac</a></p>
+<p>precise mode pac</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/clowwindy/gfwlist2pac/master/test/proxy_abp______pac&z">https://raw.githubusercontent.com/clowwindy/gfwlist2pac/master/test/proxy_abp.pac</a></p>
+<p>一个shadowsocks可用的可更新的pac</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/KyonLi/ss-pac/master/ss______pac&z">https://raw.githubusercontent.com/KyonLi/ss-pac/master/ss.pac</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>shadowsocks客户端官网下载页面</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______org/en/download/clients______html&z">http://shadowsocks.org/en/download/clients.html</a></p>
+<p>Windows系统shadowsocks旧版及MAC电脑客户端shadowsocks官方下载页面</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://sourceforge______net/projects/shadowsocksgui/files/dist/&z">http://sourceforge.net/projects/shadowsocksgui/files/dist/</a></p>
+<p>github的下载链接(最新版)</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-windows/releases&z">https://github.com/shadowsocks/shadowsocks-windows/releases</a></p>
+<p>低于2.5.2的旧版Shadowsocks-win-x.x.x.zip和Shadowsocks-win-dotnet4.0-x.x.x.zip的区别</p>
+<p>For &gt;&#x3D; Windows 8 or with .Net 4.0, download Shadowsocks-win-dotnet4.0-x.x.x.zip.</p>
+<p>For &lt;&#x3D; Windows 7 or with .Net 2.0, download Shadowsocks-win-x.x.x.zip.</p>
+<p><strong>[section label&#x3D;”notice”]注意：</strong></p>
+<p>NET 2.0不能在Windows10良好运行，</p>
+<p>从2.5.2这个版本开始，我们不再支持.NET 2.0。最低要求 .Net 4.0</p>
+<p>现在Shadowsocks-win-2.5.2.zip和Shadowsocks-win-dotnet4.0-2.5.2.zip是完全相同的文件。</p>
+<p>如果您使用的是Windows XP或7，请安装.NET 4.0或更高版本。</p>
+<p>负载均衡：就是多个连接分摊到各个服务器 随机选择服务器</p>
+<p>高可用：按最低延迟+最稳定的标准（丢包率）自动选择一个服务器进行连接</p>
+<p>累计丢包率：通过定时 ping 来测速和选择。如果要使用本功能，请打开菜单里的统计可用性</p>
+<p>shadowsocks作者关于windows2.0客户端功能性的说明</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______chinagfw______org/2014/11/shadowsocks-for-windows-20______html&z">http://www.chinagfw.org/2014/11/shadowsocks-for-windows-20.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://vc2tea______com/whats-shadowsocks/&z">http://vc2tea.com/whats-shadowsocks/</a> 写给非专业人士看的 Shadowsocks 简介</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://blog______linuxeye______com/423______html&z">https://blog.linuxeye.com/423.html</a> Shadowsocks原理</p>
+<hr>
+<p>安卓客户端-影梭的官网下载页面</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://play______google______com/store/apps/details?id=com______github______shadowsocks&z">https://play.google.com/store/apps/details?id=com.github.shadowsocks</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-android/releases&z">https://github.com/shadowsocks/shadowsocks-android/releases</a></p>
+<p>安卓未root，也可以使用shadowsocks</p>
+<p>安卓版教程 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://51______ruyo______net/p/412______html&z">http://51.ruyo.net/p/412.html</a></p>
+<p>设置要点：路由-绕过局域网及中国大陆地址，全局代理-勾选“设置系统代理”。</p>
+<p>设置完成后，点击右上角的开关，即可开启Shadowsocks代理</p>
+<p>有特殊原因还在坚守fqrouter2的，可以添加自己的shadowsocks线路，添加后fqrouter可满血复活</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”shadowsocksR”]shadowsockR</strong></p>
+<p>shadowsocks-rss版下载链接</p>
+<p>shadowsockR就是第三方shadowsocks编译版（群共享的神奇海螺版shadowsocks-SSR）</p>
+<p>shadowsockR官方链接：<a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/breakwa11/shadowsocks-rss&z">https://github.com/breakwa11/shadowsocks-rss</a></p>
+<p>ShadowsocksR 服务端安装教程</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/breakwa11/shadowsocks-rss/wiki/Server-Setup&z">https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/+MikotoMisakamm&z">https://plus.google.com/u/0/+MikotoMisakamm</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/u/0/118234153777431449917/posts&z">https://plus.google.com/u/0/118234153777431449917/posts</a></p>
+<p>使用第三方shadowsocks编译版前，请务必仔细阅读shadowsockR主页的参数解释和说明</p>
+<hr>
+<p><strong>[section label&#x3D;”route”]路由器端shadowsocks教程</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://cokebar______info/&z">https://cokebar.info/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://php-rmcr7______rhcloud______com/openwrt-fq/&z">https://php-rmcr7.rhcloud.com/openwrt-fq/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://hong______im/2014/03/16/configure-an-openwrt-based-router-to-use-shadowsocks-and-redirect-foreign-traffic/&z">http://hong.im/2014/03/16/configure-an-openwrt-based-router-to-use-shadowsocks-and-redirect-foreign-traffic/</a></p>
+<p>具体哪些型号的路由器支持shadowsocks?</p>
+<p>想自己动手的，淘宝搜 openWRT,QQ搜 群openWRT</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”ios”]iOS端 shadowsocks客户端教程</strong></p>
+<p>iOS使用shadowsocks的前提条件是必须越狱！越狱！越狱！</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______pgssh______com/ios-shadowsocks______html&z">http://www.pgssh.com/ios-shadowsocks.html</a></p>
+<p>未越狱的话，ss客户端仅相当于一个内置浏览器，无法代理其他应用。</p>
+<p>直接在appstore搜索 Shadowsocks，下载地址：</p>
+<p><a target="_blank" rel="noopener" href="https://itunes.apple.com/us/app/shadowsocks/id665729974?ls=1&mt=8">https://itunes.apple.com/us/app/shadowsocks/id665729974?ls=1&amp;mt=8</a></p>
+<p>iOS 越狱了的话，可以代理其他应用端。越狱的直接在 Cydia 里搜索 Shadowsocks ，然后安装。</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jas0n______me/2014/11/12/up_14_11_12/&z">http://jas0n.me/2014/11/12/up_14_11_12&#x2F;</a></p>
+<p>未越狱的iOS端建议使用anyconnectvpn或最近的神器Surge</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cellsystech______com/docs/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF%E5%8F%8A%E5%8D%8F%E8%AE%AE/&z">http://www.cellsystech.com/docs/%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF%E5%8F%8A%E5%8D%8F%E8%AE%AE/</a></p>
+<p><strong>[section label&#x3D;”surge”]关于Surge</strong></p>
+<p>已经提交apple,在AppStore上架</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://t______co/TF1WvOgq1c&z">https://t.co/TF1WvOgq1c</a> Surge AppStore 购买前说明。</p>
+<p>购买直达链接： <a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637?ls=1&mt=8">https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637?ls=1&amp;mt=8</a></p>
+<p>Surge 新手使用指南</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://medium______com/@scomper/surge-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-a1533c10e80b&z">https:&#x2F;&#x2F;medium.com&#x2F;@scomper&#x2F;surge-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-a1533c10e80b</a></p>
+<p>如何配置surge在ios中使用shadowsocks科学上网</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://ideafoc______us/2015/10/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEsurge%E5%9C%A8ios%E4%B8%AD%E4%BD%BF%E7%94%A8shadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/&z">http://ideafoc.us/2015/10/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEsurge%E5%9C%A8ios%E4%B8%AD%E4%BD%BF%E7%94%A8shadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://surge______run/&z">http://surge.run/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://gist______github______com/soffchen/05bc0f017a10486eb646&z">https://gist.github.com/soffchen/05bc0f017a10486eb646</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://twitter______com/Blankwonder&z">https://twitter.com/Blankwonder</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/+LeoLiu/posts/GPvHQ7uj2iv&z">https://plus.google.com/+LeoLiu/posts/GPvHQ7uj2iv</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______pgyer______com/b7c37752060a55ceeae89159d6cedd52&z">http://www.pgyer.com/b7c37752060a55ceeae89159d6cedd52</a></p>
+<p>Surge可以去twitter上找作者要测试版</p>
+<p>需要 OS X 10.10 &#x2F; iOS 9.0 以上版本</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”parameter”]shadowsocks客户端参数简单说明：</strong></p>
+<p>“server”， 服务器名称 一般填写域名或ip</p>
+<p>“server_port”， 服务端监听端口 填写ss提供者给你的服务器端口</p>
+<p>“local_address”， 本地中转地址 通常为 127.0.0.1</p>
+<p>“password”， 接入服务端密码</p>
+<p>“method”， 加密方式 通常为 aes-256-cfb或rc4-md5</p>
+<p>“local_port”， 本地监听端口， 默认为 1080 ，本地端口一般保持默认即可</p>
+<p>“timeout”， 以秒为单位的连接超时时长</p>
+<p>说明:ss:&#x2F;&#x2F;开头的地址是base64加密方式提供的shadowsocks线路，</p>
+<p>解密方法：</p>
+<p>复制ss:&#x2F;&#x2F; 后面的字符串，解密后，就可以得到格式为method:password@IP:Port的服务器地址。</p>
+<p>一个base64解密网站</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://tool______chinaz______com/Tools/Base64______aspx?jdfwkey=cvvmy&z">http://tool.chinaz.com/Tools/Base64.aspx?jdfwkey=cvvmy</a></p>
+<p>注意：</p>
+<p>切记遵守vps所在国法律，勿做违法或法律禁止事宜。</p>
+<p>千万不要挂shadowsocks使用p2p BT下载。</p>
+<p>因为美国的vps需要遵从美国的DMCA版权法律，如果该vps被用于bt下载，</p>
+<p>使用的vps的ip就会被记录下来。VPS商家就会封号，vps就会被停止服务。</p>
+<p>如果不想失去这个翻墙手段，最好不要翻墙的时候用p2p。</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”build-course”]自己部署shadowsocks服务器端的教程</strong></p>
+<p>以下为vps端自己部署shadowsocks服务器端的教程，不是自己部署的就略过</p>
+<p>大流量或重度用户建议自己搭建或购买适合自己流量,价位的shadowsocks服务</p>
+<p>对个人隐私和安全性比较重视的，就自己部署shadowsocks服务器端吧</p>
+<p>网上搭建和优化教程很多，自己动手搜一下。以下几个链接供参考</p>
+<p>官网教程</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks/wiki&z">https://github.com/shadowsocks/shadowsocks/wiki</a></p>
+<p>网上搜集的一部分教程 打不开的链接挂代理访问</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://vbird______dic______ksu______edu______tw/&z">http://vbird.dic.ksu.edu.tw/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______blogspot______com/2015/01/shadowsocks______html&z">http://shadowsocks.blogspot.com/2015/01/shadowsocks.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______dothinking______cn/ruan-jian-jing-pin-wu/shadowsocks-vps______html&z">http://www.dothinking.cn/ruan-jian-jing-pin-wu/shadowsocks-vps.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/103234343779069345365/posts/Xce4EJpLGhX&z">https://plus.google.com/103234343779069345365/posts/Xce4EJpLGhX</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://shadowsocks______blogspot______com/2015/01/shadowsocks______html&z">http://shadowsocks.blogspot.com/2015/01/shadowsocks.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://ju______outofmemory______cn/entry/114637&z">http://ju.outofmemory.cn/entry/114637</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______abclite______org/602&z">http://www.abclite.org/602</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://teddysun______com/399______html&z">http://teddysun.com/399.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://php-rmcr7______rhcloud______com/shadowsocks-server/&z">https://php-rmcr7.rhcloud.com/shadowsocks-server/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______fanyue______info/2015/02/shadowsocks______html&z">http://www.fanyue.info/2015/02/shadowsocks.html</a> 搬瓦工一键shadowsocks教程</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jannerchang______tumblr______com/post/114392917710/4-23&z">http://jannerchang.tumblr.com/post/114392917710/4-23</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/shadowsocks-manyuser-udp/&z">http://www.cmsky.com/shadowsocks-manyuser-udp/</a> Shadowsocks-Manyuser开启UDP支持</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/serverspeeder-install/&z">http://www.cmsky.com/serverspeeder-install/</a> 安装锐速为网络加速</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://blog______linuxeye______com/423______html&z">https://blog.linuxeye.com/423.html</a> Shadowsocks一键安装脚本</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://blog______linuxeye______com/426______html&z">https://blog.linuxeye.com/426.html</a> ShadowSocks多用户管理系统搭建（moeSS+manyuser）</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/bandwagonhost-one-key-install-shadowsocks/&z">http://cnwall.tk/bandwagonhost-one-key-install-shadowsocks/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/3334______html&z">http://www.tennfy.com/3334.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/2022______html&z">http://www.tennfy.com/2022.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://capbone______com/shadowsocks/&z">http://capbone.com/shadowsocks/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/2843______html&z">http://www.tennfy.com/2843.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______tennfy______com/2148______html&z">http://www.tennfy.com/2148.html</a></p>
+<p>iOS端搭建anyconnect教程</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://plus______google______com/+McGhostGao/posts/Z4gJrZsiRyp&z">https://plus.google.com/+McGhostGao/posts/Z4gJrZsiRyp</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://lifehacker______io/post/108708838206/cisco-anyconnect-shadowsocks&z">http://lifehacker.io/post/108708838206/cisco-anyconnect-shadowsocks</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://ifreedomlife______com/2015/04/20/Setup-Cisco-AnyConnect-VPN-on-CentOS7/&z">http://ifreedomlife.com/2015/04/20/Setup-Cisco-AnyConnect-VPN-on-CentOS7/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jannerchang______tumblr______com/post/108814743720/centos7-strongswan-ios-vpn&z">http://jannerchang.tumblr.com/post/108814743720/centos7-strongswan-ios-vpn</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://goo______gl/WRW8ns&z">http://goo.gl/WRW8ns</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/anyconnect/&z">http://www.cmsky.com/anyconnect/</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”vps”]关于VPS（虚拟专用服务器）的基础知识</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/about-vps/&z">http://cnwall.tk/about-vps/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______v2ex______com/go/vps&z">https://www.v2ex.com/go/vps</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cnwall______tk/about-vps-ssh-client/&z">http://cnwall.tk/about-vps-ssh-client/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______vpser______net/vps-howto&z">http://www.vpser.net/vps-howto</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://since1989______org/digitalocean/vps-vpn-shadowsocks______html&z">http://since1989.org/digitalocean/vps-vpn-shadowsocks.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______appfordev______com/68______html&z">https://www.appfordev.com/68.html</a></p>
+<p>几个vps测评网站（排名不分先后）：</p>
+<p>1.LEB: <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://lowendbox______com/&z">http://lowendbox.com/</a></p>
+<p>2.老左博客： <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______laozuo______org/vps&z">http://www.laozuo.org/vps</a></p>
+<p>3.主机测评： <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______zhujiceping______com/&z">http://www.zhujiceping.com/</a></p>
+<p>4.freehao123: <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______freehao123______com/category/vps-zhuji/&z">http://www.freehao123.com/category/vps-zhuji/</a></p>
+<p>5.年付vps： <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______yrvps______com/&z">http://www.yrvps.com/</a></p>
+<p>6.赵荣部落： <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______zrblog______net/?&z">http://www.zrblog.net/?</a></p>
+<p>7.VPS推荐网 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://vpsadd______com/&z">http://vpsadd.com/</a></p>
+<p>8.主机博士 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______drpsafe______com/&z">http://www.drpsafe.com/</a></p>
+<p>9.小夜博客 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______vpsmm______com/&z">http://www.vpsmm.com/</a></p>
+<p>10.v2ex <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______v2ex______com/go/vps&z">https://www.v2ex.com/go/vps</a></p>
+<p>想了解更多，自己google或baidu</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”think”]以后翻墙的方向，重点就是去中心化</strong></p>
+<p>fqrouter2作者:</p>
+<p>为何有fqrouter？</p>
+<p>因为当年GFW还是一个入侵检测系统，不是一个防火墙。</p>
+<p>这就意味着可以利用很多入侵检测系统的漏洞来做无代理的翻墙，这是很有意思的事情。</p>
+<p>为何关闭fqrouter？</p>
+<p>因为今年GFW已经正式升级为一道防火墙了，google的成千上万个ip被封。</p>
+<p>这种行为相当于把部分国际互联网进行了物理层面的拔网线。</p>
+<p>今后的翻墙只有资源的比拼了，对于这种索然无味的事情我就不在这个上面浪费生命了。</p>
+<p>那我怎么翻墙？（文字作者）</p>
+<p>找渠道买shadowsocks帐号。这种零散的基于交易的行为是去中心化的，长期的，有生命力的。</p>
+<hr>
+<p>shadowsocks 作者clowwindy：</p>
+<p>从实际情况上来看，Shadowsocks 没有办法离开去中心化的服务器。要么自己花钱买 VPS，</p>
+<p>要么用有人分享的账号，要么用有人提供的付费服务，他们各有所长，适合不同的人。</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______solidot______org/story?sid=45231&z">http://www.solidot.org/story?sid=45231</a></p>
+<p>ShadowsocksBackup</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/Long-live-shadowsocks&z">https://github.com/Long-live-shadowsocks</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/ShadowsocksBackup&z">https://github.com/ShadowsocksBackup</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”web-explain”]Shadowsocks Windows 官方使用说明</strong></p>
+<p>功能</p>
+<p>系统代理设置</p>
+<p>PAC 模式和全局模式</p>
+<p>GFWList 和用户规则</p>
+<p>支持 HTTP 代理</p>
+<p>支持多服务器切换</p>
+<p>支持 UDP 代理</p>
+<p>下载</p>
+<p>下载 最新版 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/shadowsocks/shadowsocks-windows/releases&z">https://github.com/shadowsocks/shadowsocks-windows/releases</a>。</p>
+<p>基本使用</p>
+<p>在任务栏找到 Shadowsocks 图标</p>
+<p>在 服务器 菜单添加多个服务器</p>
+<p>选择 启用系统代理 来启用系统代理。请禁用浏览器里的代理插件，或把它们设置为使用系统代理。</p>
+<p>除了设为系统代理，你也可以直接自己配置浏览器代理。在 SwitchyOmega 中把代理设置为 SOCKS5 或 HTTP 的 127.0.0.1:1080。这个 1080 端口可以在服务器设置中设置。</p>
+<p>PAC</p>
+<p>可以编辑 PAC 文件来修改 PAC 设置。Shadowsocks 会监听文件变化，修改后会自动生效。</p>
+<p>你也可以从 GFWList （由第三方维护）更新 PAC 文件。</p>
+<p>你也可以使用在线 PAC URL</p>
+<p>服务器自动切换</p>
+<p>负载均衡：随机选择服务器</p>
+<p>高可用：根据延迟和丢包率自动选择服务器</p>
+<p>累计丢包率：通过定时 ping 来测速和选择。如果要使用本功能，请打开菜单里的统计可用性。</p>
+<p>也可以实现 IStrategy 接口来自定义切换规则，然后给我们发一个 pull request。</p>
+<p>UDP</p>
+<p>对于 UDP，请使用 SocksCap 或 ProxyCap 强制你想使用的程序走代理。</p>
+<p>多实例</p>
+<p>如果想使用其它工具如 SwitchyOmega 管理多个服务器，可以启动多个 Shadowsocks。 为了避免配置产生冲突，把 Shadowsocks 复制到一个新目录里，并给它设置一个新的本地端口。</p>
+<p>另外在 SwitchyOmega 中需要使用 SOCKS5 代理，因为 HTTP 代理还是只会启动一个。</p>
+<p>服务器配置</p>
+<p>请访问 服务器</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#linux--server-side">https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#linux--server-side</a> 获取更多信息。</p>
+<p>绿色模式</p>
+<p>如果你想把所有临时文件放在 shadowsocks&#x2F;temp 目录而不是系统的 temp 目录， 可以在shadowsocks 所在目录创建一个 shadowsocks_portable_mode.txt 文件。</p>
+<p>开发</p>
+<p>Visual Studio 2015 is required.</p>
+<p>授权</p>
+<p>GPLv3</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”add-1”]附1:</strong></p>
+<p>Shadowsocks（Sock5代理）的PAC模式与全局模式与VPN的区别</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://t______cn/Ry4wJ6x&z">http://t.cn/Ry4wJ6x</a></p>
+<p>使用Proxifier把shadowsocks代理转为全局代理(类VPN)</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://t______cn/Ry42ih9&z">http://t.cn/Ry42ih9</a></p>
+<p>Proxifier下载</p>
+<p>Proxifier 3.28 吕达嵘汉化注册版（安装即为注册版）</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______hanzify______org/software/13717______html&z">http://www.hanzify.org/software/13717.html</a></p>
+<p>Proxifier v3.28 破解版</p>
+<p>Initex.Software.Proxifier.v3.28.Standard.Edition.Incl.Keymaker-ZWT</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www89______zippyshare______com/v/5iEwpCKM/file______html&z">http://www89.zippyshare.com/v/5iEwpCKM/file.html</a></p>
+<p>Initex.Software.Proxifier.v3.28.Portable.Edition.Incl.Keymaker-ZWT</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www12______zippyshare______com/v/BqNsbIiu/file______html&z">http://www12.zippyshare.com/v/BqNsbIiu/file.html</a></p>
+<p>本站系列教程：<a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/tag/proxifier-series/&z">https://gochrome.info/tag/proxifier-series/</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”add-2”]附2：</strong></p>
+<p>shadowsocks如何代理本地游戏客户端或其他软件客户端</p>
+<p>关于代理UDP（以TCP转发或UDP转发均可）</p>
+<p>官方shadowsocks和第三方客户端shadowsocksR最新版，都支持配合使用SocksCap64&#x2F;SocksCap&#x2F;ProxyCap等工具，把需要TCP和UDP代理的程序通过本版本程序转发。即不需要折腾OpenWrt或路由器即可在PC上获得UDP转发的能力，是游戏玩家的福音</p>
+<p>如果你是个人用户，可自行更新服务端或向你的ss站长提议更新后端。</p>
+<p>如果你是站长，可从<a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/breakwa11/shadowsocks/tree/manyuser&z">https://github.com/breakwa11/shadowsocks/tree/manyuser</a></p>
+<p>获取最新的多用户分支代码，与原版本兼容。</p>
+<p>1.需要第三方软件SocksCap64&#x2F;SocksCap&#x2F;ProxyCap</p>
+<p>2.需要有支持udp转发的shadowsocks节点</p>
+<p>SocksCap64教程（SocksCap&#x2F;ProxyCap使用方法大同小异）</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/sockscap64-shadowsocks/&z">http://www.cmsky.com/sockscap64-shadowsocks/</a></p>
+<p>SocksCap64免费</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______sockscap64______com/&z">http://www.sockscap64.com/</a></p>
+<p>Sockscap 免费</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______socksproxychecker______com/sockscap______html&z">http://www.socksproxychecker.com/sockscap.html</a></p>
+<p>Sockscap汉化版</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______hanzify______org/software/8898______html&z">http://www.hanzify.org/software/8898.html</a></p>
+<p>Proxycap</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______proxycap______com/download______html&z">http://www.proxycap.com/download.html</a></p>
+<p>破解</p>
+<p>x86 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www43______zippyshare______com/v/39892822/file______html&z">http://www43.zippyshare.com/v/39892822/file.html</a></p>
+<p>x64 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www74______zippyshare______com/v/12710611/file______html&z">http://www74.zippyshare.com/v/12710611/file.html</a></p>
+<p>注意：Proxifier 不支持处理 UDP 流量，Proxifier是靠实现类vpn方式实现第三方应用代理</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”add-3”]附3:</strong></p>
+<p>chrome浏览器SwitchyOmega扩展如何添加shadowsocks的代理设置？</p>
+<p>1.添加shadowsocks的浏览器全局模式</p>
+<p>右键SwitchyOmega扩展图标</p>
+<p>选项&gt;&gt;</p>
+<p>新建情景模式&gt;&gt;</p>
+<p>名称：shadowsocks 全局(名称随便填)&gt;&gt;</p>
+<p>类型：选择：代理服务器&gt;&gt;</p>
+<p>点击：创建&gt;&gt;</p>
+<p>代理协议：一定选择SOCKS5 ，代理服务器 填写127.0.0.1 ，代理端口填写 1080</p>
+<p>2.添加shadowsocks的浏览器pac模式</p>
+<p>新建情景模式&gt;&gt;</p>
+<p>名称：shadowsocks pac(名称随便填)&gt;&gt;</p>
+<p>类型：选择：pac情景模式&gt;&gt;</p>
+<p>点击：创建&gt;&gt;</p>
+<p>pac网址&gt;&gt;复制下面这个链接到pac网址一栏</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/KyonLi/ss-pac/master/ss______pac&z">https://raw.githubusercontent.com/KyonLi/ss-pac/master/ss.pac</a></p>
+<p>点击：立即更新情景模式</p>
+<p>shadowsocks官方有2种pac模式，用哪个或都添加这个随你便</p>
+<p>fast mode pac（快速）和precise mode pac（精确）</p>
+<p>3.添加shadowsocks的”自动切换”代理模式，</p>
+<p>有个步骤用纯文字表诉的话，略微有点困难，这里掠过。</p>
+<p>需要的自己导入OmegaOptions.bak</p>
+<p>群共享和网盘的OmegaOptions.bak (文件大小243KB那个)</p>
+<p>包括shadowsocks”自动切换” “shadowsockspac”和”shadowsocks全局” 3种情景模式，导入即可</p>
+<p>SwitchyOmega 商店下载链接</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://chrome______google______com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif&z">https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif</a></p>
+<p>SwitchyOmega官方备用下载地址</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/FelisCatus/SwitchyOmega/releases&z">https://github.com/FelisCatus/SwitchyOmega/releases</a></p>
+<p>附：原gfwlist项目迁移到 <a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://github______com/gfwlist/gfwlist&z">https://github.com/gfwlist/gfwlist</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://raw______githubusercontent______com/gfwlist/gfwlist/master/gfwlist______txt&z">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></p>
+<p>本站原创switchyomega配置文件</p>
+<p>switchyomega自动切换版：<a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/switchyomega-config/&z">https://gochrome.info/switchyomega-config/</a></p>
+<p>switchyomega虚拟情景版：<a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/switchyomega-virtual/&z">https://gochrome.info/switchyomega-virtual/</a></p>
+<p>站长推荐使用虚拟情景模式（共内置了8套模式）</p>
+<p>火狐浏览器添加规则和chrome大同小异</p>
+<p>Google 即将关闭 Google Code，原gfwlist项目主页</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://code______google______com/p/autoproxy-gfwlist/&z">https://code.google.com/p/autoproxy-gfwlist/</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”add-4”]附4：</strong></p>
+<p>全球付Globalcash虚拟信用卡和paypal注册申请教程</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______cmsky______com/globalcash/&z">http://www.cmsky.com/globalcash/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://jingyan______baidu______com/article/e73e26c0e3913b24adb6a7a4______html&z">http://jingyan.baidu.com/article/e73e26c0e3913b24adb6a7a4.html</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p><strong>[section label&#x3D;”add-5”]附5：</strong></p>
+<p>什么是cn2?</p>
+<p>中国电信下一代承载网络（国际流量走的cn2线路）</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://www______chinatelecom______com______cn/gjywpd/gj-qqwl/&z">http://www.chinatelecom.com.cn/gjywpd/gj-qqwl/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=https://www______netroby______com/view______php?id=3459&z">https://www.netroby.com/view.php?id=3459</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://baike______baidu______com/subview/2193652/2193652______htm&z">http://baike.baidu.com/subview/2193652/2193652.htm</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://cablemap______info/&z">http://cablemap.info/</a> Greg’s Cable Map</p>
+<p>CN2网络延迟和丢包监控:</p>
+<p><a target="_blank" rel="noopener" href="http://www.viidii.info/?https://gochrome______info/wp-content/themes/begin(1______8)/inc/go______php?url=http://183______91______49______53/public/sla/slaPerformanceNew______html&z">http://183.91.49.53/public/sla/slaPerformanceNew.html</a></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>如果你连不上服务器，请首先检查SS客户端配置是否正确：</p>
+<p>服务器域名或ip ，服务器端口 ，密码 ，加密方式，检查上面四项，确认没有填错。</p>
+<p>如果均正常，依然连不上的话，请尝试Ping下 服务器域名或ip,看是否通；</p>
+<p>如果不通，一般是你的线路问题（电信、联通、地域、时间等相关，有可能是暂时性问题）。</p>
+<p>但注意在少数情况下，不管你是否能Ping通，都跟是否能连上ss服务器无关。</p>
+<p>最后说下，一般都不会是服务器的问题，也就是说最大的可能性是：1.客户端参数配置，2.浏览器代理设置。</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>Shadowsocks 为什么出现 500 Internal Privoxy Error</p>
+<p>可能原因：</p>
+<p>1.客户端的服务器信息错误</p>
+<p>2.服务端未正常启动或线路问题（被墙？）</p>
+<p>3.如果有使用端口转发，有可能是转发线路问题</p>
+<p>通俗点说</p>
+<p>1.客户端配置参数填错，或参数有变化,自己更新不及时</p>
+<ol start="2">
+<li>服务器端挂了，或线路被墙 （可能性很小）</li>
+</ol>
+<p>3.使用端口转发的，联系你的服务商</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>可能有人会有觉得100多人同时在用一个服务器会非常慢，</p>
+<p>但实际上这点用户数对服务器造成的压力并没你想像中的大。</p>
+<p>根据过去的服务器监控数据来看，平时的带宽使用平均在12Mbps左右，</p>
+<p>间中会有去到20Mbps的突发流量，可以说完全没有压力。</p>
+<p>CPU使用率长期在10%以下。内存方面没做太多优化，保持在60%左右。</p>
+<p>或者100人同时在看视频的话，带宽可能就真的有压力，但这种概率几乎不存在，</p>
+<p>而且就算你家有100Mbps的宽带，服务器也有100Mbps的带宽，你也会受中间线路最小带宽路段的限制，想像下木桶短板原理，而且“网络”中还有很多你意想不到的情况和条件存在，所以用（总带宽&#x2F;使用人数来）算每人得到的带宽这种方法实在不合理。</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2017/08/03/%E6%9D%A5%E8%87%AA%E4%B8%93%E4%B8%9A%E6%91%84%E5%BD%B1%E5%B8%88%E7%9A%84100%E6%9D%A1%E6%84%9F%E6%82%9F/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  来自专业摄影师的100条感悟
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2011/07/28/?+%EF%BC%9F=%EF%BC%9F/">
+                《？+？=1》摘
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+	<a href="/">John Doe</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
