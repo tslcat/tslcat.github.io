@@ -373,7 +373,7 @@
             
         
         
-            <p>申请证书：<br>    安装acme：curl <a target="_blank" rel="noopener" href="https://get.acme.sh/">https://get.acme.sh</a> | sh<br>    安装socat：apt install socat<br>    添加软链接：ln -s  &#x2F;root&#x2F;.acme.sh&#x2F;acme.sh &#x2F;usr&#x2F;local&#x2F;bin&#x2F;acme.sh<br>    注册账号： acme.sh –register-account -m <a href="mailto:&#x6d;&#x79;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#109;">&#x6d;&#x79;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#109;</a><br>    开放80端口：ufw allow 80<br>    申请证书： acme.sh  –issue -d 你的域名  –standalone -k ec-256<br>    安装证书： acme.sh –installcert -d 你的域名 –ecc  –key-file   &#x2F;root&#x2F;trojan&#x2F;server.key   –fullchain-file &#x2F;root&#x2F;trojan&#x2F;server.crt </p>
+            <p>申请证书：<br>    安装acme：curl <a target="_blank" rel="noopener" href="https://get.acme.sh/">https://get.acme.sh</a> | sh<br>    安装socat：apt install socat<br>    添加软链接：ln -s  &#x2F;root&#x2F;.acme.sh&#x2F;acme.sh &#x2F;usr&#x2F;local&#x2F;bin&#x2F;acme.sh<br>    注册账号： acme.sh –register-account -m <a href="mailto:&#x6d;&#121;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;">&#x6d;&#121;&#x40;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;</a><br>    开放80端口：ufw allow 80<br>    申请证书： acme.sh  –issue -d 你的域名  –standalone -k ec-256<br>    安装证书： acme.sh –installcert -d 你的域名 –ecc  –key-file   &#x2F;root&#x2F;trojan&#x2F;server.key   –fullchain-file &#x2F;root&#x2F;trojan&#x2F;server.crt </p>
 <pre><code>如果默认CA无法（等待时反复出现15的到计时时）颁发，则可以切换下列CA：
 切换 Let’s Encrypt：acme.sh --set-default-ca --server letsencrypt
 切换 Buypass：acme.sh --set-default-ca --server buypass
