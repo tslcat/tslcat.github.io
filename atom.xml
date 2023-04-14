@@ -6,7 +6,7 @@
   <link href="http://blog.779911.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.779911.xyz/"/>
-  <updated>2023-03-15T01:28:38.000Z</updated>
+  <updated>2023-04-14T05:54:04.000Z</updated>
   <id>http://blog.779911.xyz/</id>
   
   <author>
@@ -17,40 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://blog.779911.xyz/2023/04/12/%E4%BD%BF%E7%94%A8ownCloud%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BA%91%E6%9C%8D%E5%8A%A1(ubuntu%2014.04%20)/"/>
-    <id>http://blog.779911.xyz/2023/04/12/%E4%BD%BF%E7%94%A8ownCloud%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%BA%91%E6%9C%8D%E5%8A%A1(ubuntu%2014.04%20)/</id>
-    <published>2023-04-12T04:41:21.561Z</published>
-    <updated>2023-03-15T01:28:38.000Z</updated>
+    <title>MY 常用地址</title>
+    <link href="http://blog.779911.xyz/2023/04/13/MY%20%E5%B8%B8%E7%94%A8%E5%9C%B0%E5%9D%80/"/>
+    <id>http://blog.779911.xyz/2023/04/13/MY%20%E5%B8%B8%E7%94%A8%E5%9C%B0%E5%9D%80/</id>
+    <published>2023-04-13T10:21:30.000Z</published>
+    <updated>2023-04-14T05:54:04.000Z</updated>
     
-    <content type="html"><![CDATA[<p>使用ownCloud搭建你的个人云服务(ubuntu 14.04 )</p><p><strong>ownCloud是什么</strong></p><p>ownCloud是一个自由且开源的个人云存储解决方案(类似百度网盘或者Dropbox)，包括两个部分：服务器和客户端。</p><span id="more"></span><p>ownCloud在客户端可通过网页界面，或者安装专用的客户端软件来使用。网页界面当然就是任何能打开网页的平台都支持，而客户端软件也支持相当多平台，Windows、Linux、iOS、Android皆有。<br>除了云存储之外，ownCloud也可用于同步行事历、电子邮件联系人、网页浏览器的书签；此外还有多人在线文件同步协作的功能。 </p><p><strong>云服务器比较</strong></p><p>在安装owncloud之前，也适用了seafile，总体来说seafile功能和细节上还有所欠缺。不过seafile和owncloud最大的不同在于：<br>owncloud的数据文件直接存放在服务器的磁盘上，目录结构也与网页(客户端)看到的结构相同。这样即便有一天owncloud挂了，或者停止开发了，导出数据也是很方便的，甚至直接删掉owncloud即可。<br>seafile的数据文件在服务器上存储时进行了切片和整合(默认是否加密不清楚)，这样确保了数据安全性，即便拥有服务器root账户也无法查看文件内容，不过seafile的管理员可以修改其他用户密码，所以这个加密功能貌似还有有问题。此外，如果seafile挂掉或者停止更新，数据导出就变的几乎不可能了。<br>下面说下怎么在ubuntu上搭建ownCloud服务器（测试版本：14.04）</p><p><strong>安装（通过apt-get）</strong></p><p>不同的linux版本可以前往查看： </p><p><a href="http://software.opensuse.org/download.html?project=isv:ownCloud:community&package=owncloud">http://software.opensuse.org/download.html?project=isv:ownCloud:community&amp;package=owncloud</a><br>对于 xUbuntu 14.04，请运行以下命令： </p><blockquote><p>sudo sh -c “echo ‘deb <a href="http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_14.04/">http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_14.04/</a> &#x2F;‘ &gt;&gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;owncloud.list” </p></blockquote><blockquote><p>sudo apt-get update </p></blockquote><blockquote><p>sudo apt-get install owncloud </p></blockquote><p>您可以把软件源金钥添加到 apt。记住该金钥的拥有者将能够分发您的系统将会信任的更新、软件包和软件源 (更多信息)。要添加该金钥，请运行： </p><blockquote><p>wget <a href="http://download.opensuse.org/repositories/isv:ownCloud:community/xUbuntu_14.04/Release.key">http://download.opensuse.org/repositories/isv:ownCloud:community/xUbuntu_14.04/Release.key</a> </p></blockquote><blockquote><p>sudo apt-key add - &lt; Release.key </p></blockquote><p>安装时间可能会有点长，因为软件包需要从download.opensuse.org下载，国内网络访问速度不是很快。可以自己连vpn下载安装包。<br>安装过程中，mysql会要求你输入root密码，输入并确认即可。</p><p>执行完毕，如果没有错误的话就安装完成了，可以通过 http:&#x2F;&#x2F;域名或ip&#x2F;owncloud 访问，将看到初始化配置界面。根据提示设置即可，注意，设置数据存储位置时，需要确保www-data用户具有写入该位置的权限（具体看配置）。</p><p><strong>注意，修改配置后要重启apache让配置生效</strong></p><blockquote><p> sudo &#x2F;etc&#x2F;init.d&#x2F;apache2 restart</p></blockquote><p><strong>设置数据文件位置之前，要修改路径位置的访问权限</strong></p><blockquote><p>sudo chown www-data:www-data &lt;路径&gt;  </p></blockquote><p><strong>修改默认编码</strong></p><p>编辑文件： &#x2F;etc&#x2F;php5&#x2F;apache2&#x2F;php.ini<br>去掉以下行前#让配置生效：</p><blockquote><p>default_charset &#x3D; “UTF-8” </p></blockquote><p><strong>上传大小限制(设置成10G)</strong></p><p>编辑文件：&#x2F;var&#x2F;www&#x2F;html&#x2F;owncloud&#x2F;.htaccess<br>    php_value upload_max_filesize 10240M<br>    php_value post_max_size 10240M<br>    php_value memory_limit 2048M</p><p><strong>修改成默认页面（访问url不用&#x2F;owncloud了）</strong></p><p>编辑文件： &#x2F;etc&#x2F;apache2&#x2F;sites-enabled&#x2F;000-default.conf<br>修改行：<br>    DocumentRoot &#x2F;var&#x2F;www&#x2F;http<br>改为：<br>    DocumentRoot &#x2F;var&#x2F;www&#x2F;owncloud</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;使用ownCloud搭建你的个人云服务(ubuntu 14.04 )&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ownCloud是什么&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;ownCloud是一个自由且开源的个人云存储解决方案(类似百度网盘或者Dropbox)，包括两个部分：服务器和客户端。&lt;/p&gt;</summary>
+    <content type="html"><![CDATA[<blockquote><p>用于注册填写</p></blockquote><h3 id="蒙大拿"><a href="#蒙大拿" class="headerlink" title="蒙大拿"></a>蒙大拿</h3><p>街道：217 W Mercury St<br>城市：Butte<br>邮编：59701</p>]]></content>
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://blog.779911.xyz/2023/04/12/Resilio%20Sync%20License%20%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
-    <id>http://blog.779911.xyz/2023/04/12/Resilio%20Sync%20License%20%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</id>
-    <published>2023-04-12T04:41:17.057Z</published>
-    <updated>2023-03-15T01:28:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Resilio Sync License 授权文件下载</p><p><img src="https://cdn.sspai.com/attachment/origin/2016/07/01/335713.gif?imageMogr2/quality/95/thumbnail/!700x233r/gravity/Center/crop/700x233"></p><p>分享一个永久的 License 授权文件 有效期为永远 可以任意的选择性同步，使用所有 Resilio Sync 的高级功能。目前对所有版本有效，测试到最高版本 2.5.2 版本。</p><span id="more"></span><p><a href="https://page13.ctfile.com/fs/14464513-204692142"><strong>Resilio Sync 授权文件 点击下载</strong></a></p><ul><li><strong>使用方法：Resilio Sync 2.5 以下版本 选择许可证菜单，然后选解下载解后压里头的授权文件即可：</strong></li></ul><p><img src="http://verysync.com/wp-content/uploads/2017/05/img_592c0b6c4568f.png"></p><ul><li><strong>2.5 以上版本界面做了一些调整， 操作如下：</strong></li></ul><p><img src="http://verysync.com/wp-content/uploads/2017/05/img_592c0bb30d96e.png"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Resilio Sync License 授权文件下载&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.sspai.com/attachment/origin/2016/07/01/335713.gif?imageMogr2/quality/95/thumbnail/!700x233r/gravity/Center/crop/700x233&quot;&gt;&lt;/p&gt;
-&lt;p&gt;分享一个永久的 License 授权文件 有效期为永远 可以任意的选择性同步，使用所有 Resilio Sync 的高级功能。目前对所有版本有效，测试到最高版本 2.5.2 版本。&lt;/p&gt;</summary>
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;用于注册填写&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;蒙大拿&quot;&gt;&lt;a href=&quot;#蒙大拿&quot; class=&quot;headerlink&quot; title=&quot;蒙大拿&quot;&gt;&lt;/a&gt;蒙大拿&lt;/h3&gt;&lt;p&gt;街道：217 W Mercury St&lt;br&gt;城市</summary>
+      
     
     
     
+    <category term="MY" scheme="http://blog.779911.xyz/categories/MY/"/>
+    
+    
+    <category term="资源" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
@@ -501,6 +490,31 @@
     
     
     <category term="资源" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>反代配置修改模版</title>
+    <link href="http://blog.779911.xyz/2022/07/05/%E5%8F%8D%E4%BB%A3%E5%AE%9D%E5%A1%94%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88/"/>
+    <id>http://blog.779911.xyz/2022/07/05/%E5%8F%8D%E4%BB%A3%E5%AE%9D%E5%A1%94%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88/</id>
+    <published>2022-07-05T12:38:00.000Z</published>
+    <updated>2023-03-15T01:28:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="宝塔"><a href="#宝塔" class="headerlink" title="宝塔"></a>宝塔</h3><p>删除或注释</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$  </span><br><span class="line"># &#123;  </span><br><span class="line">#     expires      30d;  </span><br><span class="line">#     error_log off;  </span><br><span class="line">#     access_log /dev/null;  </span><br><span class="line"># &#125;  </span><br><span class="line">  </span><br><span class="line"># location ~ .*\.(js|css)?$  </span><br><span class="line"># &#123;  </span><br><span class="line">#     expires      12h;  </span><br><span class="line">#     error_log off;  </span><br><span class="line">#     access_log /dev/null;   </span><br><span class="line"># &#125;</span><br></pre></td></tr></table></figure><p>添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;  </span><br><span class="line">    proxy_pass http://127.0.0.1:8002/;  </span><br><span class="line">    rewrite ^/(.*)$ /$1 break;  </span><br><span class="line">    proxy_redirect off;  </span><br><span class="line">    proxy_set_header Host $host;  </span><br><span class="line">    proxy_set_header X-Forwarded-Proto $scheme;  </span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;  </span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  </span><br><span class="line">    proxy_set_header Upgrade-Insecure-Requests 1;  </span><br><span class="line">    proxy_set_header X-Forwarded-Proto https;  </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen 443 ssl http2;</span><br><span class="line">  server_name sub.domain.com;  #修改</span><br><span class="line">  ssl_certificate     /path/to/ssl/cert/crt;</span><br><span class="line">  ssl_certificate_key /path/to/ssl/key/key;</span><br><span class="line"></span><br><span class="line">  location / &#123;</span><br><span class="line">    proxy_set_header   X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    proxy_pass         http://localhost:3001/;  #修改</span><br><span class="line">    proxy_http_version 1.1;</span><br><span class="line">    proxy_set_header   Upgrade $http_upgrade;</span><br><span class="line">    proxy_set_header   Connection &quot;upgrade&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;宝塔&quot;&gt;&lt;a href=&quot;#宝塔&quot; class=&quot;headerlink&quot; title=&quot;宝塔&quot;&gt;&lt;/a&gt;宝塔&lt;/h3&gt;&lt;p&gt;删除或注释&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu</summary>
+      
+    
+    
+    
+    <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
+    
+    
+    <category term="笔记" scheme="http://blog.779911.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
