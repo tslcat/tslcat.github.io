@@ -6,7 +6,7 @@
   <link href="http://blog.779911.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.779911.xyz/"/>
-  <updated>2023-04-16T06:31:44.000Z</updated>
+  <updated>2023-04-14T05:54:04.000Z</updated>
   <id>http://blog.779911.xyz/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>一键安装XUI命令</title>
-    <link href="http://blog.779911.xyz/2023/04/14/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85XUI/"/>
-    <id>http://blog.779911.xyz/2023/04/14/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85XUI/</id>
-    <published>2023-04-14T10:21:30.000Z</published>
-    <updated>2023-04-16T06:31:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装XUI"><a href="#安装XUI" class="headerlink" title="安装XUI"></a>安装XUI</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)</span><br></pre></td></tr></table></figure><h2 id="放行端口"><a href="#放行端口" class="headerlink" title="放行端口"></a>放行端口</h2><h2 id="登录XUI重置密码"><a href="#登录XUI重置密码" class="headerlink" title="登录XUI重置密码"></a>登录XUI重置密码</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;安装XUI&quot;&gt;&lt;a href=&quot;#安装XUI&quot; class=&quot;headerlink&quot; title=&quot;安装XUI&quot;&gt;&lt;/a&gt;安装XUI&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut</summary>
-      
-    
-    
-    
-    <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
-    
-    
-    <category term="笔记" scheme="http://blog.779911.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
   
   <entry>
     <title>MY 常用地址</title>
@@ -514,6 +490,31 @@
     
     
     <category term="资源" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>反代配置修改模版</title>
+    <link href="http://blog.779911.xyz/2022/07/05/%E5%8F%8D%E4%BB%A3%E5%AE%9D%E5%A1%94%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88/"/>
+    <id>http://blog.779911.xyz/2022/07/05/%E5%8F%8D%E4%BB%A3%E5%AE%9D%E5%A1%94%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88/</id>
+    <published>2022-07-05T12:38:00.000Z</published>
+    <updated>2023-03-15T01:28:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="宝塔"><a href="#宝塔" class="headerlink" title="宝塔"></a>宝塔</h3><p>删除或注释</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$  </span><br><span class="line"># &#123;  </span><br><span class="line">#     expires      30d;  </span><br><span class="line">#     error_log off;  </span><br><span class="line">#     access_log /dev/null;  </span><br><span class="line"># &#125;  </span><br><span class="line">  </span><br><span class="line"># location ~ .*\.(js|css)?$  </span><br><span class="line"># &#123;  </span><br><span class="line">#     expires      12h;  </span><br><span class="line">#     error_log off;  </span><br><span class="line">#     access_log /dev/null;   </span><br><span class="line"># &#125;</span><br></pre></td></tr></table></figure><p>添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;  </span><br><span class="line">    proxy_pass http://127.0.0.1:8002/;  </span><br><span class="line">    rewrite ^/(.*)$ /$1 break;  </span><br><span class="line">    proxy_redirect off;  </span><br><span class="line">    proxy_set_header Host $host;  </span><br><span class="line">    proxy_set_header X-Forwarded-Proto $scheme;  </span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;  </span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  </span><br><span class="line">    proxy_set_header Upgrade-Insecure-Requests 1;  </span><br><span class="line">    proxy_set_header X-Forwarded-Proto https;  </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen 443 ssl http2;</span><br><span class="line">  server_name sub.domain.com;  #修改</span><br><span class="line">  ssl_certificate     /path/to/ssl/cert/crt;</span><br><span class="line">  ssl_certificate_key /path/to/ssl/key/key;</span><br><span class="line"></span><br><span class="line">  location / &#123;</span><br><span class="line">    proxy_set_header   X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    proxy_pass         http://localhost:3001/;  #修改</span><br><span class="line">    proxy_http_version 1.1;</span><br><span class="line">    proxy_set_header   Upgrade $http_upgrade;</span><br><span class="line">    proxy_set_header   Connection &quot;upgrade&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;宝塔&quot;&gt;&lt;a href=&quot;#宝塔&quot; class=&quot;headerlink&quot; title=&quot;宝塔&quot;&gt;&lt;/a&gt;宝塔&lt;/h3&gt;&lt;p&gt;删除或注释&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu</summary>
+      
+    
+    
+    
+    <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
+    
+    
+    <category term="笔记" scheme="http://blog.779911.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
