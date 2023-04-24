@@ -6,7 +6,7 @@
   <link href="http://blog.779911.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.779911.xyz/"/>
-  <updated>2023-04-21T15:19:15.000Z</updated>
+  <updated>2023-04-24T04:32:38.000Z</updated>
   <id>http://blog.779911.xyz/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VPS优惠推送程序参考</title>
+    <link href="http://blog.779911.xyz/2023/04/24/VPS%E4%BC%98%E6%83%A0%E6%8E%A8%E9%80%81%E7%A8%8B%E5%BA%8F%E5%8F%82%E8%80%83/"/>
+    <id>http://blog.779911.xyz/2023/04/24/VPS%E4%BC%98%E6%83%A0%E6%8E%A8%E9%80%81%E7%A8%8B%E5%BA%8F%E5%8F%82%E8%80%83/</id>
+    <published>2023-04-24T09:15:00.000Z</published>
+    <updated>2023-04-24T04:32:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="监控脚本运行在Debian11系统"><a href="#监控脚本运行在Debian11系统" class="headerlink" title="监控脚本运行在Debian11系统"></a>监控脚本运行在Debian11系统</h2><h3 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h3><p>在终端中输入以下命令来安装Python：</p><p>sudo apt update<br>sudo apt install python3<br>这将安装Python 3.x版本。如果您需要安装Python 2.x版本，请将上述命令中的“python3”替换为“python”。</p><h3 id="安装所需的库"><a href="#安装所需的库" class="headerlink" title="安装所需的库"></a>安装所需的库</h3><p>在终端中输入以下命令来安装所需的Python库：</p><p>apt install python3-pip<br>pip3 install requests<br>pip3 install beautifulsoup4<br>pip3 install python-telegram-bot<br>这将安装requests、beautifulsoup4和python-telegram-bot库。</p><h3 id="创建Telegram-Bot并获取API令牌"><a href="#创建Telegram-Bot并获取API令牌" class="headerlink" title="创建Telegram Bot并获取API令牌"></a>创建Telegram Bot并获取API令牌</h3><p>可以在&#x2F;root目录下（一般默认进入系统就是在此目录下）编写Python代码 monitor.py，执行：<br>nano monitor.py<br>#(使用vi monitor.py也可以，看你喜欢)</p><p>将以下代码复制并粘贴到您的文本编辑器中，并将【API token令牌替换】【用户 ID替换】替换为您自己的API令牌和Chat ID。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">##复制下面 从这里开始</span><br><span class="line">import requests</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import telegram</span><br><span class="line">import asyncio</span><br><span class="line"></span><br><span class="line">\# 填写 Telegram Bot 的 API token 和您的 Telegram 用户 ID，保留单引号，只修改这两个</span><br><span class="line">bot_token = &#x27;API token令牌替换&#x27;</span><br><span class="line">telegram_user_id = &#x27;用户 ID替换&#x27;</span><br><span class="line"></span><br><span class="line">\# 从网页获取数据并解析</span><br><span class="line">url = &#x27;https://idc.hytron.io/index.php?rp=/store/hkbgp-standard&#x27;</span><br><span class="line">response = requests.get(url)</span><br><span class="line">soup = BeautifulSoup(response.text, &#x27;html.parser&#x27;)</span><br><span class="line">qty_element = soup.find(id=&#x27;product1&#x27;).find(class_=&#x27;qty&#x27;)</span><br><span class="line"></span><br><span class="line">\# 获取当前的数量值</span><br><span class="line">qty_text = qty_element.text.strip()</span><br><span class="line">qty = int(qty_text.split(&#x27; &#x27;)[0])</span><br><span class="line"></span><br><span class="line">\# 如果数量不为零，向 Telegram 用户发送消息</span><br><span class="line">async def check_availability():</span><br><span class="line">  bot = telegram.Bot(token=bot_token)</span><br><span class="line">  await bot.send_message(chat_id=telegram_user_id, text=f&quot;hytron1刀有货，当前数量为&#123;qty&#125;&quot;)</span><br><span class="line"></span><br><span class="line">if qty &gt; 0:</span><br><span class="line">  asyncio.run(check_availability())</span><br></pre></td></tr></table></figure><h3 id="并使用以下命令在终端中运行Python代码"><a href="#并使用以下命令在终端中运行Python代码" class="headerlink" title="并使用以下命令在终端中运行Python代码"></a>并使用以下命令在终端中运行Python代码</h3><p>python3 monitor.py<br>Python代码将开始运行，并在可用余量大于0时向您的Telegram Bot发送一条消息。如果出现任何错误，Python代码将在终端中打印错误信息。<br>如果没有任何提示，表示当前没有可用的库存，你也可以将上面的python脚本中id&#x3D;’product1’，修改为id&#x3D;’product2’ 临时验证电报是否可用。</p><h3 id="一切没问题后，使用定时任务"><a href="#一切没问题后，使用定时任务" class="headerlink" title="一切没问题后，使用定时任务"></a>一切没问题后，使用定时任务</h3><p>为了让Python代码定期运行，您可以使用Linux的定时任务工具cron。在终端中输入以下命令以编辑cron表：</p><p><code>crontab -e</code></p><p>然后添加以下行来设置定时任务，例如每隔10秒运行一次：</p><p><code>* * * * sleep 10 &amp;&amp; /usr/bin/python3 /root/monitor.py</code></p><p>请将“&#x2F;root&#x2F;monitor.py”替换为您保存Python代码的实际路径。保存并退出cron表后，定时任务将自动启动，并按照您设置的时间间隔运行Python代码。</p><h3 id="完成开始测试"><a href="#完成开始测试" class="headerlink" title="完成开始测试"></a>完成开始测试</h3><hr><h3 id="参见"><a href="#参见" class="headerlink" title="参见"></a>参见</h3><blockquote><p><a href="https://hostloc.com/thread-1152884-1-1.html">参见1</a></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;监控脚本运行在Debian11系统&quot;&gt;&lt;a href=&quot;#监控脚本运行在Debian11系统&quot; class=&quot;headerlink&quot; title=&quot;监控脚本运行在Debian11系统&quot;&gt;&lt;/a&gt;监控脚本运行在Debian11系统&lt;/h2&gt;&lt;h3 id=&quot;安装Pyt</summary>
+      
+    
+    
+    
+    <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
+    
+    
+    <category term="资料" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
   
   <entry>
     <title>DD资源库</title>
@@ -490,33 +514,6 @@
     
     
     <category term="资源" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新开通的服务器要做什么(debian/ubuntu)</title>
-    <link href="http://blog.779911.xyz/2022/07/16/%E6%96%B0%E5%BC%80%E9%80%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>http://blog.779911.xyz/2022/07/16/%E6%96%B0%E5%BC%80%E9%80%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A6%81%E5%81%9A%E4%BB%80%E4%B9%88/</id>
-    <published>2022-07-16T09:15:00.000Z</published>
-    <updated>2023-04-22T01:30:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1、VPS性能查询"><a href="#1、VPS性能查询" class="headerlink" title="1、VPS性能查询"></a>1、VPS性能查询</h3><ul><li>DD</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &#x27;https://moeclub.org/attachment/LinuxShell/InstallNET.sh&#x27;) -d 10 -v 64 -a</span><br></pre></td></tr></table></figure><ul><li>配置</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- bench.sh | bash</span><br></pre></td></tr></table></figure><ul><li>VPS跑分</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL yabs.sh | bash -s -- -fi5</span><br></pre></td></tr></table></figure><ul><li>流媒体及ChatGPT解锁</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)</span><br></pre></td></tr></table></figure><ul><li>查询IP黑名单</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mxtoolbox.com/blacklists.aspx</span><br></pre></td></tr></table></figure><h3 id="2、测速"><a href="#2、测速" class="headerlink" title="2、测速"></a>2、测速</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -Lso- https://bench.im/hyperspeed)</span><br></pre></td></tr></table></figure><h3>3、更新</h3><p>安装sudo</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install sudo</span><br></pre></td></tr></table></figure><p>更新系统</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br></pre></td></tr></table></figure><h3>4、扩容</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh &amp;&amp; chmod +x box.sh &amp;&amp; clear &amp;&amp; ./box.sh</span><br></pre></td></tr></table></figure><h4>4-1、常见问题</h4><blockquote><p>swap扩容更新、删除   [[VPS命令脚本备份（持续更新。。。。。）]] </p></blockquote><h3>5、安装常用软件</h3><h4>5-1、安装wget、vim软件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install wget curl sudo vim git</span><br></pre></td></tr></table></figure><h4>5-2、安装Nginx Proxy Manager反代 </h4><p>   [[Nginx Proxy Manager 反向代理搭建]]</p><hr><h3>附：查看服务常用信息</h3><blockquote><p>系统信息和性能查看    [[Linux命令手册]]</p></blockquote><blockquote><p>安装 Docker   [[Docker｜Compose 常用命令]]</p></blockquote><blockquote><p>安装 docker-compose  [[Docker｜Compose 常用命令]]</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;1、VPS性能查询&quot;&gt;&lt;a href=&quot;#1、VPS性能查询&quot; class=&quot;headerlink&quot; title=&quot;1、VPS性能查询&quot;&gt;&lt;/a&gt;1、VPS性能查询&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;DD&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlig</summary>
-      
-    
-    
-    
-    <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
-    
-    
-    <category term="笔记" scheme="http://blog.779911.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
