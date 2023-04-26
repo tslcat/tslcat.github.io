@@ -392,7 +392,7 @@
 <p>比如，你想访问速度快一些，可以选择购买腾讯云或阿里云提供的服务器；如果你想更自由一些，可以选择国外 Linode 或者 DigitalOcean 等提供的服务器。选择腾讯云可以使用<a target="_blank" rel="noopener" href="http://www.qcloud.com/redirect.php?redirect=1001&cps_key=50b46969b6fa53f1334070ccf5a941d0">我们的推荐链接</a>, 选择 Linode 则可以使用<a target="_blank" rel="noopener" href="https://www.linode.com/?r=e815823fd4ebad47aef51ae07250b626d30b7f40">这个链接</a>。腾讯云最低配只需 65块，Linode最低配也只需要10美金，具体的配置和价格，可以自己去仔细对比下。</p>
 <p>好了，有了充气娃娃，噢不，是服务器，我们就可以放心地上了。</p>
 <p>使用 ssh 进行登录，假定服务提供商给你的 IP 是 11.22.33.44, 帐号是 root, 密码是 passwd：</p>
-<p>$ ssh <a href="mailto:&#x72;&#x6f;&#111;&#116;&#64;&#49;&#x31;&#x2e;&#50;&#50;&#x2e;&#x33;&#x33;&#x2e;&#52;&#x34;">&#x72;&#x6f;&#111;&#116;&#64;&#49;&#x31;&#x2e;&#50;&#50;&#x2e;&#x33;&#x33;&#x2e;&#52;&#x34;</a></p>
+<p>$ ssh <a href="mailto:&#114;&#x6f;&#x6f;&#116;&#64;&#x31;&#49;&#x2e;&#50;&#x32;&#46;&#x33;&#51;&#46;&#52;&#x34;">&#114;&#x6f;&#x6f;&#116;&#64;&#x31;&#49;&#x2e;&#50;&#x32;&#46;&#x33;&#51;&#46;&#52;&#x34;</a></p>
 <p>输入密码，第一次登录后建立公钥，我们就和成功上到了服务器。</p>
 <p>接着要怎么玩呢？什么姿势舒服就怎么玩嘛。</p>
 <p>好了，文章到此结束，我回家找女朋友了。</p>
@@ -435,7 +435,7 @@
 <p>scp 使用加密进行传输，可以在两个主机中进行复制：</p>
 <p>&#x2F;&#x2F; 先登录 A 主机后，将 B 主机 11.22.33.44 上的 &#x2F;home&#x2F;data&#x2F; 复制到 A 主机下的 &#x2F;home&#x2F;data&#x2F;</p>
 <p>&#x2F;&#x2F; -r 表示遍历复制目录下的所有文件</p>
-<p>$ scp -r <a href="mailto:&#114;&#x6f;&#111;&#116;&#x40;&#x31;&#49;&#x2e;&#50;&#x32;&#46;&#x33;&#x33;&#x2e;&#x34;&#x34;">&#114;&#x6f;&#111;&#116;&#x40;&#x31;&#49;&#x2e;&#50;&#x32;&#46;&#x33;&#x33;&#x2e;&#x34;&#x34;</a>:&#x2F;home&#x2F;data&#x2F; &#x2F;home&#x2F;data&#x2F;</p>
+<p>$ scp -r <a href="mailto:&#114;&#x6f;&#111;&#116;&#64;&#x31;&#x31;&#x2e;&#50;&#50;&#x2e;&#51;&#51;&#x2e;&#x34;&#x34;">&#114;&#x6f;&#111;&#116;&#64;&#x31;&#x31;&#x2e;&#50;&#50;&#x2e;&#51;&#51;&#x2e;&#x34;&#x34;</a>:&#x2F;home&#x2F;data&#x2F; &#x2F;home&#x2F;data&#x2F;</p>
 <p>&#x2F;&#x2F; 若为建立 ssh 连接，则输入后需要输入 A 主机的登录密码</p>
 <p>rsync 传输也加密，但能将文件夹、文件等的权限等信息也保存下来，采用流式传输，同时是一种增量备份的算法在支持，效率较高：</p>
 <p><code>// 先登录 A 主机后，将 B 主机 11.22.33.44 上的 /home/data/ 复制到 A 主机下的 /home/data/</code></p>
@@ -444,7 +444,7 @@
 <p><code>// -r 表示遍历复制目录下的所有文件</code></p>
 <p><code>// -z 表示进行压缩处理</code></p>
 <p><code>// -e 指定一些端口信息</code></p>
-<p>$ rsync -avrz -e ‘ssh -p 22’ <a href="mailto:&#x72;&#x6f;&#111;&#116;&#x40;&#x31;&#49;&#46;&#x32;&#x32;&#x2e;&#51;&#51;&#46;&#x34;&#52;">&#x72;&#x6f;&#111;&#116;&#x40;&#x31;&#49;&#46;&#x32;&#x32;&#x2e;&#51;&#51;&#46;&#x34;&#52;</a>:&#x2F;home&#x2F;data &#x2F;home&#x2F;data&#x2F;</p>
+<p>$ rsync -avrz -e ‘ssh -p 22’ <a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#x40;&#49;&#x31;&#x2e;&#x32;&#x32;&#46;&#51;&#x33;&#x2e;&#x34;&#x34;">&#x72;&#x6f;&#x6f;&#x74;&#x40;&#49;&#x31;&#x2e;&#x32;&#x32;&#46;&#51;&#x33;&#x2e;&#x34;&#x34;</a>:&#x2F;home&#x2F;data &#x2F;home&#x2F;data&#x2F;</p>
 <p>嗯，小结一下：</p>
 <ul>
 <li>对于单次传输来看，可以使用 wget&#x2F;curl&#x2F;ftp;</li>
@@ -575,7 +575,7 @@
 <p>59 4 * * * &#x2F;data&#x2F;sites&#x2F;laiblog&#x2F;autobackup.sh 2&gt; &#x2F;data&#x2F;sites&#x2F;laiblog&#x2F;crontab-autobackup.log</p>
 <p>注意这个 autoback.sh 脚本使用 git push 时并没有输入帐号密码，是因为设置了全局使用 ssh 连接 git 仓库的方式。</p>
 <h1 id="免输入帐号密码使用-git-pull-x2F-push"><a href="#免输入帐号密码使用-git-pull-x2F-push" class="headerlink" title="免输入帐号密码使用 git pull&#x2F;push"></a><strong>免输入帐号密码使用 git pull&#x2F;push</strong></h1><p>使用你的邮箱生成密钥&#x2F;公钥：</p>
-<p>$ ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#121;&#111;&#117;&#x72;&#x5f;&#101;&#x6d;&#97;&#105;&#108;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#121;&#111;&#117;&#x72;&#x5f;&#101;&#x6d;&#97;&#105;&#108;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a>“</p>
+<p>$ ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#121;&#111;&#117;&#x72;&#x5f;&#x65;&#x6d;&#97;&#105;&#x6c;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#121;&#111;&#117;&#x72;&#x5f;&#x65;&#x6d;&#97;&#105;&#x6c;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>“</p>
 <p>生成后打开 ssh-agent:</p>
 <p>$ eval “$(ssh-agent -s)”</p>
 <p>将公钥添加到 ssh-agent 中：</p>
@@ -584,7 +584,7 @@
 <p>$ pbcopy &lt; ~&#x2F;.ssh&#x2F;id_rsa.pub</p>
 <p>将公钥添加到 git 仓库的（如 github 的添加地址为：<a target="_blank" rel="noopener" href="https://github.com/settings/ssh">https://github.com/settings/ssh</a>）</p>
 <p>修改远程仓库的 url 为 ssh 方式，如：</p>
-<p>$ git remote set-url origin <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;</a>:yourUserName&#x2F;yourProjectRepo.git</p>
+<p>$ git remote set-url origin <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:yourUserName&#x2F;yourProjectRepo.git</p>
 <p>这么一来，就不用每次 git pull&#x2F;push 都要输入帐号密码了。</p>
 <h1 id="使用-VPS-做梯子科学上网？"><a href="#使用-VPS-做梯子科学上网？" class="headerlink" title="使用 VPS 做梯子科学上网？"></a><strong>使用 VPS 做梯子科学上网？</strong></h1><p>对于想饭强锻炼身体科学上网的方法，如果你买的是国外 VPS 比如 <a target="_blank" rel="noopener" href="https://www.linode.com/?r=e815823fd4ebad47aef51ae07250b626d30b7f40">Linode</a>，就可以这么干。</p>
 <h2 id="安装-pptpd-搭建-VPN"><a href="#安装-pptpd-搭建-VPN" class="headerlink" title="安装 pptpd 搭建 VPN"></a><strong>安装 pptpd 搭建 VPN</strong></h2><p>按 <a target="_blank" rel="noopener" href="https://help.ubuntu.com/community/PPTPServer">这个教程</a> 走就行了。</p>
