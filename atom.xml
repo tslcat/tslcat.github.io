@@ -6,7 +6,7 @@
   <link href="http://blog.779911.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.779911.xyz/"/>
-  <updated>2023-04-24T04:32:38.000Z</updated>
+  <updated>2023-05-06T03:15:52.000Z</updated>
   <id>http://blog.779911.xyz/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装Aria2增强版</title>
+    <link href="http://blog.779911.xyz/2023/05/06/%E5%AE%89%E8%A3%85Aria2%E5%A2%9E%E5%BC%BA%E7%89%88/"/>
+    <id>http://blog.779911.xyz/2023/05/06/%E5%AE%89%E8%A3%85Aria2%E5%A2%9E%E5%BC%BA%E7%89%88/</id>
+    <published>2023-05-06T09:39:00.000Z</published>
+    <updated>2023-05-06T03:15:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装Aria2增强版"><a href="#安装Aria2增强版" class="headerlink" title="安装Aria2增强版"></a>安装Aria2增强版</h3><p><code>apt install sudo wget curl ca-certificates</code></p><p><code>wget -N git.io/aria2.sh &amp;&amp; chmod +x aria2.sh</code></p><p><code>./aria2.sh</code></p><p><a href="https://www.youtube.com/watch?v=4qj8DRGPT-I">参考视频</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;安装Aria2增强版&quot;&gt;&lt;a href=&quot;#安装Aria2增强版&quot; class=&quot;headerlink&quot; title=&quot;安装Aria2增强版&quot;&gt;&lt;/a&gt;安装Aria2增强版&lt;/h3&gt;&lt;p&gt;&lt;code&gt;apt install sudo wget curl ca-ce</summary>
+      
+    
+    
+    
+    <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
+    
+    
+    <category term="资源" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
   
   <entry>
     <title>VPS优惠推送程序参考</title>
@@ -486,33 +510,6 @@
     
     
     <category term="笔记" scheme="http://blog.779911.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx Proxy Manager 反向代理搭建</title>
-    <link href="http://blog.779911.xyz/2022/07/17/Nginx%20Proxy%20Manager%20%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%90%AD%E5%BB%BA/"/>
-    <id>http://blog.779911.xyz/2022/07/17/Nginx%20Proxy%20Manager%20%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%90%AD%E5%BB%BA/</id>
-    <published>2022-07-17T10:05:00.000Z</published>
-    <updated>2023-03-15T01:28:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[[新开通的服务器要做什么]]</p><hr><p><a href="https://nginxproxymanager.com/">官网链接</a></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Docker-compose文件"><a href="#Docker-compose文件" class="headerlink" title="Docker-compose文件"></a>Docker-compose文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line">  app:</span><br><span class="line">    image: &#x27;jc21/nginx-proxy-manager:latest&#x27;</span><br><span class="line">    restart: unless-stopped</span><br><span class="line">    ports:</span><br><span class="line">      # These ports are in format &lt;host-port&gt;:&lt;container-port&gt;</span><br><span class="line">      - &#x27;80:80&#x27; # Public HTTP Port</span><br><span class="line">      - &#x27;443:443&#x27; # Public HTTPS Port</span><br><span class="line">      - &#x27;81:81&#x27; # Admin Web Port</span><br><span class="line">      # Add any other Stream port you want to expose</span><br><span class="line">      # - &#x27;21:21&#x27; # FTP</span><br><span class="line">    environment:</span><br><span class="line">      DB_MYSQL_HOST: &quot;db&quot;</span><br><span class="line">      DB_MYSQL_PORT: 3306</span><br><span class="line">      DB_MYSQL_USER: &quot;npm&quot;</span><br><span class="line">      DB_MYSQL_PASSWORD: &quot;npm&quot;</span><br><span class="line">      DB_MYSQL_NAME: &quot;npm&quot;</span><br><span class="line">      # Uncomment this if IPv6 is not enabled on your host</span><br><span class="line">      # DISABLE_IPV6: &#x27;true&#x27;</span><br><span class="line">    volumes:</span><br><span class="line">      - ./data:/data</span><br><span class="line">      - ./letsencrypt:/etc/letsencrypt</span><br><span class="line">    depends_on:</span><br><span class="line">      - db</span><br><span class="line"></span><br><span class="line">  db:</span><br><span class="line">    image: &#x27;jc21/mariadb-aria:latest&#x27;</span><br><span class="line">    restart: unless-stopped</span><br><span class="line">    environment:</span><br><span class="line">      MYSQL_ROOT_PASSWORD: &#x27;npm&#x27;</span><br><span class="line">      MYSQL_DATABASE: &#x27;npm&#x27;</span><br><span class="line">      MYSQL_USER: &#x27;npm&#x27;</span><br><span class="line">      MYSQL_PASSWORD: &#x27;npm&#x27;</span><br><span class="line">    volumes:</span><br><span class="line">      - ./data/mysql:/var/lib/mysql</span><br></pre></td></tr></table></figure><h3 id="默认登陆名和密码"><a href="#默认登陆名和密码" class="headerlink" title="默认登陆名和密码"></a>默认登陆名和密码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Email:    admin@example.com  </span><br><span class="line">Password: changeme</span><br></pre></td></tr></table></figure><h3 id="代理其他服务器项目"><a href="#代理其他服务器项目" class="headerlink" title="代理其他服务器项目"></a>代理其他服务器项目</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、解析域名 “IP填写Nginx Proxy Manager所在服务器的IP”</span><br><span class="line">2、进入Nginx Proxy Manager“填写项目服务器所在的IP+端口号”</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[[新开通的服务器要做什么]]&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&quot;https://nginxproxymanager.com/&quot;&gt;官网链接&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;</summary>
-      
-    
-    
-    
-    <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
-    
-    
-    <category term="资源" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
