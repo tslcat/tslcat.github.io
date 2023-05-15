@@ -6,7 +6,7 @@
   <link href="http://blog.779911.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.779911.xyz/"/>
-  <updated>2023-05-06T03:15:52.000Z</updated>
+  <updated>2023-05-15T15:30:44.000Z</updated>
   <id>http://blog.779911.xyz/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>磁力网站</title>
+    <link href="http://blog.779911.xyz/2023/05/15/%E7%A3%81%E5%8A%9B%E7%BD%91%E7%AB%99/"/>
+    <id>http://blog.779911.xyz/2023/05/15/%E7%A3%81%E5%8A%9B%E7%BD%91%E7%AB%99/</id>
+    <published>2023-05-15T22:42:00.000Z</published>
+    <updated>2023-05-15T15:30:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>磁力狗</strong></p><p><code>http://clg20.vip/</code></p><p><strong>磁力猫</strong></p><p><code>https://狸猫.com</code></p><p><strong>U3C3</strong></p><p><code>https://u3c3.site/</code></p><p><strong>techlife</strong></p><p><code>https://so.techlife.app/</code></p><p><strong>磁力多</strong></p><p><code>https://ciliduo.de</code></p><p><strong>BTSOW</strong></p><p><code>https://btsow.hair/tags</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;磁力狗&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;http://clg20.vip/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;磁力猫&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://狸猫.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://blog.779911.xyz/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="资源" scheme="http://blog.779911.xyz/tags/%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
   
   <entry>
     <title>安装Aria2增强版</title>
@@ -69,9 +97,9 @@
     <link href="http://blog.779911.xyz/2023/04/22/DD%E8%B5%84%E6%BA%90%E5%BA%93/"/>
     <id>http://blog.779911.xyz/2023/04/22/DD%E8%B5%84%E6%BA%90%E5%BA%93/</id>
     <published>2023-04-22T22:42:00.000Z</published>
-    <updated>2023-04-25T05:10:03.000Z</updated>
+    <updated>2023-05-06T04:02:31.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="参考教材"><a href="#参考教材" class="headerlink" title="参考教材"></a>参考教材</h3><p><a href="https://hostloc.com/thread-1139293-1-1.html">创建自己的DD镜像</a></p><p><a href="https://hostloc.com/forum.php?mod=viewthread&tid=1050365&extra=page=1&mobile=2">DDwin10教程</a></p><p><a href="https://hostloc.com/thread-1160487-1-1.html">[DD包]Win10 LTSC21H2适度精简&amp;PRO22H2极限精简</a></p><hr><h3 id="DD-WIN7"><a href="#DD-WIN7" class="headerlink" title="DD WIN7"></a>DD WIN7</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -qO InstallNET.sh &#x27;https://d.02es.com/InstallNET.sh&#x27; &amp;&amp; bash InstallNET.sh -dd &#x27;https://d.02es.com/Windows/Win7_sp1_64_Administrator_nat.ee.gz&#x27;</span><br></pre></td></tr></table></figure><p>win7的，密码nat.ee</p><h3 id="WIN10TLSC"><a href="#WIN10TLSC" class="headerlink" title="WIN10TLSC"></a>WIN10TLSC</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -qO InstallNET.sh &#x27;https://moeclub.org/attachment/LinuxShell/InstallNET.sh&#x27; &amp;&amp; bash InstallNET.sh -dd &#x27;https://dd.591592.xyz/nat.ee/guajibao/guajibao-win10-ent-ltsc-2021-x64-cn/guajibao-win10-ent-ltsc-2021-x64-cn.vhd.gz&#x27;</span><br></pre></td></tr></table></figure><p>密码 nat.ee</p><h3 id="DD-Debian11"><a href="#DD-Debian11" class="headerlink" title="DD Debian11"></a>DD Debian11</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &#x27;https://huyal.com/scripts/InstallNET.sh&#x27;) -d 11 -v 64 -a -p 你的密码</span><br></pre></td></tr></table></figure><h3 id="DD-Debian11-1"><a href="#DD-Debian11-1" class="headerlink" title="DD Debian11"></a>DD Debian11</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &#x27;https://huyal.com/scripts/InstallNET.sh&#x27;) -d 11 -v 64 -a -p 你的密码 --mirror &#x27;http://mirrors.163.com/debian/&#x27;</span><br></pre></td></tr></table></figure><blockquote><p>其中你的密码为root账户密码。随你自己喜欢。不要太简单即可。DD好后记得修改SSH端口。默认为：22</p></blockquote><h3 id="DD-Debian11-2"><a href="#DD-Debian11-2" class="headerlink" title="DD Debian11"></a>DD Debian11</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &#x27;https://moeclub.org/attachment/LinuxShell/InstallNET.sh&#x27;) -d 10 -v 64 -a</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="参考教材"><a href="#参考教材" class="headerlink" title="参考教材"></a>参考教材</h3><p><a href="https://hostloc.com/thread-1139293-1-1.html">创建自己的DD镜像</a></p><p><a href="https://hostloc.com/forum.php?mod=viewthread&tid=1050365&extra=page=1&mobile=2">DDwin10教程</a></p><p><a href="https://hostloc.com/thread-1160487-1-1.html">[DD包]Win10 LTSC21H2适度精简&amp;PRO22H2极限精简</a></p><hr><h3 id="DD-WIN7"><a href="#DD-WIN7" class="headerlink" title="DD WIN7"></a>DD WIN7</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -qO InstallNET.sh &#x27;https://d.02es.com/InstallNET.sh&#x27; &amp;&amp; bash InstallNET.sh -dd &#x27;https://d.02es.com/Windows/Win7_sp1_64_Administrator_nat.ee.gz&#x27;</span><br></pre></td></tr></table></figure><p>win7的，密码nat.ee</p><h3 id="WIN10TLSC"><a href="#WIN10TLSC" class="headerlink" title="WIN10TLSC"></a>WIN10TLSC</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -qO InstallNET.sh &#x27;https://moeclub.org/attachment/LinuxShell/InstallNET.sh&#x27; &amp;&amp; bash InstallNET.sh -dd &#x27;https://dd.591592.xyz/nat.ee/guajibao/guajibao-win10-ent-ltsc-2021-x64-cn/guajibao-win10-ent-ltsc-2021-x64-cn.vhd.gz&#x27;</span><br></pre></td></tr></table></figure><p>密码 nat.ee</p><h3 id="DD-Debian11"><a href="#DD-Debian11" class="headerlink" title="DD Debian11"></a>DD Debian11</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &#x27;https://huyal.com/scripts/InstallNET.sh&#x27;) -d 11 -v 64 -a -p 你的密码</span><br></pre></td></tr></table></figure><h3 id="DD-Debian11-1"><a href="#DD-Debian11-1" class="headerlink" title="DD Debian11"></a>DD Debian11</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &#x27;https://huyal.com/scripts/InstallNET.sh&#x27;) -d 11 -v 64 -a -p 你的密码 --mirror &#x27;http://mirrors.163.com/debian/&#x27;</span><br></pre></td></tr></table></figure><blockquote><p>其中你的密码为root账户密码。随你自己喜欢。不要太简单即可。DD好后记得修改SSH端口。默认为：22</p></blockquote><h3 id="DD-Debian11-2"><a href="#DD-Debian11-2" class="headerlink" title="DD Debian11"></a>DD Debian11</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget --no-check-certificate -qO- &#x27;https://moeclub.org/attachment/LinuxShell/InstallNET.sh&#x27;) -d 10 -v 64 -a</span><br></pre></td></tr></table></figure><h3 id="centos-x2F-fedora-x2F-ubuntu"><a href="#centos-x2F-fedora-x2F-ubuntu" class="headerlink" title="centos&#x2F;fedora&#x2F;ubuntu"></a>centos&#x2F;fedora&#x2F;ubuntu</h3><p>在1g小鸡上重装centos&#x2F;fedora&#x2F;ubuntu的脚本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh</span><br><span class="line">bash reinstall.sh centos-7/8/9 alma-8/9 rocky-8/9 fedora-36/37/38 ubuntu-20.04/22.04</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Username: root</span><br><span class="line">Password: 123@@@</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://hostloc.com/thread-1166439-2-2.html">参考网站</a></p></blockquote>]]></content>
     
     
       
@@ -476,37 +504,6 @@
     
     
     <category term="VPS" scheme="http://blog.779911.xyz/categories/VPS/"/>
-    
-    
-    <category term="笔记" scheme="http://blog.779911.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>孟德斯鸠：论专制十恶</title>
-    <link href="http://blog.779911.xyz/2023/01/11/%E3%80%8A%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E3%80%8B%E4%B9%A6%E6%91%98/"/>
-    <id>http://blog.779911.xyz/2023/01/11/%E3%80%8A%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E3%80%8B%E4%B9%A6%E6%91%98/</id>
-    <published>2023-01-11T11:21:30.000Z</published>
-    <updated>2023-03-15T01:28:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>01.没有人性的政治</p><p>02.没有思想的崇拜</p><p>03.没有人文的科学</p><p>04.没有道德的商业</p><p>05.没有良知的知识</p><p>06.没有真实的历史</p><p>07.没有独立的精神</p><p>08.没有自由的幸福</p><p>09.没有劳动的富裕</p><p>10.没有制约的权力</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;01.没有人性的政治&lt;/p&gt;
-&lt;p&gt;02.没有思想的崇拜&lt;/p&gt;
-&lt;p&gt;03.没有人文的科学&lt;/p&gt;
-&lt;p&gt;04.没有道德的商业&lt;/p&gt;
-&lt;p&gt;05.没有良知的知识&lt;/p&gt;
-&lt;p&gt;06.没有真实的历史&lt;/p&gt;
-&lt;p&gt;07.没有独立的精神&lt;/p&gt;
-&lt;p&gt;08.没有自由的幸福&lt;</summary>
-      
-    
-    
-    
-    <category term="读书" scheme="http://blog.779911.xyz/categories/%E8%AF%BB%E4%B9%A6/"/>
     
     
     <category term="笔记" scheme="http://blog.779911.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
